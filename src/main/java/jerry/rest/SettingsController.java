@@ -6,6 +6,7 @@ import jerry.beans.Input;
 import jerry.beans.InputType;
 import jerry.beans.Setting;
 import jerry.service.SettingService;
+import jerry.util.InetAddr;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -16,6 +17,9 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
+import java.net.Inet4Address;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;

@@ -1,7 +1,7 @@
 var websocket;
 var settings;
-var host ="http://localhost:8090";
-var wsHost = "ws://localhost:8090";
+var host ="http://"+location.host;
+var wsHost = "ws://"+location.host;
 var workingColumn;
 
 var rows = 0;
@@ -96,7 +96,6 @@ $(function() {
        positionGrid();
        doConnect();
       });
-   
 });
 
 

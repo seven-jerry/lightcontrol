@@ -2,6 +2,7 @@ package jerry.rest;
 
 import jerry.beans.Setting;
 import jerry.service.SettingService;
+import jerry.util.InetAddr;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,4 +24,5 @@ public class SettingRestController {
     public List<Setting> getSettings() {
         return settingService.availableSettings();
     }
+
 }

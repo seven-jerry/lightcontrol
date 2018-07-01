@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <div  th:replace="~{fragments/header :: head}"></div>
+
+</head>
+
+<body>
+<div th:replace="~{fragments/header :: header}">Header</div>
+<div class="container">
+    <br/>
+    <br/>
+
+    <div th:if="${not #lists.isEmpty(settings)}">
+
+        <h1>Arduino - Einstellungen</h1>
+
+        <div class="card col-md-12"  th:each="setting : ${settings}">
+            <div class="card-header"  th:text="${setting.serialport}">
+            </div>
+            <div class="card-body">
+                <p class="card-text">baund rate : <span th:text="${setting.baundRate}"></span></p>
+                <p class="card-text">output row :<span th:text="${setting.outputRow}"></span></p>
+                <p class="card-text">output column : <span th:text="${setting.outputColumn}"></span></p>
+                <div class="card-header">
+                     Inputs
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item" th:each="input : ${setting.inputs}">Name :<span th:text="${input.name}"></span>
+                        |  Type :<span th:text="${input.type}"></span>
+                    </li>
+                </ul>
+                <br/>
+                <a href="#" th:href="@{/setting/detail/?id={id}(id=${setting.id})}" class="btn btn-primary">Bearbeiten</a>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="form-group">
+        <div class="col-sm-10">
+            <a th:href="@{/setting/add}" class="btn btn-primary">Hinzufügen</a>
+        </div>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div th:insert="~{fragments/footer :: footer}"></div>
+</div>
+
+</body>
+</html>

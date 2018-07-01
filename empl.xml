@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><setting><serialport>cu.arduinoport</serialport><baundrate>19200</baundrate><outputRow>5</outputRow><outputColumn>7</outputColumn><input><type>maunualSwitch</type><id>0</id></input><input><type>wireless</type><id>1</id></input></setting>

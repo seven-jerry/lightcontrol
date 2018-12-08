@@ -1,0 +1,9 @@
+
+
+master gets settings from /api/setting/list
+ip -> setting[]
+master starts websocket to client
+master displays overview of clients
+master can send commands to client
+master polls internet server for commands
+

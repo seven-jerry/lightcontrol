@@ -1,11 +1,118 @@
 var websocket;
-var settings;
-var host ="http://"+location.host;
-var wsHost = "ws://"+location.host;
+var setting;
+var host = "http://" + location.host;
+var wsHost = "ws://" + location.host;
 var workingColumn;
-
+var expectedState = [];
 var rows = 0;
 var columns = 0;
+var lastMessage;
+var outSideHigh= 0;
+var outSideLow= 0;
+
+
+var template = '<li class="nav-item">';
+template += '<a class="nav-link" href="#" onclick="writeAction(\'{command}\')">{label}</a>';
+template += '</li>';
+
+
+$(function () {
+    $.getJSON(host + "/api/setting/list", function (data) {
+        setting = data;
+        prepareSetting();
+        drawGrid();
+        positionGrid();
+        doConnect();
+    });
+});
+
+
+function prepareSetting() {
+    columns = setting.columns;
+    rows = setting.rows;
+    addActions(setting.commands);
+}
+
+
+function addActions(actions) {
+    for (var i in actions) {
+        var action = actions[i];
+        var actionTemplate = template.replace("{label}", action.label);
+        actionTemplate = actionTemplate.replace("{command}", action.command);
+        $("#commandWrapper").append(actionTemplate);
+    }
+}
+
+
+function drawGrid() {
+    $("#grid").empty();
+    for (var row = 0; row < rows; row++) {
+        for (var column = 0; column < columns; column++) {
+            addLight(column, row);
+        }
+    }
+}
+
+
+function addLight(column, row) {
+    if (workingColumn == undefined) {
+        workingColumn = row;
+    } else if (workingColumn != row) {
+        workingColumn = row;
+        $("#grid").append("<br/>");
+    }
+    var key = "light" + row + column + "";
+
+
+    $("#grid").append('<button id ="' + key + '" class="btn btn-default lights">' + (column + 1) + " " + (row + 1) + "</button>");
+}
+
+
+window.onresize = function () {
+    positionGrid();
+};
+
+
+function positionGrid() {
+    var marginLeft = 50 * (window.innerWidth / 1300);
+    var marginTop = 50 * (window.innerHeight / 1000);
+
+    var width = (window.innerWidth - marginLeft * (columns + 1)) / columns;
+    var height = (window.innerHeight - 58 - marginTop * (rows + 1)) / rows;
+
+    $(".lights").each(function () {
+        $(this).css("margin-left", marginLeft + "px");
+        $(this).css("margin-top", marginTop + "px");
+        $(this).css("width", width + "px");
+        $(this).css("height", height + "px");
+
+    });
+}
+
+
+function doConnect() {
+    websocket = new WebSocket(wsHost + "/webSocket");
+
+    websocket.onopen = function (evt) {
+        console.log(evt);
+    };
+
+    websocket.onclose = function (evt) {
+        console.log(evt);
+    };
+
+    websocket.onmessage = function (evt) {
+        console.log(evt);
+        message(evt.data);
+    };
+
+    websocket.onerror = function (evt) {
+        console.log(evt);
+        error(evt.data);
+    };
+}
+
+
 function writePing(message) {
     $('#pingOutput').append(message + '\n');
 }
@@ -18,178 +125,106 @@ function writeMessage(message) {
     $('#messageOutput').append(message + '\n')
 }
 
-function prepareSettings(){
-    settings.forEach(element => {
-        if(element.outputRow > rows){
-            rows = element.outputRow;
-        }
-        if(element.outputColumn > columns){
-            columns = element.outputColumn;
-        }
-    });
-}
-
-function drawGrid(){
-    $("#grid").empty();
-    for (var row = 0; row < rows; row++) {
-    for (var column = 0; column < columns; column++) {
-            addLight(column,row);
-        }
-    }
-}
-
-window.onresize = function(){positionGrid();};
-function positionGrid(){
-    var marginLeft = 50 * (window.innerWidth/1300);
-    var marginTop = 50 * (window.innerHeight/1000);
-
-    var width = (window.innerWidth - marginLeft*(columns+1)) / columns;
-    var height = (window.innerHeight - 58 - marginTop*(rows+1)) / rows;
-
-    $(".lights").each(function(){
-        $(this).css("margin-left",marginLeft+"px");
-        $(this).css("margin-top",marginTop+"px");
-        $(this).css("width",width+"px");
-        $(this).css("height",height+"px");
-
-    });
-}
-
-function addLight(column,row){
-    if(workingColumn == undefined){
-        workingColumn = row;
-    } else if(workingColumn != row){
-        workingColumn = row;
-        $("#grid").append("<br/>");
-    }
-    var key = "light"+row+column+"";
 
 
- $("#grid").append('<button id ="'+key+'" class="btn btn-default lights">'+(column+1)+" "+(row+1)+"</button>");
-}
-
-function doConnect() {
-    websocket = new WebSocket(wsHost+"/webSocket");
-
-    websocket.onopen = function (evt) {
-    };
-
-    websocket.onclose = function (evt) {
-    };
-
-    websocket.onmessage = function (evt) {
-        message(evt.data);
-    };
-
-    websocket.onerror = function (evt) {
-        error(evt.data);
-       // message('{"key" : "cu.usbmodemFA131","value" : "{001010020030040050060100110120130140150160200210221230240250260300310320330340350360400410420430440450460}"}');
-
-    };
-}
-
-$(function() {
-    $.getJSON( host+"/api/setting/list", function( data ) {
-       settings = data;
-       prepareSettings();
-       drawGrid();
-       positionGrid();
-       doConnect();
-      });
-});
 
 
-function message(msg){
-    var object = JSON.parse(msg);
-    if(object.value.length < (columns*rows)*3){
+
+function message(msg) {
+    if (msg.length < (columns * rows) * 3) {
         return;
     }
-    var value = object.value;
-    while(value.length > 0){
-        var x = parseInt(value.charAt(0));
-        var y = parseInt(value.charAt(1));
-        var s = parseInt(value.charAt(2));
+    outSideHigh = 0;
+    outSideLow = 0;
 
-        var key = "#light"+x+y+"";
-        if(s == 0){
-            $(key).css("background-color","#6c757d");
-            $(key).attr('onclick','change('+x+','+y+','+1+');');
+    lastMessage = msg;
+    hideLoader();
+    while (msg.length > 0) {
+        var xChar = msg.charAt(0);
+        if(xChar == 'o'){
+            msg = proccessOutsideState(msg);
+            continue;
         }
-        else if(s == 1){
-            $(key).css("background-color","#ffc107");
-            $(key).attr('onclick','change('+x+','+y+','+0+');');
+        var x = parseInt(msg.charAt(0));
+        var y = parseInt(msg.charAt(1));
+        var s = parseInt(msg.charAt(2));
+
+        var key = "#light" + x + y + "";
+        if (s == 0) {
+            $(key).css("background-color", "#6c757d");
+            $(key).attr('onclick', 'change(' + x + ',' + y + ',' + 1 + ');');
+        }
+        else if (s == 1) {
+            $(key).css("background-color", "#ffc107");
+            $(key).attr('onclick', 'change(' + x + ',' + y + ',' + 0 + ');');
 
         }
-        value = value.substr(3);
+        else if (s == 7) {
+            $(key).css("display", "none");
+            $(key).attr('onclick', '');
+
+        }
+        msg = msg.substr(3);
+    }
+    changeAll();
+    updateOutside();
+}
+
+function proccessOutsideState(msg){
+    var s = parseInt(msg.charAt(2));
+    if(s == 1){
+        outSideHigh++;
+    }
+    if(s == 0){
+        outSideLow++;
+    }
+    return msg.substr(3);
+
+}
+
+function change(row, column, value) {
+    var obj = "" + row + "" + column + "" + value + "";
+    var key = "#light" + row + column + "";
+    expectedState.push(obj);
+    $(key).css("background-color", "#ffffe6");
+    showLoader();
+    websocket.send(obj);
+}
+
+function changeAll() {
+    for(var i in expectedState){
+        var obj = expectedState[i];
+        if(lastMessage.includes(obj)){
+            expectedState.shift();
+            continue;
+        }
+        $(obj).css("background-color", "#ffffe6");
+    }
+    if(expectedState.length > 0){
+        showLoader();
+    }
+    if(expectedState.length === 0){
+        hideLoader();
     }
 }
 
-
-function change(row,column,value){
-    var key = "";
-    settings.forEach(element => {
-        if(element.outputColumn > column && element.outputRow > row){
-            key = element.serialport;
-        }
-    });
-
-    var obj = {};
-    obj["key"] = key;
-    obj["value"] = ""+row+""+column+""+value+"";
-    websocket.send(JSON.stringify(obj));
+function updateOutside(){
+    $("#outside").text("Ein: "+outSideHigh+ " Aus: "+outSideLow);
 }
-
-function turnAllOn(){
-    var key = "";
-    settings.forEach(element => {
-        if(element.outputColumn > 0 && element.outputRow > 0){
-            key = element.serialport;
-        }
-    });
-    var obj = {};
-    obj["key"] = key;
-
-   var obj = {};
-   obj["key"] = key;
-   obj["value"] = "sah";
-    websocket.send(JSON.stringify(obj));
-
-}
-
-function turnAllOff(){
-    var key = "";
-       settings.forEach(element => {
-           if(element.outputColumn > 0 && element.outputRow > 0){
-               key = element.serialport;
-           }
-       });
-       var obj = {};
-       obj["key"] = key;
-
-      var obj = {};
-      obj["key"] = key;
-      obj["value"] = "sal";
-       websocket.send(JSON.stringify(obj));
-}
-
-function turnHalfOn(){
-  var key = "";
-     settings.forEach(element => {
-         if(element.outputColumn > 0 && element.outputRow > 0){
-             key = element.serialport;
-         }
-     });
-     var obj = {};
-     obj["key"] = key;
-
-    var obj = {};
-    obj["key"] = key;
-    obj["value"] = "shh";
-     websocket.send(JSON.stringify(obj));
+function writeAction(action) {
+    websocket.send(action);
 }
 
 
+function error(err) {
+    console.log(err);
+    location.reload();
+}
 
-function error(err){
-    alert(err);
+
+function showLoader(){
+    $("#loader").css("display","block");
+}
+function hideLoader(){
+    $("#loader").css("display","none");
 }

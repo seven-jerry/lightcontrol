@@ -1,158 +1,223 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
+
 <head>
     <div th:replace="~{fragments/header :: head}"></div>
 
 </head>
 
 <body>
-<div th:replace="~{fragments/header :: header}">
-</div>
-
+<div th:replace="~{fragments/header :: header}">Header</div>
 <div class="container">
     <br/>
     <br/>
-    <h1 th:text="${setting.serialport}"></h1>
-    <form class="form-horizontal"   th:object="${setting}" th:action="@{/setting/update}"  method="post">
+    <h1>Setting</h1>
+    <form method="POST" th:if="${setting != null}"  th:object="${setting}" th:action="@{/setting/update}">
+
         <div class="form-group">
-            <label class="col-sm-2 control-label">Serial Port:</label>
-            <div class="col-sm-10">
-                <select class="form-control" th:field="${setting.serialport}">
-                    <option th:each="port : ${ports}"
-                            th:value="${port}"
-                            th:utext="${port}"
-                            th:selected="${setting.serialport == port}"
-                    />
-                </select>
-            </div>
+            <label th:for="rows">Total Rows</label>
+            <input class="form-control" type="number" th:field="*{rows}">
+        </div>
+        <div class="form-group">
+            <label th:for="rows">Total Columns</label>
+            <input class="form-control" type="number" th:field="*{columns}">
+        </div>
+        <div class="form-group">
+            <label th:for="rows">Total Outside</label>
+            <input class="form-control" type="number" th:field="*{outside}">
         </div>
 
         <div class="form-group">
-            <label class="col-sm-2 control-label">Baund Rate:</label>
-            <div class="col-sm-10">
-                <input class="form-control" th:field="${setting.baundRate}"/>
-            </div>
+            <label th:for="rows">Input Command</label>
+            <select class="form-control mb-2" name="inputCommand">
+                <option th:each="command : ${inputCommands}"
+                        th:value="${command}"
+                        th:utext="${command}"
+                        th:selected="${command == setting.inputCommand}"
+                ></option>
+            </select>
         </div>
-
-        <div class="form-group">
-            <label class="col-sm-2 control-label">Output Row:</label>
-            <div class="col-sm-10">
-                <input class="form-control" th:field="${setting.outputRow}"/>
-            </div>
-        </div>
-
-
-        <div class="form-group">
-            <label class="col-sm-2 control-label">Output Column:</label>
-            <div class="col-sm-10">
-                <input class="form-control" th:field="${setting.outputColumn}"/>
-            </div>
-        </div>
-        <input type="hidden" name="id" th:value="${setting.id}">
-
-        <div class="form-group">
-            <div class="col-sm-10">
-                <button class="btn btn-primary" name="action" value="update">Update</button>
-                <button class="btn btn-danger" name="action" value="delete">Delete</button>
-
-            </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
         </div>
     </form>
 
+        <div class="card" style="margin-top:20px;">
+            <h4 class="card-header">Sources</h4>
+            <div style="margin-left:10px;">
+                <h5 style="margin-top:20px;">Input Source</h5>
+                <div class="form-row align-items-center">
+                    <div class="col-auto">
+                        <form method="POST" th:if="${setting.inputSource != null}"  th:object="${setting.inputSource}" th:action="@{/setting/inputsource/set}">
+                            <div class="col-auto">
+                                <label class="">BaundRate</label>
+                                <input type="text" class="form-control mb-2"
+                                       name="baundRate" th:value="*{baundRate}">
+                            </div>
+                            <div class="col-auto">
+                                <label class="">Type</label>
+                                <select class="form-control mb-2" name="serialSources">
+                                    <option th:each="source : ${sources}"
+                                            th:value="${source}"
+                                            th:utext="${source}"
+                                            th:selected="${source == setting.inputSource.getSerialSources()}"
+                                    ></option>
+                                </select>
+                            </div>
+                            <div class="col-auto">
+                                <label class="">Port</label>
+                                <select class="form-control mb-2" name="port">
+                                    <option th:each="port : ${ports}"
+                                            th:value="${port}"
+                                            th:utext="${port}"
+                                            th:selected="${port == setting.inputSource.getPort()}"
+                                    ></option>
+                                </select>
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" style="margin-top:30px;" class="btn btn-primary mb-2">Submit
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <h5 style="margin-top:20px;">Output Source</h5>
+                <div class="form-row align-items-center">
+                    <div class="col-auto">
+                        <form method="POST" th:if="${setting.outputSource != null}" th:object="${setting.outputSource}" th:action="@{/setting/outputsource/set}">
+                            <div class="col-auto">
+                                <label class="">BaundRate</label>
+                                <input type="text" class="form-control mb-2"
+                                       name="baundRate" th:value="*{baundRate}">
+                            </div>
+                            <div class="col-auto">
+                                <label class="">Type</label>
+                                <select class="form-control mb-2" name="serialSources">
+                                    <option th:each="source : ${sources}"
+                                            th:value="${source}"
+                                            th:utext="${source}"
+                                            th:selected="${source == setting.outputSource.getSerialSources()}"
+                                    ></option>
+                                </select>
+                            </div>
+                            <div class="col-auto">
+                                <label class="">Port</label>
+                                <select class="form-control mb-2" name="port">
+                                    <option th:each="port : ${ports}"
+                                            th:value="${port}"
+                                            th:utext="${port}"
+                                            th:selected="${port == setting.outputSource.getPort()}"
+                                    ></option>
+                                </select>
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" style="margin-top:30px;" class="btn btn-primary mb-2">Submit
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    <div class="card" style="margin-top:20px;">
+        <h4 class="card-header">Inputs</h4>
+        <div style="margin-left:10px;">
+            <h5 style="margin-top:10px;">list</h5>
+            <div th:if="${!setting.getInputs().isEmpty()}">
+                <ul th:each="input : ${setting.getInputs()}">
+                    <li style="display:inline">Name : <span th:text="${input.getName()}"></span></li>
+                    <li style="display:inline">SourceId : <span th:text="${input.getSourceId()}"></span></li>
+                    <li style="display:inline"><a
+                            th:href="@{/setting/input/delete/?id={id}(id=${input.id})}">Delete</a>
+                    </li>
+                </ul>
+            </div>
+
+            <form method="POST" th:object="${newInput}" th:action="@{/setting/input/add}">
+                <h5>New Input</h5>
+                <div class="form-row align-items-center">
+                    <div class="col-auto">
+                        <label class="">Name</label>
+                        <input type="text" class="form-control mb-2" th:field="*{name}">
+                    </div>
+                    <div class="col-auto">
+                        <label class="">Id</label>
+                        <input type="text" class="form-control mb-2" th:field="*{sourceId}">
+                    </div>
+                    <div class="col-auto">
+                        <label class="">Order</label>
+                        <input type="text" class="form-control mb-2" th:field="*{order}">
+                    </div>
+                    <div class="col-auto">
+                        <label class="">Type</label>
+                        <select class="form-control mb-2" name="type">
+                            <option th:each="type : ${types}"
+                                    th:value="${type}"
+                                    th:utext="${type}"
+                                    th:selected="${type == newInput.getType()}"
+                            ></option>
+                        </select>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" style="margin-top:30px;" class="btn btn-primary mb-2">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="card" style="margin-top:20px;">
+        <h4 class="card-header">Commands</h4>
+        <div style="margin-left:10px;">
+            <h5 style="margin-top:10px;">list</h5>
+            <div th:if="${!setting.getCommands().isEmpty()}">
+                <ul th:each="command : ${setting.getCommands()}">
+                    <li style="display:inline">Label : <span th:text="${command.getLabel()}"></span></li>
+                    <li style="display:inline">Command : <span th:text="${command.getCommand()}"></span></li>
+                    <li style="display:inline"><a
+                            th:href="@{/setting/command/delete/?id={id}(id=${command.id})}">Delete</a>
+                    </li>
+                </ul>
+            </div>
+
+            <form method="POST" th:object="${newCommand}" th:action="@{/setting/command/add}">
+                <h5>New Input</h5>
+                <div class="form-row align-items-center">
+                    <div class="col-auto">
+                        <label class="">Label</label>
+                        <input type="text" class="form-control mb-2" th:field="*{label}">
+                    </div>
+                    <div class="col-auto">
+                        <label class="">Command</label>
+                        <input type="text" class="form-control mb-2" th:field="*{command}">
+                    </div>
+                    <div class="col-auto">
+                        <label class="">Order</label>
+                        <input type="text" class="form-control mb-2" th:field="*{order}">
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" style="margin-top:30px;" class="btn btn-primary mb-2">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>.
+
+
     <br/>
-
-    <h3>Inputs</h3>
-
-    <div class="card form-group col-sm-10" th:each="input : ${setting.inputs}">
-        <form class="form-horizontal"   th:object="${input}" th:action="@{/setting/input/update}"  method="post">
-            <div class="card-header" th:text="${input.name}"></div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Name:</label>
-                <div class="col-sm-10">
-                    <input class="form-control" name="name" th:value="${input.name}"/>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Id:</label>
-                <div class="col-sm-10">
-                    <input class="form-control" name="inputId" th:value="${input.inputId}"/>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Type:</label>
-                <div class="col-sm-10">
-                    <select class="form-control" name="type">
-                        <option th:each="type : ${types}"
-                                th:value="${type}"
-                                th:utext="${type}"
-                                th:selected="${input.type == type}"
-                        />
-                    </select>
-                </div>
-            </div>
-
-            <input type="hidden" name="settingId" th:value="${input.settingId}">
-            <input type="hidden" name="id" th:value="${input.id}">
-
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <button class="btn btn-primary" name="action" value="update">Update</button>
-                    <button class="btn btn-danger" name="action" value="delete">Delete</button>
-                </div>
-            </div>
-        </form>
-    </div>
-
-
-    <div class="card form-group col-sm-10">
-        <form class="form-horizontal" th:action="@{/setting/input/add}"  th:object="${newInput}" method="post">
-            <div class="card-header">New Input</div>
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Name:</label>
-                <div class="col-sm-10">
-                    <input class="form-control" th:field="${newInput.name}"/>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Id:</label>
-                <div class="col-sm-10">
-                    <input class="form-control" name="inputId" th:value="${newInput.inputId}"/>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Type:</label>
-                <div class="col-sm-10">
-                    <select class="form-control" th:field="${newInput.type}">
-                        <option th:each="type : ${types}"
-                                th:value="${type}"
-                                th:utext="${type}"/>
-                    </select>
-                </div>
-            </div>
-
-            <input type="hidden" th:field="${newInput.settingId}">
-
-            <div class="form-group">
-                <div class="col-sm-10">
-                    <button class="btn btn-primary">Add</button>
-                </div>
-            </div>
-        </form>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-    </div>
-
-
-
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <div th:insert="~{fragments/footer :: footer}"></div>
+    <script>
+
+    </script>
 </div>
-
 </body>
-
 </html>

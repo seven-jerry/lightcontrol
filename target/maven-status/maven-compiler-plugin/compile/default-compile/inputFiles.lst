@@ -6,20 +6,22 @@
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/config/WebSocketConfig.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/interaction/StateController.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/arduino/ThriPredicate.java
-/Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/master/MasterMain.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/viewcontroller/InteractionController.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/arduino/IConsumer.java
+/Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/viewcontroller/ClientController.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/arduino/HttpConsumer.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/master/ClientStateFetcher.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/arduino/IProducer.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/config/MvcConfig.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/viewmodel/pojo/Command.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/arduino/InputCommand.java
+/Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/viewcontroller/SettingCommandController.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/persist/FilePersistedCollection.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/interaction/Controller.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/viewmodel/pojo/Client.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/arduino/MockArduino.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/arduino/ILIfeCycleExposable.java
+/Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/interaction/InputControl.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/arduino/IReadUpdateable.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/arduino/HttpPollingProducer.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/service/SerialService.java
@@ -27,6 +29,7 @@
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/service/PersistenceService.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/viewcontroller/Index.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/persist/IIdProvider.java
+/Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/arduino/ThriConsumer.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/arduino/StateCommand.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/service/LifeCycleService.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/arduino/SerialSources.java
@@ -42,6 +45,7 @@
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/util/ErrorForwardingConsumer.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/util/DateFormatter.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/master/SettingManager.java
+/Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/viewmodel/pojo/ClientState.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/persist/FilePersistedObject.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/arduino/IStateHolder.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/viewcontroller/SourceController.java
@@ -50,6 +54,7 @@
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/persist/IObjectPersistable.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/viewcontroller/CommandController.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/persist/IPersistable.java
+/Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/viewcontroller/MockStateEndpoint.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/viewmodel/pojo/Input.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/viewmodel/InputType.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/SpringMain.java

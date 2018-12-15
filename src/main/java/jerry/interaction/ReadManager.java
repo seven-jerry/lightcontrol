@@ -5,6 +5,7 @@ import jerry.service.PersistenceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicReference;
 
 @Component
@@ -17,9 +18,11 @@ public class ReadManager implements IReadUpdateable, ILIfeCycleExposable {
     @Autowired
     PersistenceService service;
 
+    private InputControl inputControl = InputControl.AUTO;
+
     private InputCommand command;
 
-    private AtomicReference<StateArray> state = new AtomicReference<>(new StateArray(0,0,0));
+    private AtomicReference<StateArray> state = new AtomicReference<>(new StateArray(0, 0, 0));
 
     @Override
     public void startLifecycle() throws RuntimeException {
@@ -36,18 +39,29 @@ public class ReadManager implements IReadUpdateable, ILIfeCycleExposable {
         int currentState = state.get().stateHashCode();
         int nextState = message.stateHashCode();
         state.set(message);
-        System.out.println("currentState : "+currentState + " nextState : "+nextState);
-        if(currentState != nextState) {
-            command.testCondition(message).ifPresent(e -> notifier.produceOnce(e.getCommand()));
+        System.out.println("currentState : " + currentState + " nextState : " + nextState);
+        if (currentState != nextState) {
+
+            command.testCondition(message, notifier.lastUpdated(),inputControl).ifPresent(e -> notifier.produceOnce(e.getCommand()));
         }
     }
 
-    public StateArray getLastState(){
+    public StateArray getLastState() {
         return this.state.get();
     }
+
     @Override
     public void handleError(String message) {
-        System.out.println("Error :"+message);
+        System.out.println("Error :" + message);
         command.resetCondition();
+    }
+
+
+    public InputControl getInputControl() {
+        return inputControl;
+    }
+
+    public void setInputControl(InputControl inputControl) {
+        this.inputControl = Objects.requireNonNull(inputControl);
     }
 }

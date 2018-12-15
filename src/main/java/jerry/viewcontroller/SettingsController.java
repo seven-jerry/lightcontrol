@@ -2,6 +2,7 @@ package jerry.viewcontroller;
 
 import jerry.arduino.InputCommand;
 import jerry.arduino.SerialSources;
+import jerry.interaction.InputControl;
 import jerry.viewmodel.InputType;
 import jerry.service.PersistenceService;
 import jerry.service.SerialService;
@@ -41,6 +42,7 @@ public class SettingsController {
         model.addAttribute("ports", SerialService.allSerialPorts());
         model.addAttribute("sources", SerialSources.values());
         model.addAttribute("inputCommands", InputCommand.values());
+        model.addAttribute("inputControls", InputControl.values());
         return "setting/detail";
     }
 
@@ -53,7 +55,8 @@ public class SettingsController {
                 s.setColumns(setting.getColumns());
                 s.setOutside(setting.getOutside());
                 s.setInputCommand(setting.getInputCommand());
-
+                s.setMasterUrl(setting.getMasterUrl());
+                s.setControl(setting.getControl());
             });
         return this.details(model);
     }

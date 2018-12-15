@@ -1,9 +1,6 @@
 package jerry.service;
 
-import jerry.viewmodel.pojo.Client;
-import jerry.viewmodel.pojo.Command;
-import jerry.viewmodel.pojo.Input;
-import jerry.viewmodel.pojo.Setting;
+import jerry.viewmodel.pojo.*;
 import jerry.persist.*;
 import org.springframework.stereotype.Service;
 
@@ -80,4 +77,5 @@ public class PersistenceService {
     public void removeClient(String id) {
         clientPersist.removeEntryById(Integer.valueOf(id));
     }
+
 }

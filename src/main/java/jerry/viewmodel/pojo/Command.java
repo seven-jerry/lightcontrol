@@ -10,9 +10,6 @@ public class Command implements IIdProvider ,Comparable<Command>{
     private Integer id;
     private String command;
     private String label;
-
-
-
     private Integer order = 0;
 
     public static Command withDefaults() {

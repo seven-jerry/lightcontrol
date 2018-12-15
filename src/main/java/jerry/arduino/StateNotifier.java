@@ -4,7 +4,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.function.Consumer;
@@ -13,7 +12,8 @@ import java.util.function.Consumer;
 public class StateNotifier extends Thread implements IReadUpdateable, ILIfeCycleExposable {
     private BlockingQueue<IConsumer> queueConsumer = new ArrayBlockingQueue<>(10);
     private AtomicReference<String> lastRead = new AtomicReference<>("");
-    private AtomicInteger integer = new AtomicInteger(0);
+    private AtomicInteger lastUpdated = new AtomicInteger(0);
+
     private boolean started;
 
     public void addConsumer(IConsumer consumer) {
@@ -41,10 +41,6 @@ public class StateNotifier extends Thread implements IReadUpdateable, ILIfeCycle
             if (array == null) {
                 continue;
             }
-            if (array.toString().equals(lastRead.get()) && integer.incrementAndGet() < 10) {
-                //continue;
-            }
-            integer.set(0);
             lastRead.set(array.toString());
             for (IConsumer consumer : queueConsumer) {
                 writeToConsumer(consumer, array);
@@ -59,9 +55,13 @@ public class StateNotifier extends Thread implements IReadUpdateable, ILIfeCycle
             }
         }
     }
+    public Integer lastUpdated(){
+        return lastUpdated.get();
+    }
 
-    public void produceOnce(String payload) {
+    public Integer produceOnce(String payload) {
         this.onWrite.accept(payload);
+        return lastUpdated.incrementAndGet();
     }
 
     @Override

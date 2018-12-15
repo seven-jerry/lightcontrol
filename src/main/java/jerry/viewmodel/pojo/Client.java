@@ -7,8 +7,16 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Client implements IIdProvider,Comparable<Client>{
     private String ipAddress;
-    private int fetchCycle;
     private Integer id;
+    private String label = "label";
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
+    }
 
     public String getIpAddress() {
         return ipAddress;
@@ -16,14 +24,6 @@ public class Client implements IIdProvider,Comparable<Client>{
 
     public void setIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
-    }
-
-    public int getFetchCycle() {
-        return fetchCycle;
-    }
-
-    public void setFetchCycle(int fetchCycle) {
-        this.fetchCycle = fetchCycle;
     }
 
     @Override

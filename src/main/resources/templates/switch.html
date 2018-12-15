@@ -2,11 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <div th:replace="~{fragments/header :: head}"></div>
-  
-   <!-- <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-<script src="../../static/js/script.js"></script>!-->
+
     <style>
         .loader {
             border: 6px solid #f3f3f3; /* Light grey */
@@ -21,24 +17,42 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        .white{
+            color:white !important;
+            background-color: rgba(255,255,255,0.1);
+            margin : 3px ;
+            padding:3px;
+        }
     </style>
 </head>
 
 <body>
     <!-- As a heading -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#" th:href="@{/}">Light Control</a>
+    <nav class="navbar navbar-expand-lg fixed-bottom navbar-light bg-dark">
+        <a class="navbar-brand white" href="#" th:href="@{/}">Light Control</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto" id="commandWrapper">
-                <li><div id="loader" class="loader"></div></li>
-                <li>Außen : <div id="outside"></div></li>
+                <li><div id="loader" class="loader white"></div></li>
+                <li class="white">Außen : <div id="outside"></div></li>
             </ul>
-
         </div>
+
+        <form class="form-inline" method="POST" th:if="${inputControl != null}" th:object="${inputControl}"
+              th:action="@{/switch/inputcontrol/set}">
+            <select class="form-control" name="control">
+                <option th:each="control : ${inputControls}"
+                        th:value="${control}"
+                        th:utext="${control}"
+                        th:selected="${control == inputControl}"
+                ></option>
+            </select>
+            <button class="btn btn-outline-info white" style="margin-left: 10px;" type="submit">OK</button>
+        </form>
+
     </nav>
 
 

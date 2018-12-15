@@ -1,5 +1,7 @@
 package jerry.arduino;
 
+import jerry.viewmodel.pojo.Input;
+
 import java.util.Objects;
 
 
@@ -16,6 +18,36 @@ public class StateArray {
         this.o = o;
         this.state = new int[x][y];
         this.outsideState = new int[o];
+    }
+
+    public StateArray(String state){
+        int o = 0;
+        int x = 0;
+        int y = 0;
+        String stateString = state + "";
+        while (stateString.length() > 2) {
+            char c = stateString.charAt(0);
+            if (c == 'o') {
+                o++;
+                stateString = stateString.substring(3);
+                continue;
+            }
+            int stateStringX = (int) stateString.charAt(0) - '0';
+            int stateStringY = (int) stateString.charAt(1) - '0';
+            if(stateStringX > x){
+                x = stateStringX;
+            }
+            if(stateStringY > y){
+                y = stateStringY;
+            }
+            stateString = stateString.substring(3);
+        }
+        this.x = ++x;
+        this.y = ++y;
+        this.o = o;
+        this.state = new int[x][y];
+        this.outsideState = new int[o];
+        this.update(state);
     }
 
     public StateArray(StateArray array) {
@@ -109,5 +141,13 @@ public class StateArray {
             }
         }
         return false;
+    }
+
+    public void walk(ThriConsumer<Integer, Integer,Integer> consumer) {
+        for (int i = 0; i < state.length; i = i + 1) {
+            for (int j = 0; j < state[i].length; j++) {
+                consumer.accept(i,j,state[i][j]);
+            }
+        }
     }
 }

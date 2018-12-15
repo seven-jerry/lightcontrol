@@ -11,8 +11,8 @@ var outSideHigh= 0;
 var outSideLow= 0;
 
 
-var template = '<li class="nav-item">';
-template += '<a class="nav-link" href="#" onclick="writeAction(\'{command}\')">{label}</a>';
+var template = '<li class="nav-item white">';
+template += '<a class="nav-link white" href="#" onclick="writeAction(\'{command}\')">{label}</a>';
 template += '</li>';
 
 

@@ -3,12 +3,15 @@ jerry/interaction/StateController$Builder.class
 jerry/interaction/Controller$InputTimer.class
 jerry/viewmodel/pojo/Command.class
 jerry/arduino/WebSocketComsumer.class
+jerry/viewcontroller/MockStateEndpoint.class
 jerry/interaction/ReadManager.class
 jerry/viewmodel/pojo/Setting.class
+jerry/arduino/ThriConsumer.class
 jerry/arduino/MockArduino.class
 jerry/viewcontroller/InteractionController.class
 jerry/persist/IIdProvider.class
 jerry/arduino/IReadUpdateable.class
+jerry/viewcontroller/ClientController.class
 jerry/viewcontroller/WebSocketController.class
 jerry/arduino/IConsumer.class
 jerry/viewmodel/pojo/Input.class
@@ -21,10 +24,12 @@ jerry/interaction/Controller$HeartBeatTimer.class
 jerry/persist/FilePersistedCollection.class
 jerry/arduino/IReadStateUpdateable.class
 jerry/arduino/StateArray.class
+jerry/interaction/InputControl.class
 jerry/arduino/StateCommand.class
 jerry/config/SimpleCORSFilter.class
 jerry/viewcontroller/MasterController.class
 jerry/interaction/Controller$InputTimer$1.class
+jerry/viewcontroller/SettingCommandController.class
 jerry/arduino/Arduino.class
 jerry/arduino/ISerialSource.class
 jerry/master/ClientStateFetcher.class
@@ -44,7 +49,6 @@ jerry/persist/AbstractFilePersisted.class
 jerry/arduino/IProducer.class
 jerry/util/DateFormatter.class
 jerry/service/LifeCycleService.class
-jerry/master/MasterMain.class
 jerry/arduino/IStateHolder.class
 jerry/persist/IPersistable.class
 jerry/persist/FilePersistedObject.class
@@ -56,6 +60,7 @@ jerry/viewmodel/pojo/Client.class
 jerry/interaction/StateController.class
 jerry/persist/IObjectPersistable.class
 jerry/interaction/ReadWriteThread.class
+jerry/viewmodel/pojo/ClientState.class
 jerry/interaction/Controller$1.class
 jerry/arduino/ThriPredicate.class
 jerry/arduino/StateNotifier.class

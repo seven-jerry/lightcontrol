@@ -6,7 +6,7 @@
 
     <groupId>jerryhome</groupId>
     <artifactId>lightcontrol</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -189,6 +189,13 @@
             <properties>
                 <repo-id>eating</repo-id>
                 <repo-url>ftp://192.168.1.100/home/pi/Desktop</repo-url>
+            </properties>
+        </profile>
+        <profile>
+            <id>master</id>
+            <properties>
+                <repo-id>master</repo-id>
+                <repo-url>ftp://192.168.1.30/home/pi/Desktop</repo-url>
             </properties>
         </profile>
     </profiles>

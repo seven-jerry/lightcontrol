@@ -37,21 +37,21 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto" id="commandWrapper">
                 <li><div id="loader" class="loader white"></div></li>
+                <li style="color:white;" id="updateMessage"></li>
                 <li class="white">Außen : <div id="outside"></div></li>
+                <li id="formEl"><form style="padding:2px;" class="form-inline" method="POST" th:if="${inputControl != null}" th:object="${inputControl}"
+                          th:action="@{/switch/inputcontrol/set}">
+                    <select class="form-control" name="control">
+                        <option th:each="control : ${inputControls}"
+                                th:value="${control}"
+                                th:utext="${control}"
+                                th:selected="${control == inputControl}">
+                        </option>
+                    </select>
+                    <button class="btn btn-outline-info white" style="margin-left: 10px;" type="submit">OK</button>
+                </form></li>
             </ul>
         </div>
-
-        <form class="form-inline" method="POST" th:if="${inputControl != null}" th:object="${inputControl}"
-              th:action="@{/switch/inputcontrol/set}">
-            <select class="form-control" name="control">
-                <option th:each="control : ${inputControls}"
-                        th:value="${control}"
-                        th:utext="${control}"
-                        th:selected="${control == inputControl}"
-                ></option>
-            </select>
-            <button class="btn btn-outline-info white" style="margin-left: 10px;" type="submit">OK</button>
-        </form>
 
     </nav>
 

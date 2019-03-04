@@ -10,12 +10,10 @@ import java.util.function.Consumer;
 
 public class FilePersistedObject<T> extends AbstractFilePersisted<T> implements IObjectPersistable<T> {
     protected File file;
-    public FilePersistedObject(String filePath,Class<T> tClass) {
+    public FilePersistedObject(String folder,String filePath,Class<T> tClass) {
+        super(folder);
         file = parentToBaseDirectoryLocatedFile(filePath);
         this.clazz = tClass;
-    }
-
-    public FilePersistedObject() {
     }
 
     @Override

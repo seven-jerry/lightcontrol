@@ -9,11 +9,20 @@ var columns = 0;
 var lastMessage;
 var outSideHigh= 0;
 var outSideLow= 0;
-
+var queue="";
+var sendQueue = false;
+var sendTimeout;
+var sendQueueDelay = 300;
 
 var template = '<li class="nav-item white">';
 template += '<a class="nav-link white" href="#" onclick="writeAction(\'{command}\')">{label}</a>';
 template += '</li>';
+
+hideLoader();
+
+function log(msg){
+    console.log(msg);
+}
 
 
 $(function () {
@@ -39,7 +48,8 @@ function addActions(actions) {
         var action = actions[i];
         var actionTemplate = template.replace("{label}", action.label);
         actionTemplate = actionTemplate.replace("{command}", action.command);
-        $("#commandWrapper").append(actionTemplate);
+
+        $("#formEl").before(actionTemplate);
     }
 }
 
@@ -99,16 +109,26 @@ function doConnect() {
 
     websocket.onclose = function (evt) {
         console.log(evt);
+        error("closed connection");
     };
 
     websocket.onmessage = function (evt) {
-        console.log(evt);
         message(evt.data);
+        message(queue,"#ffffe6");
+        if(queue.length == 0){
+          $("#updateMessage").text("");
+        }
+        if(queue.length > 0){
+            $("#updateMessage").text("Elemente werden übertragen : "+(queue.length / 3));
+            websocket.send(queue);
+            queue = "";
+            hideLoader();
+        }
+
     };
 
     websocket.onerror = function (evt) {
-        console.log(evt);
-        error(evt.data);
+        error("error");
     };
 }
 
@@ -130,15 +150,12 @@ function writeMessage(message) {
 
 
 
-function message(msg) {
-    if (msg.length < (columns * rows) * 3) {
-        return;
-    }
+function message(msg,onColor="#ffc107",offColor="#6c757d") {
+
     outSideHigh = 0;
     outSideLow = 0;
 
     lastMessage = msg;
-    hideLoader();
     while (msg.length > 0) {
         var xChar = msg.charAt(0);
         if(xChar == 'o'){
@@ -151,11 +168,11 @@ function message(msg) {
 
         var key = "#light" + x + y + "";
         if (s == 0) {
-            $(key).css("background-color", "#6c757d");
+            $(key).css("background-color", offColor);
             $(key).attr('onclick', 'change(' + x + ',' + y + ',' + 1 + ');');
         }
         else if (s == 1) {
-            $(key).css("background-color", "#ffc107");
+            $(key).css("background-color", onColor);
             $(key).attr('onclick', 'change(' + x + ',' + y + ',' + 0 + ');');
 
         }
@@ -166,7 +183,6 @@ function message(msg) {
         }
         msg = msg.substr(3);
     }
-    changeAll();
     updateOutside();
 }
 
@@ -184,41 +200,50 @@ function proccessOutsideState(msg){
 
 function change(row, column, value) {
     var obj = "" + row + "" + column + "" + value + "";
+
     var key = "#light" + row + column + "";
-    expectedState.push(obj);
+     log("change :"+obj);
+
     $(key).css("background-color", "#ffffe6");
     showLoader();
-    websocket.send(obj);
+
+     var counter = 0;
+     var index = queue.indexOf(obj,counter);
+     while(index != -1){
+        if(index % 3 == 0){
+        return;
+        }
+        var tmp = index;
+        counter = index;
+        index = queue.indexOf(obj,tmp);
+     }
+
+    queue += obj;
+    $("#updateMessage").text("Puffer : "+(queue.length / 3));
+
 }
 
-function changeAll() {
-    for(var i in expectedState){
-        var obj = expectedState[i];
-        if(lastMessage.includes(obj)){
-            expectedState.shift();
-            continue;
-        }
-        $(obj).css("background-color", "#ffffe6");
-    }
-    if(expectedState.length > 0){
-        showLoader();
-    }
-    if(expectedState.length === 0){
-        hideLoader();
-    }
-}
 
 function updateOutside(){
     $("#outside").text("Ein: "+outSideHigh+ " Aus: "+outSideLow);
 }
 function writeAction(action) {
+    clearTimeout(sendTimeout);
+     queue = "";
+     hideLoader();
+     sendQueue = false;
     websocket.send(action);
+
 }
 
 
 function error(err) {
     console.log(err);
+    alert(err);
+    setTimeout(
+    function(){
     location.reload();
+    },60);
 }
 
 

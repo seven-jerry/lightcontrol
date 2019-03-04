@@ -2,8 +2,10 @@ package jerry.service;
 
 import jerry.viewmodel.pojo.*;
 import jerry.persist.*;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -12,10 +14,21 @@ import java.util.function.Consumer;
 
 @Service
 public class PersistenceService {
-    IObjectPersistable<Setting> settingPersist = new FilePersistedObject<Setting>("/setting.xml", Setting.class);
-    ICollectionPersistable<Input> inputPersist = new FilePersistedCollection<Input>("/input/", Input.class, "input", "xml");
-    ICollectionPersistable<Command> commandPersist = new FilePersistedCollection<Command>("/command/", Command.class, "command", "xml");
-    ICollectionPersistable<Client> clientPersist = new FilePersistedCollection<Client>("/client/", Client.class, "client", "xml");
+    IObjectPersistable<Setting> settingPersist;
+    ICollectionPersistable<Input> inputPersist;
+    ICollectionPersistable<Command> commandPersist;
+    ICollectionPersistable<Client> clientPersist;
+    @Value("${base.folder}")
+    public String settingsFolder;
+
+    @PostConstruct
+    public void init(){
+         settingPersist = new FilePersistedObject<Setting>(settingsFolder,"/setting.xml", Setting.class);
+        inputPersist = new FilePersistedCollection<Input>(settingsFolder,"/input/", Input.class, "input", "xml");
+        commandPersist = new FilePersistedCollection<Command>(settingsFolder,"/command/", Command.class, "command", "xml");
+        clientPersist = new FilePersistedCollection<Client>(settingsFolder,"/client/", Client.class, "client", "xml");
+    }
+
 
     public Setting getSetting() {
         Optional<Setting> optionalSetting = settingPersist.get();

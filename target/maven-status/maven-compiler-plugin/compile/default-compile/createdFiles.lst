@@ -42,6 +42,7 @@ jerry/service/PersistenceService.class
 jerry/viewcontroller/Index.class
 jerry/util/ErrorForwardingConsumer.class
 jerry/viewcontroller/CommandController.class
+jerry/persist/IFolderChangeable.class
 jerry/arduino/WebsockerProducer.class
 jerry/arduino/MockArduino$MockStream.class
 jerry/arduino/IStateUpdateable.class

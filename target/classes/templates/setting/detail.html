@@ -34,6 +34,16 @@
         </div>
 
         <div class="form-group">
+            <label th:for="rows">Min Brightness</label>
+            <input class="form-control" type="number" th:field="*{minBrightness}">
+        </div>
+
+        <div class="form-group">
+            <label th:for="rows">Max Brightness</label>
+            <input class="form-control" type="number" th:field="*{maxBrightness}">
+        </div>
+
+        <div class="form-group">
             <label th:for="rows">Automatisch schalten</label>
             <select class="form-control mb-2" name="control">
                 <option th:each="control : ${inputControls}"
@@ -201,7 +211,7 @@
             </div>
 
             <form method="POST" th:object="${newCommand}" th:action="@{/setting/command/add}">
-                <h5>New Input</h5>
+                <h5>New Command</h5>
                 <div class="form-row align-items-center">
                     <div class="col-auto">
                         <label class="">Label</label>

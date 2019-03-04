@@ -45,6 +45,7 @@
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/util/ErrorForwardingConsumer.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/util/DateFormatter.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/master/SettingManager.java
+/Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/persist/IFolderChangeable.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/viewmodel/pojo/ClientState.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/persist/FilePersistedObject.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/arduino/IStateHolder.java

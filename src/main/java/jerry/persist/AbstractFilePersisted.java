@@ -8,13 +8,24 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 
-public abstract class AbstractFilePersisted<T> {
+public abstract class AbstractFilePersisted<T> implements IFolderChangeable{
     protected Class<T> clazz;
+
+    protected String folder;
+
+    AbstractFilePersisted(String folder){
+        this.folder = folder;
+    }
+
+
+    public void setFolder(String folder){
+        this.folder = folder;
+    }
 
     File toBaseDirectoryLocatedFile(String path) {
         if (!path.endsWith("/")) path += "/";
         if (!path.startsWith("/")) path = "/" + path;
-        File f = new File(System.getProperty("user.home") + "/jerryHome/v1.1" + path);
+        File f = new File( folder+ "/jerryHome/v1.1" + path);
         f.toPath().toFile().mkdirs();
         return f;
     }
@@ -22,7 +33,7 @@ public abstract class AbstractFilePersisted<T> {
     File parentToBaseDirectoryLocatedFile(String path) {
         if (!path.endsWith("/")) path += "/";
         if (!path.startsWith("/")) path = "/" + path;
-        File f = new File(System.getProperty("user.home") + "/jerryHome/v1.1" + path);
+        File f = new File(folder + "/jerryHome/v1.1" + path);
         f.toPath().getParent().toFile().mkdirs();
         return f;
     }

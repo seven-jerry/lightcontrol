@@ -2,6 +2,8 @@ package jerry.arduino;
 
 import jerry.viewmodel.pojo.Input;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 
@@ -11,6 +13,7 @@ public class StateArray {
     private int x;
     private int y;
     private int o = 0;
+    private Map<String,String> analogInputs = new HashMap<>();
 
     public StateArray(int x, int y, int o) {
         this.x = x;
@@ -20,7 +23,7 @@ public class StateArray {
         this.outsideState = new int[o];
     }
 
-    public StateArray(String state){
+    public StateArray(String state) {
         int o = 0;
         int x = 0;
         int y = 0;
@@ -34,10 +37,10 @@ public class StateArray {
             }
             int stateStringX = (int) stateString.charAt(0) - '0';
             int stateStringY = (int) stateString.charAt(1) - '0';
-            if(stateStringX > x){
+            if (stateStringX > x) {
                 x = stateStringX;
             }
-            if(stateStringY > y){
+            if (stateStringY > y) {
                 y = stateStringY;
             }
             stateString = stateString.substring(3);
@@ -64,7 +67,8 @@ public class StateArray {
             }
         }
         System.arraycopy(array.outsideState, 0, this.outsideState, 0, o);
-    }
+        this.analogInputs = array.analogInputs;
+;    }
 
     public void setState(String stateString) {
         Objects.requireNonNull(stateString, "the state string must nt be null");
@@ -101,11 +105,12 @@ public class StateArray {
     }
 
     private void update(String stateString) {
-        if (stateString.length() < (x * y) * 3) {
-            throw  new IllegalArgumentException("the state string was not long enough");
-        }
         while (stateString.length() > 2) {
             char c = stateString.charAt(0);
+            if (c == 'A') {
+                stateString = stateString.substring(1);
+                break;
+            }
             if (c == 'o') {
                 int y = (int) stateString.charAt(1) - '0';
                 int s = (int) stateString.charAt(2) - '0';
@@ -119,16 +124,38 @@ public class StateArray {
             state[x][y] = s;
             stateString = stateString.substring(3);
         }
+        updateAnalog(stateString);
+    }
+
+    private synchronized void updateAnalog(String stateString) {
+        while (stateString.indexOf(':') != -1) {
+            int keyIndex=stateString.indexOf(':');
+            int delimiter = stateString.indexOf(',');
+            String key = stateString.substring(0,keyIndex);
+            if(delimiter == -1){
+                String value = stateString.substring(keyIndex+1);
+                analogInputs.put(key,value);
+                break;
+            }
+            String value = stateString.substring(keyIndex+1,delimiter);
+            stateString = stateString.substring(delimiter+1);
+            analogInputs.put(key,value);
+        }
+    }
+
+    public synchronized Map<String,String> getAnalogInputs(){
+        return this.analogInputs;
     }
 
 
     public int stateHashCode() {
-        StringBuilder builder = new StringBuilder(this.x*this.y);
+        StringBuilder builder = new StringBuilder(this.x * this.y);
         for (int i = 0; i < state.length; i = i + 1) {
             for (int j = 0; j < state[i].length; j++) {
                 builder.append(state[i][j]);
             }
         }
+        this.analogInputs.forEach((k,v) -> {builder.append(k);builder.append(v);});
         return builder.toString().hashCode();
     }
 
@@ -142,11 +169,20 @@ public class StateArray {
         }
         return false;
     }
+    public Map<String,String> asMap() {
+        HashMap<String, String> map = new HashMap<>();
 
-    public void walk(ThriConsumer<Integer, Integer,Integer> consumer) {
         for (int i = 0; i < state.length; i = i + 1) {
             for (int j = 0; j < state[i].length; j++) {
-                consumer.accept(i,j,state[i][j]);
+                map.put(i + "" + j, "" + state[i][j]);
+            }
+        }
+        return map;
+    }
+    public void walk(ThriConsumer<Integer, Integer, Integer> consumer) {
+        for (int i = 0; i < state.length; i = i + 1) {
+            for (int j = 0; j < state[i].length; j++) {
+                consumer.accept(i, j, state[i][j]);
             }
         }
     }

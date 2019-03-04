@@ -3,6 +3,7 @@ package jerry.viewcontroller;
 import jerry.arduino.InputCommand;
 import jerry.arduino.SerialSources;
 import jerry.interaction.InputControl;
+import jerry.interaction.ReadManager;
 import jerry.viewmodel.InputType;
 import jerry.service.PersistenceService;
 import jerry.service.SerialService;
@@ -22,14 +23,17 @@ public class SettingsController {
     @Autowired
     jerry.interaction.Controller lifeCycleController;
 
+    @Autowired
+    ReadManager manager;
+
 
     @GetMapping("")
     public String index(Model model) {
         model.addAttribute("setting", persistenceService.getSetting());
-
-            if(!model.containsAttribute("info")) {
+        if(!model.containsAttribute("info")) {
             model.addAttribute("info", "controller has started :" + lifeCycleController.hasStarted());
         }
+        model.addAttribute("inputState",manager.getLastState());
         return "setting";
     }
 

@@ -36,15 +36,22 @@ public class StateNotifier extends Thread implements IReadUpdateable, ILIfeCycle
 
     @Override
     public void run() {
-        while (true) {
-            StateArray array = readQueue.poll();
-            if (array == null) {
-                continue;
+        try {
+
+            while (true) {
+                StateArray array = null;
+                while ((array = readQueue.poll()) == null) {
+                    Thread.sleep(100);
+
+                }
+
+                lastRead.set(array.toString());
+                for (IConsumer consumer : queueConsumer) {
+                    writeToConsumer(consumer, array);
+                }
             }
-            lastRead.set(array.toString());
-            for (IConsumer consumer : queueConsumer) {
-                writeToConsumer(consumer, array);
-            }
+        } catch (InterruptedException e){
+            Thread.currentThread().interrupt();
         }
     }
 

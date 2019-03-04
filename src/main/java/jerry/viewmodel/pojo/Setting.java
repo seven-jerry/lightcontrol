@@ -16,19 +16,9 @@ public class Setting {
     private InputCommand inputCommand;
     private String masterUrl;
     private InputControl control;
-
-    public InputCommand getInputCommand() {
-        return inputCommand;
-    }
-
-    public void setInputCommand(InputCommand inputCommand) {
-        this.inputCommand = inputCommand;
-    }
-
-    Setting() {
-        this.outputSource = new SerialSource();
-        this.inputSource = new SerialSource();
-    }
+    private int minBrightness;
+    private int maxBrightness;
+    private int userBrightness;
 
     @XmlTransient
     private List<Input> inputs = new ArrayList<>();
@@ -38,6 +28,22 @@ public class Setting {
     private SerialSource outputSource;
 
     private SerialSource inputSource;
+
+
+    Setting() {
+        this.outputSource = new SerialSource();
+        this.inputSource = new SerialSource();
+    }
+
+
+
+    public void setInputCommand(InputCommand inputCommand) {
+        this.inputCommand = inputCommand;
+    }
+
+    public InputCommand getInputCommand() {
+        return inputCommand;
+    }
 
     public Integer getRows() {
         return rows;
@@ -114,7 +120,9 @@ public class Setting {
         s.rows = 0;
         s.columns = 0;
         s.outside = 0;
-        s.masterUrl = "http://localhost:8090";
+        s.minBrightness = 0;
+        s.maxBrightness = 0;
+        s.masterUrl = "http://localhost";
         return s;
     }
 
@@ -152,5 +160,21 @@ public class Setting {
 
     public void setControl(InputControl control) {
         this.control = control;
+    }
+
+    public int getMinBrightness() {
+        return minBrightness;
+    }
+
+    public void setMinBrightness(int minBrightness) {
+        this.minBrightness = minBrightness;
+    }
+
+    public int getMaxBrightness() {
+        return maxBrightness;
+    }
+
+    public void setMaxBrightness(int maxBrightness) {
+        this.maxBrightness = maxBrightness;
     }
 }

@@ -27,6 +27,7 @@ public class ReadWriteThread extends Thread implements ILIfeCycleExposable {
     public BlockingQueue<String> ouputQueue = new ArrayBlockingQueue<>(10);
 
 
+
     public ReadWriteThread(ISerialSource inputSource,
                            ISerialSource outputSource, IReadStateUpdateable updatable) {
         this.inputSource = inputSource;
@@ -74,7 +75,6 @@ public class ReadWriteThread extends Thread implements ILIfeCycleExposable {
 
     private boolean readFromSource(ISerialSource source, Consumer<String> callback) throws IOException {
         StringBuilder builder = new StringBuilder();
-        System.out.println("avail : " + source.getInputStream().available());
         while (source.getInputStream().available() > 0) {
             char readChar = (char)source.getInputStream().read();
             if (startOfMessage(readChar)) {
@@ -85,7 +85,6 @@ public class ReadWriteThread extends Thread implements ILIfeCycleExposable {
                 try {
                     if (!builder.toString().equals(ISerialSource.WRITE_SUCCEEDED)) {
                         callback.accept(builder.toString());
-                        System.out.println("read : "+builder.toString());
                     }
                     return false;
                 } catch (RuntimeException e) {
@@ -105,9 +104,6 @@ public class ReadWriteThread extends Thread implements ILIfeCycleExposable {
                 }
 
         );
-        if(value != null) {
-            System.out.println("write : " + value);
-        }
         return value != null;
     }
 

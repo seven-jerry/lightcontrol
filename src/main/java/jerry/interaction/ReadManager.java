@@ -3,8 +3,14 @@ package jerry.interaction;
 import jerry.arduino.*;
 import jerry.service.PersistenceService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.nio.file.Files;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -17,6 +23,10 @@ public class ReadManager implements IReadUpdateable, ILIfeCycleExposable {
 
     @Autowired
     PersistenceService service;
+
+    @Value("${base.folder}")
+    public String settingsFolder;
+
 
     private InputControl inputControl = InputControl.AUTO;
 
@@ -39,10 +49,23 @@ public class ReadManager implements IReadUpdateable, ILIfeCycleExposable {
         int currentState = state.get().stateHashCode();
         int nextState = message.stateHashCode();
         state.set(message);
-        System.out.println("currentState : " + currentState + " nextState : " + nextState);
+        writeToDisk(message);
         if (currentState != nextState) {
-
             command.testCondition(message, notifier.lastUpdated(),inputControl).ifPresent(e -> notifier.produceOnce(e.getCommand()));
+        }
+    }
+
+    private void writeToDisk(StateArray message){
+        try {
+            File file = new File(settingsFolder+"/analogstate.log");
+            FileWriter fr = new FileWriter(file, true);
+            for(String k : message.getAnalogInputs().keySet()){
+                String v = message.getAnalogInputs().get(k);
+                fr.append(LocalDateTime.now()+";"+k +";"+ v+";\n");
+            }
+            fr.close();
+        } catch (Exception e){
+            System.out.println(e);
         }
     }
 

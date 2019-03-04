@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:fragment="head" th:remove="tag">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="../../public/css/bootstrap.min.css"
           th:href="@{/webjars/bootstrap/4.1.0/css/bootstrap.min.css}"
@@ -27,19 +28,19 @@
             <ul class="navbar-nav">
 
                 <li class="nav-item" th:classappend="${#httpServletRequest.getRequestURI() == '/' ? 'active':''}">
-                    <a class="nav-link" href="#" th:href="@{/}">Home</a>
+                    <a class="nav-link" href="#" th:href="@{/}">Hauptseite</a>
                 </li>
                 <li class="nav-item" th:classappend="${#httpServletRequest.getRequestURI() == '/master' ? 'active':''}">
-                    <a class="nav-link" href="/switch" th:href="@{/master}">Master</a>
+                    <a class="nav-link" href="/switch" th:href="@{/master}">Alle Zimmer</a>
                 </li>
 
                 <li class="nav-item" th:classappend="${#httpServletRequest.getRequestURI() == '/switch' ? 'active':''}">
-                    <a class="nav-link" href="/switch" th:href="@{/switch}">Switching</a>
+                    <a class="nav-link" href="/switch" th:href="@{/switch}">Einzeln</a>
                 </li>
 
                 <li class="nav-item"
                     th:classappend="${#httpServletRequest.getRequestURI() == '/command' ? 'active':''}">
-                    <a class="nav-link" href="/switch" th:href="@{/command}">Commands</a>
+                    <a class="nav-link" href="/switch" th:href="@{/command}">Befehle</a>
                 </li>
             </ul>
         </div>

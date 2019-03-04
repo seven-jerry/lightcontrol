@@ -12,8 +12,9 @@ public class FilePersistedCollection<T extends IIdProvider&Comparable<T>> extend
     File folder;
     String fileNameTemplate;
 
-    public FilePersistedCollection(String path,Class<T> tClass,String prefix,String potfix){
-        folder =toBaseDirectoryLocatedFile(path);
+    public FilePersistedCollection(String folder,String path,Class<T> tClass,String prefix,String potfix){
+        super(folder);
+        this.folder =toBaseDirectoryLocatedFile(path);
         fileNameTemplate = prefix + "{id}."+potfix;
         clazz = tClass;
    }

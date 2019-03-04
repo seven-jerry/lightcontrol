@@ -3,15 +3,7 @@
 
 <head>
     <div th:replace="~{fragments/header :: head}"></div>
-    <style>
-        @media (max-width: 980px) {
-
-            li {
-                font-size: 4em;
-
-            }
-        }
-    </style>
+    <style></style>
 </head>
 
 <body>
@@ -36,7 +28,7 @@
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item" th:each="client : ${clients}">Client :<span
                                     th:text="${client.ipAddress}"></span>
-                                <span><a th:href="@{/master/remove/?id={id}(id=${client.id})}">Remove</a></span>
+                                <span><a th:href="@{/master/remove/?id={id}(id=${client.id})}">Entfernen</a></span>
                             </li>
                         </ul>
                     </div>
@@ -88,7 +80,7 @@
             </div>
             <hr/>
             <div class="row col-auto">
-                <h1 style="margin-top:20px;">Kommandos</h1>
+                <h1 style="margin-top:20px;">Befehle</h1>
                 <div class="col-lg-12 col-sm-12" id="grid">
                     <ul class="list-group" style="list-style: none" id="clients">
                     </ul>

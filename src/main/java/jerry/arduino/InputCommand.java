@@ -9,6 +9,8 @@ import java.util.function.Predicate;
 public enum InputCommand {
     ONE_HIGH_ALL_LOW_MOTION(InputCommand::oneHigh, StateCommand.MOTION_HIGH, InputCommand::allLow, StateCommand.ALL_LOW),
     IGNORE(InputCommand::oneHigh, StateCommand.HEART_BEAT, InputCommand::allLow, StateCommand.HEART_BEAT);
+
+
     Predicate<StateArray> highCondition;
     StateCommand highCommand;
 

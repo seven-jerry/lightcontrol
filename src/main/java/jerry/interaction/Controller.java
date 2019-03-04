@@ -8,6 +8,7 @@ import jerry.arduino.StateNotifier;
 import jerry.service.PersistenceService;
 import jerry.viewmodel.pojo.Setting;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -20,6 +21,12 @@ public class Controller {
     StateNotifier notifier;
     @Autowired
     ReadManager readManager;
+
+    @Value("${heartbeat.rate}")
+    int heartbeatTime;
+
+    @Value("${input.rate}")
+    int inputRate;
 
     @Autowired
     PersistenceService persistenceService;
@@ -110,21 +117,15 @@ public class Controller {
     }
 
     private class InputTimer extends Timer implements ILIfeCycleExposable {
-        private int waitCycles = 10;
-        private int waitCounter = 0;
 
         @Override
         public void startLifecycle() throws RuntimeException {
             this.scheduleAtFixedRate(new TimerTask() {
                 @Override
                 public void run() {
-                    waitCounter++;
                     Controller.this.readInputs();
-                    if (waitCounter == waitCycles) {
-                        // Controller.this.readManager.getLastState();
-                    }
                 }
-            }, 500, 500);
+            }, 500, Controller.this.inputRate);
         }
 
         @Override
@@ -141,7 +142,7 @@ public class Controller {
                 public void run() {
                     Controller.this.heartBeat();
                 }
-            }, 500, 3000);
+            }, 500, Controller.this.heartbeatTime);
         }
 
         @Override

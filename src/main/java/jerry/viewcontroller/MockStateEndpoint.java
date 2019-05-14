@@ -1,6 +1,6 @@
 package jerry.viewcontroller;
 
-import jerry.arduino.StateArray;
+import jerry.interaction.StateArray;
 import jerry.interaction.ReadManager;
 import jerry.service.PersistenceService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ public class MockStateEndpoint {
 
     @RequestMapping("/setInputState")
     public String setInputState(@RequestParam("state") String state){
-        readManager.handleMessage(new StateArray(state));
+        readManager.handleMessage(StateArray.parseString(state));
         return "OK";
     }
 }

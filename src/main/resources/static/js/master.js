@@ -21,6 +21,11 @@ stateTemplate += '</li>';
 var clientTemplate = '<li style="display: inline"><input type="checkbox" class="sendToClient" name="{id}" checked/><span style="margin-left:5px;">{label}</span></li>';
 
 
+var errorTemplate = '<li class="list-group-item sized" style="margin-top:20px; background-color: #D8000C">';
+errorTemplate += '{label}';
+errorTemplate += '</li>';
+
+
 var lineBreak = "<br/>";
 var clients = [];
 $(function () {
@@ -28,14 +33,28 @@ $(function () {
         $.getJSON(host + "/master/list", function (data) {
             $("#stateWrapper").empty();
             $("#inputWrapper").empty();
+            $("#errors").empty();
+
             commands = [];
-            for (var key in data) {
-                if (data.hasOwnProperty(key)) {
-                    var endpoint = data[key];
+            states = JSON.parse(data.states);
+            errors = JSON.parse(data.errors);
+            last_updated = data.last_updated;
+            $("#date").text(last_updated);
+            for (var key in states) {
+                if (states.hasOwnProperty(key)) {
+                    var endpoint = states[key];
                     updateState(key, endpoint.id, endpoint.state);
-                    updateInputs(key, endpoint.inputs);
+                    updateInputs(key, endpoint.labeledInputs);
                     updateCommands(endpoint.commands);
                     updateClientList(key);
+                }
+            }
+            for (var key in errors) {
+                if (errors.hasOwnProperty(key)) {
+                    var error = errors[key];
+                    var error = errorTemplate.replace("{label}",error);
+                    $("#errors").append(error);
+
                 }
             }
 
@@ -120,16 +139,17 @@ function updateCommands(l_commands) {
     }
 }
 
-function updateInputs(label, msg) {
+function updateInputs(label, obj) {
 
     var inputString = "<span style='font-weight: bold;'>" + label + "</span><hr/>";
-    if (msg == undefined || msg == null) return;
-    while (msg.length > 0) {
-        var x = parseInt(msg.charAt(0));
-        var y = parseInt(msg.charAt(1));
-        var s = parseInt(msg.charAt(2));
-        inputString += " " + y + " => " + s + " " + lineBreak;
-        msg = msg.substr(3);
+    if (obj == undefined || obj == null) return;
+    for (key in obj) {
+        if(!obj.hasOwnProperty(key)){
+            continue;
+        }
+        var value = obj[key];
+
+        inputString += " " + key + " => " + value + " " + lineBreak;
     }
 
     var st = stateTemplate.replace("{label}", inputString);
@@ -152,6 +172,14 @@ function updateClientList(key) {
         t = t.replace("{id}",key);
         $("#clients").append(t);
     }
+}
+
+
+function updateErrors(key) {
+        var t = clientTemplate.replace("{label}",key);
+        t = t.replace("{id}",key);
+        $("#clients").append(t);
+
 }
 
 function additionalWriteParameters() {

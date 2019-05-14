@@ -1,7 +1,5 @@
 package jerry.persist;
 
-import jerry.arduino.ISerialSource;
-
 import java.util.Optional;
 import java.util.function.Consumer;
 

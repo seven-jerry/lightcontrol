@@ -1,6 +1,6 @@
 package jerry.viewcontroller;
 
-import jerry.viewmodel.pojo.SerialSource;
+import jerry.pojo.SerialSource;
 import jerry.service.PersistenceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

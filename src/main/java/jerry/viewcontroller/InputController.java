@@ -1,6 +1,7 @@
 package jerry.viewcontroller;
 
-import jerry.viewmodel.pojo.Input;
+import jerry.service.ClientStateRepository;
+import jerry.pojo.Input;
 import jerry.service.PersistenceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,6 +16,9 @@ public class InputController {
 
     @Autowired
     PersistenceService persistenceService;
+
+    @Autowired
+    ClientStateRepository clientStateRepository;
 
     @PostMapping(value = "/add")
     public String addInput(@ModelAttribute Input input, Model model) {

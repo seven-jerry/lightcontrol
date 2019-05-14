@@ -33,15 +33,6 @@
             <input class="form-control" type="text" th:field="*{masterUrl}">
         </div>
 
-        <div class="form-group">
-            <label th:for="rows">Min Brightness</label>
-            <input class="form-control" type="number" th:field="*{minBrightness}">
-        </div>
-
-        <div class="form-group">
-            <label th:for="rows">Max Brightness</label>
-            <input class="form-control" type="number" th:field="*{maxBrightness}">
-        </div>
 
         <div class="form-group">
             <label th:for="rows">Automatisch schalten</label>
@@ -171,7 +162,7 @@
                         <input type="text" class="form-control mb-2" th:field="*{name}">
                     </div>
                     <div class="col-auto">
-                        <label class="">Id</label>
+                        <label class="">Source Id</label>
                         <input type="text" class="form-control mb-2" th:field="*{sourceId}">
                     </div>
                     <div class="col-auto">
@@ -231,7 +222,54 @@
                 </div>
             </form>
         </div>
-    </div>.
+    </div>
+
+
+
+
+    <div class="card" style="margin-top:20px;">
+        <h4 class="card-header">State Command Overwrites</h4>
+        <div style="margin-left:10px;">
+            <h5 style="margin-top:10px;">list</h5>
+            <div th:if="${!stateCommandOverwrites.isEmpty()}">
+                <ul th:each="overwrite : ${stateCommandOverwrites}">
+                    <li style="display:inline">Label : <span th:text="${overwrite.getCommand()}"></span></li>
+                    <li style="display:inline">Command : <span th:text="${overwrite.getOverwrite()}"></span></li>
+                    <li style="display:inline"><a
+                            th:href="@{/setting/statecontroloverwrite/delete/?id={id}(id=${overwrite.id})}">Delete</a>
+                    </li>
+                </ul>
+            </div>
+
+            <form method="POST" th:object="${newStateCommandOverwrite}" th:action="@{/setting/statecontroloverwrite/add}">
+                <h5>New Sate Command Overwrite</h5>
+                <div class="form-row align-items-center">
+
+                    <div class="col-auto">
+                        <label class="">Command</label>
+                        <select class="form-control mb-2" name="command">
+                            <option th:each="command : ${stateCommands}"
+                                    th:value="${command}"
+                                    th:utext="${command}"
+                            ></option>
+                        </select>
+                    </div>
+
+
+                    <div class="col-auto">
+                        <label class="">Label</label>
+                        <input type="text" class="form-control mb-2" th:field="*{overwrite}">
+                    </div>
+
+
+
+                    <div class="col-auto">
+                        <button type="submit" style="margin-top:30px;" class="btn btn-primary mb-2">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
 
     <br/>

@@ -1,14 +1,13 @@
 package jerry.viewcontroller;
 
-import jerry.arduino.InputCommand;
-import jerry.arduino.SerialSources;
-import jerry.interaction.InputControl;
-import jerry.interaction.ReadManager;
-import jerry.viewmodel.InputType;
+import jerry.interaction.*;
+import jerry.device.SerialSources;
+import jerry.pojo.InputType;
 import jerry.service.PersistenceService;
 import jerry.service.SerialService;
-import jerry.viewmodel.pojo.Setting;
+import jerry.pojo.Setting;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -21,19 +20,19 @@ public class SettingsController {
     PersistenceService persistenceService;
 
     @Autowired
-    jerry.interaction.Controller lifeCycleController;
+    @Qualifier("contextAdjustingInteractionManager")
+    AbstractInteractionManager lifeCycleClientInteractionManager;
 
     @Autowired
-    ReadManager manager;
-
+    EventHandler eventHandler;
 
     @GetMapping("")
     public String index(Model model) {
         model.addAttribute("setting", persistenceService.getSetting());
-        if(!model.containsAttribute("info")) {
-            model.addAttribute("info", "controller has started :" + lifeCycleController.hasStarted());
+        if (!model.containsAttribute("info")) {
+            model.addAttribute("info", "has started :" + lifeCycleClientInteractionManager.hasStarted());
         }
-        model.addAttribute("inputState",manager.getLastState());
+        model.addAttribute("events", eventHandler.getAllEvents());
         return "setting";
     }
 
@@ -47,6 +46,11 @@ public class SettingsController {
         model.addAttribute("sources", SerialSources.values());
         model.addAttribute("inputCommands", InputCommand.values());
         model.addAttribute("inputControls", InputControl.values());
+
+        model.addAttribute("stateCommands", StateCommand.values());
+        model.addAttribute("stateCommandOverwrites", persistenceService.getStateCommandOverwrites());
+        model.addAttribute("newStateCommandOverwrite", persistenceService.newStateControlOverwrite());
+
         return "setting/detail";
     }
 
@@ -54,14 +58,14 @@ public class SettingsController {
     @PostMapping(value = "/setting/update")
     public String update(final @ModelAttribute Setting setting, Model model) {
 
-            persistenceService.updateSetting(s -> {
-                s.setRows(setting.getRows());
-                s.setColumns(setting.getColumns());
-                s.setOutside(setting.getOutside());
-                s.setInputCommand(setting.getInputCommand());
-                s.setMasterUrl(setting.getMasterUrl());
-                s.setControl(setting.getControl());
-            });
+        persistenceService.updateSetting(s -> {
+            s.setRows(setting.getRows());
+            s.setColumns(setting.getColumns());
+            s.setOutside(setting.getOutside());
+            s.setInputCommand(setting.getInputCommand());
+            s.setMasterUrl(setting.getMasterUrl());
+            s.setControl(setting.getControl());
+        });
         return this.details(model);
     }
 

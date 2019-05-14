@@ -28,30 +28,15 @@
             </ul>
             <br/>
         </div>
+    </div>
 
-        <div class="card-header">Input State</div>
-        <div class="card-body">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item" th:each="input : ${inputState.asMap()}">Key :<span
-                        th:text="${input.key}"></span>
-                    | Value :<span th:text="${input.value}"></span>
-                </li>
-            </ul>
-            <br/>
-        </div>
-
-        <div class="card-header">Analog Input State</div>
-        <div class="card-body">
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item" th:each="input : ${inputState.getAnalogInputs()}">Key :<span
-                        th:text="${input.key}"></span>
-                    | Value :<span th:text="${input.value}"></span>
-                </li>
-            </ul>
-            <br/>
-        </div>
+    <div>
+        <ul th:each="event : ${events}">
+            <li th:text="${event}"></li>
+        </ul>
 
     </div>
+
     <div><p th:text="${info}"></p></div>
     <a href="#" th:href="@{/setting/detail}" class="btn btn-primary">Bearbeiten</a>
 

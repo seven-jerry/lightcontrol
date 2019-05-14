@@ -1,7 +1,6 @@
 package jerry.service;
 
 import com.fazecast.jSerialComm.SerialPort;
-import jerry.arduino.MockArduino;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

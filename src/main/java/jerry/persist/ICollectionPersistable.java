@@ -1,6 +1,5 @@
 package jerry.persist;
 
-import com.sun.org.apache.bcel.internal.generic.InstructionComparator;
 
 import java.util.List;
 
@@ -11,5 +10,4 @@ public interface ICollectionPersistable<T extends Comparable<T>> extends IPersis
     void removeEntries(List<T> entries);
     void removeEntryById(Integer id);
     void removeAllEntries();
-    void updateEntries(List<T> entries);
 }

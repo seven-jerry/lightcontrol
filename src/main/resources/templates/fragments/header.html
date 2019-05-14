@@ -43,6 +43,12 @@
                     <a class="nav-link" href="/switch" th:href="@{/command}">Befehle</a>
                 </li>
             </ul>
+
+        </div>
+        <div th:if="${#httpServletRequest.remoteUser != null}">
+            <p style="display:inline; color:gray;margin-right:5px"  th:text="${#httpServletRequest.remoteUser}">
+            </p>
+            <a style="display:inline" class="navbar-brand" href="/logout">Abmelden</a>
         </div>
     </nav>
     <div th:if="${error != null}" class="alert alert-danger" role="alert" th:text="${error}"></div>

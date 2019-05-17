@@ -1,5 +1,6 @@
 ///<reference path="SingleLightController.ts"/>
 ///<reference path="CommandsController.ts"/>
+///<reference path="MasterController.ts"/>
 
 declare var profile;
 declare var wsHost;
@@ -26,6 +27,10 @@ else if (profile == "single_light") {
     function light_clicked(row, column, value) {
         controller.lightClicked(row, column, value);
     }
+}
+
+else if (profile == "master") {
+    controller = new client.MasterController();
 }
 
 controller.start(wsHost);

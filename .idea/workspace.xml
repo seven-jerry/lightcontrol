@@ -2,217 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25ee49b8-b532-4d39-b11c-6aa1bb1bf2db" name="Default" comment="version 1.2.2">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_3_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_client_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_xml_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_api_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_client_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_common_9_4_15_v20190215.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_17_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_1_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_1_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_1_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_1_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_1_5_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/ArduinoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/SimpleEchoSocket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/config/Beans.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/config/MasterBeans.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/config/MessageWebApplicationInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/config/Security.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/consumer/ClientRequestMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/consumer/ClientState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/consumer/RequestType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/device/MockSerialDevice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractInteractionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractStateNotifier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/ClientInteractionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/ClientStateNotifier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/DeviceResponseHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/EventHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/IMessageable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/IResponseHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/MasterInteractionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/MasterStateNotifier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/StateArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/StateCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/StateCommandUpdater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/master/ClientStateUpdater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/master/IMasterResponseHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdateSocket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdater.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/pojo/InputType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/pojo/StateCommandOverwrite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/service/ClientStateRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/service/IClientStateChangeNotifiable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/util/ErrrorHandling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/util/Sleep.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/util/ThriIntFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MasterSocketController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ts/AbstractController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ts/ClientState.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ts/ClientStateModel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ts/CommandsController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ts/EntryPoint.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ts/MessageConverter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ts/SingleLightController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ts/WebSocketClient.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ts/entity/Command.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ts/entity/Input.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ts/entity/SerialSource.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ts/entity/Setting.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ts/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/java/jerry/device/StateArrayTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/java/jerry/interaction/DeviceResponseHandlerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_4_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fazecast_jSerialComm_1_3_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fazecast_jSerialComm_2_5_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_7_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_7_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_11_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_10_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_11_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_31.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_17.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_31.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_17.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_31.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_17.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_9_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_11_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_4_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_9_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_16_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_15_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_23_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_26.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_26.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_thymeleaf_2_0_2_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_0_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_6_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_6_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_6_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_6_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_6_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_6_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_0_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_6_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_0_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_6_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_1_6_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_6_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_1_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_extras_thymeleaf_extras_java8time_3_0_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_11_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_9_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring5_3_0_11_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_5_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_6_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_5_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/master/IMasterChangeNotifiable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ts/ClientStateWrapper.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ts/MasterController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ts/MasterModel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/SpringMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/SpringMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/Arduino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/device/SerialDevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/HttpConsumer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/HttpPollingProducer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/IConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/consumer/IConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/ILIfeCycleExposable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/ILIfeCycleExposable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/IProducer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/IReadStateUpdateable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/IReadUpdateable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/IReadUpdateable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/ISerialSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/device/ISerialSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/IStateHolder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/IStateUpdateable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/InputCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/InputCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/MockArduino.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/SerialSources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/device/SerialSources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/StateArray.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/StateCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/StateNotifier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/ThriConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/util/ThriConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/ThriPredicate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/util/ThriPredicate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/WebSocketComsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/consumer/WebSocketConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/WebsockerProducer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/arduino/WriteMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/device/WriteMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/config/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/config/SimpleCORSFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/config/SimpleCORSFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/config/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/config/WebSocketConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/ReadManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/ReadManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/ReadWriteThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/WriteThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/StateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/StateDelegator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/master/ClientStateFetcher.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/master/SettingManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/persist/FilePersistedCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/persist/FilePersistedCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/persist/FilePersistedObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/persist/FilePersistedObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/persist/ICollectionPersistable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/persist/ICollectionPersistable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/persist/IObjectPersistable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/persist/IObjectPersistable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/service/PersistenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/service/PersistenceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/service/SerialService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/service/SerialService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/CommandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/CommandController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/Index.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/InputController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/InteractionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/InteractionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/consumer/ClientRequestMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/consumer/ClientRequestMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/consumer/ClientState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/consumer/ClientState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractInteractionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractInteractionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractStateNotifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractStateNotifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/ClientStateNotifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/ClientStateNotifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/EventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/MasterInteractionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/MasterInteractionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/MasterStateNotifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/MasterStateNotifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/StateArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/StateArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/master/ClientStateUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/master/ClientStateUpdater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdateSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdateSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/service/ClientStateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/service/ClientStateRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/service/IClientStateChangeNotifiable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/service/IClientStateChangeNotifiable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MasterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MasterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MockStateEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MockStateEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SettingCommandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SettingCommandController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SettingRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SettingRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SettingsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SourceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/WebSocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/WebSocketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewmodel/InputType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewmodel/pojo/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/pojo/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewmodel/pojo/ClientState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewmodel/pojo/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/pojo/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewmodel/pojo/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/pojo/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewmodel/pojo/SerialSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/pojo/SerialSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewmodel/pojo/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/pojo/Setting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/general.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/command.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/master.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/master.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/client.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/client.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/command.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/command.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MasterSocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MasterSocketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/master.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/master.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/master.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/setting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/setting/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/setting/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/switch.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/switch.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jerry/SpringMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jerry/SpringMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jerry/arduino/Arduino.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jerry/config/SimpleCORSFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jerry/config/SimpleCORSFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jerry/config/WebSocketConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jerry/config/WebSocketConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/general.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/setting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/setting/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/setting/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/switch.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/switch.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ts/ClientStateModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/ClientStateModel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ts/EntryPoint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/EntryPoint.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/java/ReadManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/test/ReadManagerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -235,8 +50,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/ClientStateUpdater.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="79" column="19" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
+            <state relative-caret-position="195">
+              <caret line="123" column="89" selection-start-line="123" selection-start-column="89" selection-end-line="123" selection-end-column="89" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1199#1200#0" expanded="true" />
+                <element signature="e#1240#1241#0" expanded="true" />
+                <element signature="e#4923#4924#0" expanded="true" />
+                <element signature="e#4963#4964#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdater.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="84" column="13" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -245,93 +76,90 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MasterController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdateSocket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+            <state relative-caret-position="239">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/ClientStateNotifier.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/ts/ClientStateModel.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/ts/MasterModel.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="97">
+              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/ts/CommandsController.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/ts/ClientStateWrapper.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jerry/consumer/ClientState.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/client.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jerry/pojo/Setting.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="84" column="47" selection-start-line="84" selection-start-column="47" selection-end-line="84" selection-end-column="47" />
+            <state relative-caret-position="160">
+              <caret line="325" column="28" selection-start-line="325" selection-start-column="10" selection-end-line="325" selection-end-column="28" />
               <folding>
-                <element signature="e#1680#1681#0" expanded="true" />
-                <element signature="e#1720#1721#0" expanded="true" />
-                <element signature="e#1771#1772#0" expanded="true" />
-                <element signature="e#1826#1827#0" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/InteractionController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/ts/MasterController.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="19" column="10" selection-start-line="19" selection-end-line="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/master.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/client.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/setting/detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3945">
-              <caret line="263" selection-start-line="263" selection-end-line="263" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/command.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="49" column="72" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/WebSocketController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
+            <state relative-caret-position="705">
+              <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -345,17 +173,15 @@
         <option value="HTML File" />
         <option value="Enum" />
         <option value="package.json" />
-        <option value="TypeScript File" />
         <option value="JUnit4 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>TinyBFactory</find>
-      <find>bluetooth.bluegiga</find>
       <find>SpringMain</find>
       <find>waitForEvent</find>
       <find>wait</find>
@@ -384,6 +210,8 @@
       <find>ClientInteractionManager</find>
       <find>error writ</find>
       <find>writeMessage</find>
+      <find>MasterController</find>
+      <find>ClientStateWrapper</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/target</dir>
@@ -395,18 +223,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/ts/SingleLightController.ts" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/device/SerialDevice.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/config/Security.java" />
-        <option value="$PROJECT_DIR$/scp.sh" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/master/ClientFetcher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/IMessageable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/master/IMasterResponseHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/EventHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/setting.html" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/InteractionManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/Index.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/InteractionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SettingCommandController.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SettingRestController.java" />
@@ -415,37 +231,49 @@
         <option value="$PROJECT_DIR$/src/main/java/jerry/device/MockSerialDevice.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/device/SerialSources.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/service/SerialService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/MasterInteractionManager.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/master/ClientMasterWebSocketController.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/consumer/ClientStateNotifier.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/config/WebSocketConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/ReadManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/MasterStateNotifier.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/service/IClientStateChangeNotyable.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/service/IClientStateChangeNotifyable.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/service/iClientStateChangeNotifyable.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/service/iClientStateChangeNotifiable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/service/IClientStateChangeNotifiable.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/config/Beans.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/config/MasterBeans.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/service/ClientStateRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractStateNotifier.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/ClientStateNotifier.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/consumer/ClientRequestMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/ClientInteractionManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MasterSocketController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractInteractionManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdateSocket.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/util/Sleep.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdater.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/WebSocketController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/EventHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MasterSocketController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/IInputMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/StateArray.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jerry/pojo/Setting.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/ts/ClientStateModel.ts" />
+        <option value="$PROJECT_DIR$/src/main/java/jerry/consumer/ClientState.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jerry/service/ClientStateRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jerry/service/IClientStateChangeNotifiable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jerry/master/master/IMasterResponseHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jerry/master/IClentStateChangeNotifiable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jerry/master/IMasterChangeNotifiable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/MasterStateNotifier.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractStateNotifier.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractInteractionManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/MasterInteractionManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/master/ClientStateUpdater.java" />
+        <option value="$PROJECT_DIR$/src/main/java/jerry/consumer/ClientRequestMessage.java" />
         <option value="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MasterController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/master.html" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/pojo/Setting.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/consumer/ClientState.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/ts/EntryPoint.ts" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/js/client.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/ts/MasterModel.ts" />
+        <option value="$PROJECT_DIR$/src/main/resources/ts/MasterController.ts" />
+        <option value="$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdateSocket.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/ts/ClientStateWrapper.ts" />
       </list>
     </option>
   </component>
@@ -472,8 +300,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -601,6 +429,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lightcontrol" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lightcontrol" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -615,11 +460,54 @@
             <path>
               <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
               <item name="lightcontrol" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="ts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lightcontrol" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="ts" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lightcontrol" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.google.code.gson:gson:2.8.5" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.google.code.gson:gson:2.8.5" type="70bed36:NamedLibraryElementNode" />
+              <item name="gson-2.8.5.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.google.code.gson:gson:2.8.5" type="70bed36:NamedLibraryElementNode" />
+              <item name="gson-2.8.5.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="gson" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: com.google.code.gson:gson:2.8.5" type="70bed36:NamedLibraryElementNode" />
+              <item name="gson-2.8.5.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="gson" type="462c0819:PsiDirectoryNode" />
+              <item name="reflect" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
@@ -802,6 +690,23 @@
               <item name="Maven: org.springframework:spring-websocket:4.3.0.RELEASE" type="70bed36:NamedLibraryElementNode" />
               <item name="spring-websocket-4.3.0.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
               <item name="socket" type="462c0819:PsiDirectoryNode" />
+              <item name="adapter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-websocket:4.3.0.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-websocket-4.3.0.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="socket" type="462c0819:PsiDirectoryNode" />
+              <item name="adapter" type="462c0819:PsiDirectoryNode" />
+              <item name="standard" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-websocket:4.3.0.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-websocket-4.3.0.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="socket" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -812,6 +717,14 @@
               <item name="socket" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
               <item name="annotation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework:spring-websocket:4.3.0.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-websocket-4.3.0.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="socket" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -847,24 +760,26 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="jerry.interaction" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/ts" />
-      <recent name="$PROJECT_DIR$/src/main/resources/ts/entity" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="jerry.interaction" />
-      <recent name="jerry.viewcontroller" />
-      <recent name="jerry.config" />
-      <recent name="jerry.arduino" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/ts/entry_point" />
       <recent name="$PROJECT_DIR$/src/main/resources/ts/entities" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="jerry.interaction" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="jerry.master" />
+      <recent name="jerry.interaction" />
+      <recent name="jerry.viewcontroller" />
+      <recent name="jerry.config" />
+      <recent name="jerry.arduino" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/ts" />
+      <recent name="$PROJECT_DIR$/src/main/java/jerry/master" />
+      <recent name="$PROJECT_DIR$/src/main/resources/ts/entity" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1105,6 +1020,8 @@
       <workItem from="1557864491178" duration="52000" />
       <workItem from="1557864929743" duration="47000" />
       <workItem from="1557865074136" duration="27000" />
+      <workItem from="1557902410658" duration="1268000" />
+      <workItem from="1557932096343" duration="16242000" />
     </task>
     <task id="LOCAL-00001" summary="version 1.2.2">
       <created>1551729148231</created>
@@ -1149,7 +1066,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187761000" />
+    <option name="totallyTimeSpent" value="205271000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1165,7 +1082,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Web" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4939759" visible="true" weight="0.2653791" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.4939759" visible="true" weight="0.36480686" />
       <window_info id="Structure" order="2" weight="0.2532189" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -1178,12 +1095,12 @@
       <window_info anchor="bottom" id="Spring" order="3" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.49928468" visible="true" weight="0.30180806" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.55632824" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49928468" weight="0.30120483" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.5554217" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49713877" weight="0.32684284" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49713877" visible="true" weight="0.32650602" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5028612" side_tool="true" weight="0.32771084" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32891566" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.32771084" />
@@ -1255,28 +1172,16 @@
           <option name="timeStamp" value="171" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/jerry/service/ClientStateRepository.java</url>
-          <line>97</line>
+          <url>file://$PROJECT_DIR$/src/main/java/jerry/consumer/ClientRequestMessage.java</url>
+          <line>63</line>
           <properties />
-          <option name="timeStamp" value="192" />
+          <option name="timeStamp" value="241" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/jerry/interaction/DeviceResponseHandler.java</url>
-          <line>51</line>
-          <properties />
-          <option name="timeStamp" value="194" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractInteractionManager.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/WebSocketController.java</url>
           <line>55</line>
           <properties />
-          <option name="timeStamp" value="209" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdater.java</url>
-          <line>74</line>
-          <properties />
-          <option name="timeStamp" value="214" />
+          <option name="timeStamp" value="255" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1290,156 +1195,45 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/org/springframework/beans/factory/support/DefaultSingletonBeanRegistry.class">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="158" selection-start-line="158" selection-end-line="158" />
+        <state relative-caret-position="150">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/org/springframework/beans/factory/support/AbstractBeanFactory.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/consumer/ClientState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        <state relative-caret-position="211">
+          <caret line="36" column="42" selection-start-line="36" selection-end-line="37" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/4.3.0.RELEASE/spring-websocket-4.3.0.RELEASE.jar!/org/springframework/web/socket/handler/WebSocketHandlerDecorator.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="614" selection-start-line="614" selection-end-line="614" />
+        <state relative-caret-position="164">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.6.RELEASE/spring-context-5.1.6.RELEASE-sources.jar!/org/springframework/context/annotation/ConfigurationClassEnhancer.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/4.3.0.RELEASE/spring-websocket-4.3.0.RELEASE.jar!/org/springframework/web/socket/handler/LoggingWebSocketHandlerDecorator.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1737">
-          <caret line="362" selection-start-line="362" selection-end-line="362" />
+        <state relative-caret-position="113">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/config/SimpleCORSFilter.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/4.3.0.RELEASE/spring-websocket-4.3.0.RELEASE.jar!/org/springframework/web/socket/handler/ExceptionWebSocketHandlerDecorator.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="113">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/SettingManager.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/ClientMasterWebSocketController.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/InputControl.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/4.3.0.RELEASE/spring-websocket-4.3.0.RELEASE.jar!/org/springframework/web/socket/adapter/standard/StandardWebSocketHandlerAdapter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/consumer/WebSocketConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/ArduinoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.6.RELEASE/spring-context-5.1.6.RELEASE-sources.jar!/org/springframework/stereotype/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/config/WebSocketConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="18" column="68" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
-            <element signature="e#935#936#0" expanded="true" />
-            <element signature="e#974#975#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/ReadManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/MasterStateNotifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/service/IClientStateChangeNotifiable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/StateRepository.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/Index.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/MasterInteractionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/config/Beans.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="52" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/config/MasterBeans.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="49" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/StateArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="188" selection-start-line="188" selection-end-line="188" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/websocket/websocket-api/9.4.15.v20190215/websocket-api-9.4.15.v20190215.jar!/org/eclipse/jetty/websocket/api/annotations/OnWebSocketError.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/websocket/websocket-api/9.4.15.v20190215/websocket-api-9.4.15.v20190215-sources.jar!/org/eclipse/jetty/websocket/api/annotations/OnWebSocketError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+        <state relative-caret-position="113">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
         </state>
       </provider>
     </entry>
@@ -1450,6 +1244,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/master/ClientStateUpdater.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/master/MasterUpdateSocket.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/master/MasterUpdater.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/master/IMasterResponseHandler.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/IMasterResponseHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -1457,27 +1263,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/pojo/InputType.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/service/IClientStateChangeNotifiable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        <state relative-caret-position="45">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/ClientStateNotifier.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/IMasterChangeNotifiable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="54" column="49" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
+        <state relative-caret-position="30">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/4.3.0.RELEASE/spring-websocket-4.3.0.RELEASE.jar!/org/springframework/web/socket/handler/AbstractWebSocketHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/service/ClientStateRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar!/com/google/gson/JsonObject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+          <folding>
+            <element signature="e#2235#2236#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar!/com/google/gson/JsonPrimitive.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/ClientInteractionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-299">
+          <caret line="19" column="35" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractInteractionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#756#757#0" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/4.3.0.RELEASE/spring-websocket-4.3.0.RELEASE.jar!/org/springframework/web/socket/WebSocketSession.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractStateNotifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2919#2920#0" expanded="true" />
+            <element signature="e#2970#2971#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/MasterStateNotifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/MasterInteractionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#571#572#0" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/WebSocketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/client.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-310">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/command.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="17" column="17" selection-start-line="16" selection-start-column="12" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jerry/consumer/ClientRequestMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="69" selection-start-line="16" selection-start-column="69" selection-end-line="16" selection-end-column="69" />
+        <state relative-caret-position="276">
+          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
           <folding>
             <element signature="e#1042#1043#0" expanded="true" />
             <element signature="e#1089#1090#0" expanded="true" />
@@ -1485,199 +1407,202 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/websocket/websocket-client/9.4.15.v20190215/websocket-client-9.4.15.v20190215.jar!/org/eclipse/jetty/websocket/client/WebSocketClient.class">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/master.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="367" column="16" selection-start-line="367" selection-start-column="16" selection-end-line="367" selection-end-column="16" />
+        <state relative-caret-position="-71">
           <folding>
-            <element signature="e#14034#14035#0" expanded="true" />
-            <element signature="e#14087#14088#0" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/switch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="64" column="47" lean-forward="true" selection-start-line="54" selection-start-column="3" selection-end-line="64" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SettingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SettingRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MasterSocketController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/CommandController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="21" column="80" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MasterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/master.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ts/SingleLightController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ts/WebSocketClient.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="62" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ts/AbstractController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="114" column="9" lean-forward="true" selection-start-line="106" selection-start-column="6" selection-end-line="114" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ts/EntryPoint.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ts/CommandsController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/ClientStateUpdater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="123" column="89" selection-start-line="123" selection-start-column="89" selection-end-line="123" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1199#1200#0" expanded="true" />
+            <element signature="e#1240#1241#0" expanded="true" />
+            <element signature="e#4923#4924#0" expanded="true" />
+            <element signature="e#4963#4964#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="84" column="13" selection-start-line="84" selection-start-column="13" selection-end-line="84" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdateSocket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="53" column="83" selection-start-line="53" selection-start-column="83" selection-end-line="53" selection-end-column="83" />
+        <state relative-caret-position="239">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/ClientStateNotifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/websocket/websocket-client/9.4.15.v20190215/websocket-client-9.4.15.v20190215-sources.jar!/org/eclipse/jetty/websocket/client/WebSocketClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7650">
-          <caret line="667" column="16" selection-start-line="667" selection-start-column="16" selection-end-line="667" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/consumer/IConsumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/service/PersistenceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractInteractionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="71" column="64" selection-start-line="71" selection-start-column="64" selection-end-line="71" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractStateNotifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2794#2795#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/ClientInteractionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/service/ClientStateRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="e#1367#1368#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/util/Sleep.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ts/ClientStateModel.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdater.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ts/MasterModel.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+        <state relative-caret-position="97">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ts/MasterController.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MasterSocketController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ts/ClientStateWrapper.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="195">
+          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/ClientStateUpdater.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/client.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="79" column="19" selection-start-line="79" selection-start-column="19" selection-end-line="79" selection-end-column="19" />
+        <state relative-caret-position="160">
+          <caret line="325" column="28" selection-start-line="325" selection-start-column="10" selection-end-line="325" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MasterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/pojo/Setting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="84" column="47" selection-start-line="84" selection-start-column="47" selection-end-line="84" selection-end-column="47" />
-          <folding>
-            <element signature="e#1680#1681#0" expanded="true" />
-            <element signature="e#1720#1721#0" expanded="true" />
-            <element signature="e#1771#1772#0" expanded="true" />
-            <element signature="e#1826#1827#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/InteractionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="19" column="10" selection-start-line="19" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/master.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/client.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/setting/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3945">
-          <caret line="263" selection-start-line="263" selection-end-line="263" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/command.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="72" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/WebSocketController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="56" column="36" selection-start-line="56" selection-start-column="36" selection-end-line="56" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/consumer/ClientState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>

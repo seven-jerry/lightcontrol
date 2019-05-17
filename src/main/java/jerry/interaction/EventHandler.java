@@ -12,11 +12,19 @@ import java.util.concurrent.ConcurrentHashMap;
 @Component
 public class EventHandler implements IMessageable{
 
+    public static enum Type{
+        ERROR
+    }
+
     Map<LocalDateTime, String> events = new ConcurrentHashMap<>();
 
     @Override
     public void pushMessage(String message){
         events.put(LocalDateTime.now(), message);
+    }
+
+    public void pushMessage(Type type,String message){
+        events.put(LocalDateTime.now(), type.name() + " : "+message);
     }
 
     private void purge(){

@@ -18,11 +18,9 @@
         </div>
         <div class="row col-auto">
             <h1 style="margin-top:20px;">Status</h1>
-            <div class="col-lg-12 col-sm-12">
-                <ul class="list-group">
-                    <li th:each="client : ${states}">
-                        <span th:text="${client.key}"></span><span th:text="${client.value.getOutputState()}"></span>
-                    </li>
+            <div class="col-lg-12 col-sm-10">
+                <ul class="list-group" id="stateWrapper">
+                    <li></li>
                 </ul>
             </div>
         </div>
@@ -30,6 +28,17 @@
     </div>
     <hr/>
     <div th:insert="~{fragments/footer :: footer}">&copy</div>
+    <script>
+        var how ="[[${host}]]";
+
+        if(how == "local"){
+            how = location.host;
+        }
+        var wsHost = "ws://" + how;
+        var profile = "master";
+
+    </script>
+    <script th:src="@{/js/client.js}"></script>
 </div>
 
 </body>

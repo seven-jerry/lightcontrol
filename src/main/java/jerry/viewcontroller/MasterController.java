@@ -13,6 +13,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 
 @Controller
 @RequestMapping(value = "/master")
@@ -29,15 +31,20 @@ public class MasterController {
     @Value("${spring.profiles.active}")
     private String profile;
 
-    @RequestMapping("")
-    public String index(Model model) {
+    @RequestMapping(value = {"", "/", "/{host}/"})
+    public String index(Model model, @PathVariable("host") Optional<String> host) {
         if (profile.equals("client")) {
             return "/";
         }
 
         if (profile.equals("master")) {
-            model.addAttribute("started",manager.hasStarted());
-            model.addAttribute("states",clientStateUpdater.getClientStates());
+            model.addAttribute("started", manager.hasStarted());
+            model.addAttribute("states", clientStateUpdater.getClientStateMap());
+            if (host.isPresent()) {
+                model.addAttribute("host", host.get());
+            } else {
+                model.addAttribute("host", "local");
+            }
             return "master";
         }
         throw new RuntimeException("unknown profile " + profile);

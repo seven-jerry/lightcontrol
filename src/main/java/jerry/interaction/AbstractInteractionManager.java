@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Component
 @Slf4j
@@ -36,6 +37,9 @@ public abstract class AbstractInteractionManager {
     protected abstract void initLifeCycle();
 
     public void writeToProducer(String argumentAsString) {
+    }
+
+    public void writeToProducer(Map<String,String> map) {
     }
 
 

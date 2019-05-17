@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public class ClientStateRepository implements ILIfeCycleExposable {
         return repository;
     }
 
-    public void setNotifier(IClientStateChangeNotifiable notifier){
+    public void setNotifier(IClientStateChangeNotifiable notifier) {
         this.notifier = notifier;
     }
 
@@ -83,6 +84,9 @@ public class ClientStateRepository implements ILIfeCycleExposable {
         return hasUpdated;
     }
 
+    public boolean updateCommands(Command[] commands) {
+        return this.updateCommands(Arrays.asList(commands));
+    }
 
     public boolean updateCommands(List<Command> commands) {
         if (state == null) return false;

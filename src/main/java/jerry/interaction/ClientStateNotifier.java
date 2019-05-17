@@ -10,8 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.TextMessage;
 
-import javax.annotation.PostConstruct;
-
 @Component
 @Slf4j
 public class ClientStateNotifier extends AbstractStateNotifier implements IClientStateChangeNotifiable {
@@ -45,7 +43,7 @@ public class ClientStateNotifier extends AbstractStateNotifier implements IClien
                 messages.offer(clientStateRepository.getStateJson(requestMessage.argumentsAsArray()));
                 break;
             case CHANGE:
-                clientInteractionManager.writeToProducer(requestMessage.argumentAsString());
+                interactionManager.writeToProducer(requestMessage.argumentAsString());
                 break;
         }
     }

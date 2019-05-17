@@ -5,7 +5,7 @@ import jerry.pojo.Input;
 import jerry.util.ThriIntFunction;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.Objects;
+import java.util.*;
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.Predicate;
@@ -24,6 +24,7 @@ public class StateArray {
 
     private int output_x;
     private int output_y;
+
 
     public static StateArray empty(int output_x, int output_y, int input_count, int outside_count) {
         return new StateArray(output_x, output_y, input_count, outside_count);
@@ -71,15 +72,15 @@ public class StateArray {
     }
 
     private void initInputState(String state) {
-        if(state.length() <= 1){
-        inputState = new int[0];
-        return;
-    }
+        if (state.length() <= 1) {
+            inputState = new int[0];
+            return;
+        }
         inputState = new int[Character.getNumericValue(state.charAt(state.length() - 2)) + INDEX_LENGTH_OFFSET];
     }
 
     private void initOutSideState(String state) {
-        if(state.length() <= 1){
+        if (state.length() <= 1) {
             outsideState = new int[0];
             return;
         }
@@ -146,7 +147,7 @@ public class StateArray {
     private void updateArray(String state, int[] array) {
 
         if (state.length() > array.length * 2) {
-            log.error("state {} too long for {}", state,array);
+            log.error("state {} too long for {}", state, array);
             throw new IllegalArgumentException("the state string is too long");
         }
 
@@ -255,7 +256,7 @@ public class StateArray {
 
     }
 
-    public StateArray copy(){
+    public StateArray copy() {
         return StateArray.parseString(this.toString());
     }
 
@@ -265,15 +266,15 @@ public class StateArray {
                 .replace("" + OUTPUT_CHAR, "").replace("" + OUTSIDE_CHAR, "");
     }
 
-    public void changeOutside(BiFunction<Integer,Integer,Integer> consumer) {
+    public void changeOutside(BiFunction<Integer, Integer, Integer> consumer) {
         for (int i = 0; i < outsideState.length; i = i + 1) {
-               int s = consumer.apply(i, outsideState[i]);
-               outsideState[i] = s;
-        }    }
+            int s = consumer.apply(i, outsideState[i]);
+            outsideState[i] = s;
+        }
+    }
 
 
     public boolean hasOutsideState() {
         return outsideState != null && outsideState.length > 0;
     }
-
 }

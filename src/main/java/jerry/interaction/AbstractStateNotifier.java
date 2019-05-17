@@ -26,7 +26,7 @@ public abstract class AbstractStateNotifier implements Runnable, ILIfeCycleExpos
 
     @Autowired
     @Qualifier("contextAdjustingInteractionManager")
-    AbstractInteractionManager clientInteractionManager;
+    AbstractInteractionManager interactionManager;
 
 
     public void addConsumer(IConsumer consumer) {
@@ -42,6 +42,9 @@ public abstract class AbstractStateNotifier implements Runnable, ILIfeCycleExpos
         try {
             while (!Thread.currentThread().isInterrupted() && started) {
                 String message = messages.take();
+                if(masterConsumer != null) {
+                    writeToConsumer(masterConsumer, message);
+                }
                 for (IConsumer consumer : consumers) {
                     writeToConsumer(consumer, message);
                 }

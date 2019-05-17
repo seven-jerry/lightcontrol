@@ -17,7 +17,7 @@ public final class MasterUpdateSocket {
 
     LocalDateTime lastUpdated = LocalDateTime.now();
     private Session session;
-    private WebSocketClient webSocketClient;
+    private WebSocketClient webSocketClient = new WebSocketClient();
     private final IMessageable messageReciever;
     private final IMasterResponseHandler handler;
 
@@ -34,7 +34,6 @@ public final class MasterUpdateSocket {
     public void connect(String destination) {
         if(isConnected()) return;
         try {
-            webSocketClient = new WebSocketClient();
             webSocketClient.getHttpClient().setConnectTimeout(300);
             webSocketClient.start();
 

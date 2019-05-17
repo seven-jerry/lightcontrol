@@ -34,7 +34,7 @@ namespace client {
                     if (key == "output_state" && object.hasOwnProperty(key)) {
                         this.updateOutputState(object[key]);
                     }
-                    if (key == "input_state" && object.hasOwnProperty(key)) {
+                    if (key == "input_state_map" && object.hasOwnProperty(key)) {
                         this.updateInputState(object[key]);
                     }
 

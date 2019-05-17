@@ -1,6 +1,5 @@
 package jerry.service;
 
 public interface IClientStateChangeNotifiable {
-           void hasUpdatedClientState(String... keys);
-
+    void hasUpdatedClientState(String... keys);
 }

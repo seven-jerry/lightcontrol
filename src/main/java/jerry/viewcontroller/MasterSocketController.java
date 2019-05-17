@@ -1,7 +1,9 @@
 package jerry.viewcontroller;
 
 import jerry.interaction.AbstractInteractionManager;
+import jerry.interaction.EventHandler;
 import jerry.master.ClientStateUpdater;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -13,9 +15,12 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 import java.io.IOException;
 
+import static jerry.interaction.EventHandler.Type.ERROR;
+
 @Component
 @Qualifier("masterSocket")
 @CrossOrigin
+@Slf4j
 public class MasterSocketController extends TextWebSocketHandler {
 
 
@@ -26,14 +31,16 @@ public class MasterSocketController extends TextWebSocketHandler {
     @Autowired
     ClientStateUpdater updater;
 
+    @Autowired
+    EventHandler eventHandler;
 
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
         try {
             clientInteractionManager.start();
         } catch (Exception e) {
-            session.sendMessage(new TextMessage("{\"error\":\"" + e.getMessage() + "\"}"));
-            System.out.println("websocket" + e.getMessage());
+            eventHandler.pushMessage("masterSocket.onConnect : "+e.getMessage());
+            log.error(e.getMessage());
         }
     }
 
@@ -47,7 +54,7 @@ public class MasterSocketController extends TextWebSocketHandler {
         try {
             updater.handleStateUpdate(session, textMessage);
         } catch (Exception e) {
-            session.sendMessage(new TextMessage("{\"error\":\"" + e.getMessage() + "\"}"));
+           eventHandler.pushMessage(ERROR,"handle client message :"+e.getMessage());
             System.out.println("websocket" + e);
         }
     }

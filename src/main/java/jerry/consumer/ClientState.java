@@ -1,11 +1,14 @@
 package jerry.consumer;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.google.gson.reflect.TypeToken;
 import jerry.interaction.StateArray;
 import jerry.pojo.Command;
 import jerry.pojo.Setting;
 
+import java.lang.reflect.Type;
 import java.time.LocalDateTime;
 import java.util.*;
 
@@ -15,6 +18,8 @@ public class ClientState {
     public static final String OUTSIDE_STATE = "outside_state";
     public static final String COMMANDS = "commands";
     public static final String INPUT_STATE = "input_state";
+    public static final String INPUT_STATE_MAP = "input_state_map";
+
     public static final String SETTINGS = "setting";
     public static final String MESSAGE_TYPE = "message.type";
 
@@ -27,22 +32,17 @@ public class ClientState {
 
 
     public static ClientState fromJson(JsonObject jsonObject) {
-        ClientState state = new ClientState();
-        state.setting = new Gson().fromJson(jsonObject.get(ClientState.SETTINGS),Setting.class);
-        state.setting.setCommands(new Gson().fromJson(jsonObject.get(ClientState.COMMANDS),Command[].class));
+        ClientState clientState = new ClientState();
+        clientState.setting = new Gson().fromJson(jsonObject.get(ClientState.SETTINGS), Setting.class);
+        clientState.setting.setCommands(new Gson().fromJson(jsonObject.get(ClientState.COMMANDS), Command[].class));
 
+        String state =
+                jsonObject.get(ClientState.OUTPUT_STATE).getAsString() +
+                        jsonObject.get(ClientState.OUTSIDE_STATE).getAsString() +
+                        jsonObject.get(ClientState.INPUT_STATE).getAsString();
+        clientState.state = StateArray.parseString(state);
 
-
-        jobj.add(ClientState.OUTPUT_STATE, new Gson().toJsonTree(this.state.outputStateString(false)));
-
-        jobj.add(ClientState.OUTSIDE_STATE, new Gson().toJsonTree(this.state.outSideStateString(false)));
-
-        jobj.add(ClientState.INPUT_STATE, new Gson().toJsonTree(this.setting.labeledInput(this.state)));
-
-        jobj.add("time", new Gson().toJsonTree(LocalDateTime.now().toString()));
-
-        jobj.add(MESSAGE_TYPE, new Gson().toJsonTree(keySet.isEmpty() ? MESSAGE_TYPE_FULL : MESSAGE_TYPE_PARTIAL));
-
+        return clientState;
     }
 
     public static ClientState fromClientState(ClientState source) {
@@ -103,8 +103,9 @@ public class ClientState {
         if (keySet.isEmpty() || keySet.contains(ClientState.OUTSIDE_STATE)) {
             jobj.add(ClientState.OUTSIDE_STATE, new Gson().toJsonTree(this.state.outSideStateString(false)));
         }
-        if (keySet.isEmpty() || keySet.contains(ClientState.INPUT_STATE)) {
-            jobj.add(ClientState.INPUT_STATE, new Gson().toJsonTree(this.setting.labeledInput(this.state)));
+        if (keySet.isEmpty() || keySet.contains(ClientState.INPUT_STATE) || keySet.contains(ClientState.INPUT_STATE_MAP)) {
+            jobj.add(ClientState.INPUT_STATE, new Gson().toJsonTree(this.state.inputStateString(false)));
+            jobj.add(ClientState.INPUT_STATE_MAP, new Gson().toJsonTree(this.setting.labeledInput(this.state)));
         }
 
         jobj.add("time", new Gson().toJsonTree(LocalDateTime.now().toString()));

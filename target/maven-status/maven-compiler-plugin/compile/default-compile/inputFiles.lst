@@ -24,6 +24,7 @@
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/master/ClientStateUpdater.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/pojo/Command.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/interaction/InputControl.java
+/Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/master/IMasterChangeNotifiable.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/service/SerialService.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/persist/ICollectionPersistable.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/consumer/RequestType.java

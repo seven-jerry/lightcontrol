@@ -1,5 +1,6 @@
 jerry/interaction/StateCommandUpdater.class
 jerry/interaction/ClientStateNotifier$1.class
+jerry/interaction/EventHandler$Type.class
 jerry/interaction/StateArray.class
 jerry/interaction/ReadManager.class
 jerry/viewcontroller/MasterSocketController.class
@@ -37,6 +38,7 @@ jerry/service/SerialService.class
 jerry/interaction/ClientStateNotifier.class
 jerry/persist/IObjectPersistable.class
 jerry/pojo/Client.class
+jerry/master/IMasterChangeNotifiable.class
 jerry/ArduinoTest.class
 jerry/config/MvcConfig.class
 jerry/config/MasterBeans.class
@@ -44,6 +46,7 @@ jerry/SpringMain.class
 jerry/viewcontroller/MockStateEndpoint.class
 jerry/device/MockSerialDevice.class
 jerry/interaction/ILIfeCycleExposable.class
+jerry/master/ClientStateUpdater$HostAwareChangeNotifiable.class
 jerry/viewcontroller/InteractionController.class
 jerry/interaction/WriteThread.class
 jerry/persist/IIdProvider.class
@@ -65,6 +68,7 @@ jerry/device/ISerialSource.class
 jerry/util/ThriIntFunction.class
 jerry/config/Security.class
 jerry/service/PersistenceService.class
+jerry/interaction/MasterStateNotifier$1.class
 jerry/util/ErrorForwardingConsumer.class
 jerry/interaction/AbstractInteractionManager.class
 jerry/master/MasterUpdateSocket.class

@@ -27,6 +27,7 @@ jerry/interaction/StateDelegator$Builder.class
 jerry/util/Sleep.class
 jerry/persist/AbstractFilePersisted.class
 jerry/pojo/StateCommandOverwrite.class
+jerry/master/MasterUpdater$1.class
 jerry/master/IMasterResponseHandler.class
 jerry/util/DateFormatter.class
 jerry/service/LifeCycleService.class
@@ -71,6 +72,7 @@ jerry/service/PersistenceService.class
 jerry/interaction/MasterStateNotifier$1.class
 jerry/util/ErrorForwardingConsumer.class
 jerry/interaction/AbstractInteractionManager.class
+jerry/config/LocalSecurity.class
 jerry/master/MasterUpdateSocket.class
 jerry/consumer/WebSocketConsumer.class
 jerry/pojo/Input.class

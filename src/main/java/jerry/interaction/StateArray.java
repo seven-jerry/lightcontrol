@@ -12,6 +12,7 @@ import java.util.function.Predicate;
 
 @Slf4j
 public class StateArray {
+    private static final int DISABLED_STATE = 7;
     private static final int INDEX_LENGTH_OFFSET = 1;
 
     public static final char OUTPUT_CHAR = 'o';
@@ -129,7 +130,9 @@ public class StateArray {
             int x = Character.getNumericValue(stateChars[i]);
             int y = Character.getNumericValue(stateChars[i + 1]);
             int s = Character.getNumericValue(stateChars[i + 2]);
-            outputState[x][y] = s;
+            if(outputState[x][y] != StateArray.DISABLED_STATE) {
+                outputState[x][y] = s;
+            }
         }
     }
 
@@ -169,7 +172,9 @@ public class StateArray {
         for (int i = 0; i < output_x; i++) {
             for (int j = 0; j < output_y; j++) {
                 int new_state = function.apply(i, j, outputState[i][j]);
-                outputState[i][j] = new_state;
+                if (outputState[i][j] != StateArray.DISABLED_STATE) {
+                    outputState[i][j] = new_state;
+                }
             }
         }
     }

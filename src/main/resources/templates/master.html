@@ -3,7 +3,41 @@
 
 <head>
     <div th:replace="~{fragments/header :: head}"></div>
-    <style></style>
+    <style>
+        .list {
+            list-style-type: none;
+        }
+
+        .left {
+            text-align: left;
+
+        }
+
+        .slice {
+            min-height: 100%;
+            width: 33%;
+            display: inline-block;
+        }
+
+        span{
+            color:dimgray;
+        }
+        span.value{
+            color:black;
+            margin-left: 10px;
+        }
+        span.block{
+            display: block;
+        }
+
+        @media (max-width: 800px) {
+            .slice {
+                height: auto;
+                width: 100%;
+                display: inline-block;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -19,26 +53,40 @@
         <div class="row col-auto">
             <h1 style="margin-top:20px;">Status</h1>
             <div class="col-lg-12 col-sm-10">
-                <ul class="list-group" id="stateWrapper">
-                    <li></li>
-                </ul>
+                <div class="list-group list" id="stateWrapper">
+
+                </div>
             </div>
         </div>
         <hr/>
+
+        <div class="row col-auto">
+            <h1 style="margin-top:20px;">Befehle</h1>
+            <div class="col-lg-12 col-sm-10">
+                <form class="form-inline" id="commandForm">
+
+                </form>
+            </div>
+            <div class="col-lg-12 col-sm-10">
+                <div class="" id="commandWrapper">
+                </div>
+            </div>
+        </div>
     </div>
-    <hr/>
-    <div th:insert="~{fragments/footer :: footer}">&copy</div>
-    <script>
-        var how ="[[${host}]]";
+</div>
+<hr/>
+<div th:insert="~{fragments/footer :: footer}">&copy</div>
+<script>
+    var how = "[[${host}]]";
 
-        if(how == "local"){
-            how = location.host;
-        }
-        var wsHost = "ws://" + how;
-        var profile = "master";
+    if (how == "local") {
+        how = location.host;
+    }
+    var wsHost = "ws://" + how;
+    var profile = "master";
 
-    </script>
-    <script th:src="@{/js/client.js}"></script>
+</script>
+<script th:src="@{/js/client.js}"></script>
 </div>
 
 </body>

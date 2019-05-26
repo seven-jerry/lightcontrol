@@ -33,11 +33,11 @@ public class MasterController {
 
     @RequestMapping(value = {"", "/", "/{host}/"})
     public String index(Model model, @PathVariable("host") Optional<String> host) {
-        if (profile.equals("client")) {
+        if (profile.contains("client")) {
             return "/";
         }
 
-        if (profile.equals("master")) {
+        if (profile.contains("master")) {
             model.addAttribute("started", manager.hasStarted());
             model.addAttribute("states", clientStateUpdater.getClientStateMap());
             if (host.isPresent()) {

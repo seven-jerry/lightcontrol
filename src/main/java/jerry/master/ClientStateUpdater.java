@@ -42,10 +42,15 @@ public class ClientStateUpdater {
         Map<String, String> map = new HashMap<>();
         String state = clientStates.get(host).getStateJson(keys);
         map.put(host.getRemoteAddress().getHostName(), state);
-        notifiable.hasUpdatedClientState(new Gson().toJson(map));
+        if (notifiable != null) {
+            notifiable.hasUpdatedClientState(new Gson().toJson(map));
+        }
     }
 
     public void handleStateUpdate(WebSocketSession session, TextMessage textMessage) {
+        if (this.handlePing(session, textMessage)) {
+            return;
+        }
         ClientStateRepository repository = this.get(session);
         if (repository == null) {
             repository = this.initFromMessage(textMessage.getPayload());
@@ -63,6 +68,32 @@ public class ClientStateUpdater {
             return;
         }
         this.partialUpdate(repository, textMessage);
+    }
+
+    private boolean handlePing(WebSocketSession session, TextMessage textMessage) {
+        try {
+            JsonObject stateEl = new Gson().fromJson(textMessage.getPayload(), JsonObject.class);
+            if (ClientState.MESSAGE_TYPE_PING.equals(stateEl.get(ClientState.MESSAGE_TYPE).getAsString()) && this.notifiable != null) {
+                this.notifiable.hasUpdatedClientState(this.pingMessage(session, stateEl));
+                return true;
+            }
+        } catch (Exception e) {
+            log.error(e.toString());
+        }
+
+        return false;
+    }
+
+    private String pingMessage(WebSocketSession session, JsonObject object) {
+        Map<String,String> innerMap = new HashMap<>();
+        innerMap.put("time",object.get("time").getAsString());
+        innerMap.put("type",ClientState.MESSAGE_TYPE_PING);
+
+        Map<String,Map<String,String>> map = new HashMap<>();
+        map.put(session.getRemoteAddress().getHostName(),innerMap);
+        return new Gson().toJson(map);
+
+
     }
 
     private void partialUpdate(ClientStateRepository repository, TextMessage textMessage) {
@@ -99,7 +130,6 @@ public class ClientStateUpdater {
 
     private ClientStateRepository initFromMessage(String message) {
         JsonObject stateEl = new Gson().fromJson(message, JsonObject.class);
-
         if (!ClientState.MESSAGE_TYPE_FULL.equals(stateEl.get(ClientState.MESSAGE_TYPE).getAsString())) {
             return null;
         }

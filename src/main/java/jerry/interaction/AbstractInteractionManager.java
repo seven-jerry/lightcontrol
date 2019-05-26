@@ -25,7 +25,7 @@ public abstract class AbstractInteractionManager {
     protected List<ILIfeCycleExposable> lifeCycleManagedComponents = new ArrayList<>();
 
 
-    public AbstractInteractionManager(){
+    public AbstractInteractionManager() {
         System.out.println("abstract");
     }
 
@@ -39,7 +39,7 @@ public abstract class AbstractInteractionManager {
     public void writeToProducer(String argumentAsString) {
     }
 
-    public void writeToProducer(Map<String,String> map) {
+    public void writeToProducer(Map<String, String> map) {
     }
 
 
@@ -54,7 +54,9 @@ public abstract class AbstractInteractionManager {
         String started = "";
         try {
             started = this.start();
-            onTryAutoStart();
+            if ("already started".equals(started)) {
+                onTryAutoStart();
+            }
 
         } catch (Exception e) {
             log.error(e.getMessage());
@@ -73,8 +75,8 @@ public abstract class AbstractInteractionManager {
             onStart();
         } catch (Exception e) {
             this.stop();
-            log.error("could not start. reason: "+e.getMessage());
-            eventHandler.pushMessage("could not start. reason: "+e.getMessage());
+            log.error("could not start. reason: " + e.getMessage());
+            eventHandler.pushMessage("could not start. reason: " + e.getMessage());
             throw e;
         }
         return "started";
@@ -85,15 +87,18 @@ public abstract class AbstractInteractionManager {
     }
 
 
-    protected void onStart() throws Exception{
+    protected void onStart() throws Exception {
         this.lifeCycleManagedComponents.forEach(ILIfeCycleExposable::startLifecycle);
     }
 
     public synchronized void stop() {
-        this.lifeCycleManagedComponents.forEach(ILIfeCycleExposable::stopLifeCycle);
+        this.onStop();
         this.auto_start = false;
         started = false;
     }
 
+    protected void onStop() {
+        this.lifeCycleManagedComponents.forEach(ILIfeCycleExposable::stopLifeCycle);
+    }
 
 }

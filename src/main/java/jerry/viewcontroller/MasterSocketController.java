@@ -1,5 +1,8 @@
 package jerry.viewcontroller;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import jerry.consumer.ClientState;
 import jerry.interaction.AbstractInteractionManager;
 import jerry.interaction.EventHandler;
 import jerry.master.ClientStateUpdater;

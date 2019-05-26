@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Objects;
 import java.util.function.BiConsumer;
+import java.util.function.Consumer;
 
 public enum StateCommand {
     ALL_HIGH("sah", StateCommand::turnAllOn),
@@ -43,6 +44,8 @@ public enum StateCommand {
     }
 
     public void callConsumer(StateArray array) {
+        BiConsumer<StateCommand,StateArray> allLow = StateCommand::turnAllOff;
+        allLow.accept(this,array);
         this.consumer.accept(this, array);
     }
 

@@ -278,16 +278,35 @@
         </profile>
 
 
-        <!-- <profile>
+         <profile>
              <id>hall</id>
              <properties>
                  <repo-id>hall</repo-id>
                  <repo-host>192.168.1.6</repo-host>
-                 <repo-path>/home/pi/Desktop</repo-path>
+                 <repo-path>/home/pi/java/</repo-path>
              </properties>
          </profile>
 
-         <profile>
+        <profile>
+            <id>eating</id>
+            <properties>
+                <repo-id>eating</repo-id>
+                <repo-host>192.168.1.100</repo-host>
+                <repo-path>/home/pi/java/</repo-path>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>bath</id>
+            <properties>
+                <repo-id>bath</repo-id>
+                <repo-host>192.168.1.42</repo-host>
+                <repo-path>/home/pi/java/</repo-path>
+            </properties>
+        </profile>
+
+
+         <!--<profile>
              <id>living</id>
              <properties>
                  <repo-id>living</repo-id>

@@ -50,6 +50,7 @@ namespace client {
             this.consumer.handleWebSocketMessage(evt.data);
         }
 
+
         onSocketError(evt) {
             this.consumer.handleWebSocketError(evt.data);
         };

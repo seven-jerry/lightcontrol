@@ -97,5 +97,6 @@ public abstract class AbstractStateNotifier implements Runnable, ILIfeCycleExpos
 
     public void setMasterConsumer(IConsumer masterUpdater) {
         this.masterConsumer = masterUpdater;
+        this.addConsumer(this.masterConsumer);
     }
 }

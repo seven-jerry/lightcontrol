@@ -27,8 +27,8 @@ public class ClientRequestMessage {
 
     public static String changeString(String value) {
         ClientRequestMessage message = new ClientRequestMessage();
-        message.type = RequestType.FETCH;
-        message.argument = "{"+value+"}";
+        message.type = RequestType.CHANGE;
+        message.argument = value;
         return new Gson().toJson(message);
     }
 

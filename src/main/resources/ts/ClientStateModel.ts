@@ -3,9 +3,10 @@ namespace client {
     export interface IClientStateChangeConsumer {
         handleUpdateError(message: string);
         handleSizeChange(columns: number, rows: number);
-        handleCommandsChanged();
+        handleCommandsChanged(commands:Command[]);
         handleOutputStateChange(state:string);
         handleInputStateChange(inputMap:{});
+        handleSettingsChange(setting:Setting);
         handleOutsideStateChange(state:string);
     }
 
@@ -21,12 +22,12 @@ namespace client {
         handleStateUpdate(update: string) {
             try {
                 let object = JSON.parse(update);
+                if (object.hasOwnProperty("setting")) {
+                    this.updateSettings(object["setting"]);
+                }
                 for (let key in object) {
                     if (key == "error"  && object.hasOwnProperty(key)) {
                         this.consumer.handleUpdateError(object[key]);
-                    }
-                    if (key == "setting" && object.hasOwnProperty(key)) {
-                        this.updateSettings(object[key]);
                     }
                     if (key == "commands" && object.hasOwnProperty(key)) {
                         this.updateCommands(object[key]);
@@ -56,6 +57,7 @@ namespace client {
             if (setting.rows != newSetting.rows || setting.columns != newSetting.columns) {
                 this.consumer.handleSizeChange(newSetting.columns, newSetting.rows);
             }
+            this.consumer.handleSettingsChange(newSetting);
         }
 
         private updateCommands(obj: any) {
@@ -63,12 +65,12 @@ namespace client {
             let newCommands = Command.arrayFromObject(obj);
             this.clientState.commands = newCommands;
             if (commands.length != newCommands.length) {
-                this.consumer.handleCommandsChanged();
+                this.consumer.handleCommandsChanged(newCommands);
                 return;
             }
 
             // always fire update for now
-            this.consumer.handleCommandsChanged();
+            this.consumer.handleCommandsChanged(newCommands);
         }
 
 

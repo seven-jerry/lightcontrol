@@ -33,6 +33,15 @@
             <input class="form-control" type="text" th:field="*{masterUrl}">
         </div>
 
+        <div class="form-group">
+            <label th:for="rows">Internet Url</label>
+            <input class="form-control" type="text" th:field="*{masterInternetUrl}">
+        </div>
+
+        <div class="form-group">
+            <label th:for="name">Name</label>
+            <input class="form-control" type="text" th:field="*{name}">
+        </div>
 
         <div class="form-group">
             <label th:for="rows">Automatisch schalten</label>
@@ -55,6 +64,7 @@
                 ></option>
             </select>
         </div>
+
         <div class="col-auto">
             <button type="submit" class="btn btn-primary mb-2">Submit</button>
         </div>
@@ -268,6 +278,39 @@
                     </div>
                 </div>
             </form>
+
+
+
+
+            <form method="POST" th:object="${newStateCommandOverwrite}" th:action="@{/setting/statecontroloverwrite/add}">
+                <h5>New Sate Command Overwrite</h5>
+                <div class="form-row align-items-center">
+
+                    <div class="col-auto">
+                        <label class="">Command</label>
+                        <select class="form-control mb-2" name="command">
+                            <option th:each="command : ${stateCommands}"
+                                    th:value="${command}"
+                                    th:utext="${command}"
+                            ></option>
+                        </select>
+                    </div>
+
+
+                    <div class="col-auto">
+                        <label class="">Label</label>
+                        <input type="text" class="form-control mb-2" th:field="*{overwrite}">
+                    </div>
+
+
+
+                    <div class="col-auto">
+                        <button type="submit" style="margin-top:30px;" class="btn btn-primary mb-2">Submit</button>
+                    </div>
+                </div>
+            </form>
+
+
         </div>
     </div>
 

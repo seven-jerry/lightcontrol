@@ -1,30 +1,23 @@
 ///<reference path="WebSocketClient.ts"/>
 ///<reference path="ClientStateModel.ts"/>
+///<reference path="StateAggregation.ts"/>
+
 namespace client {
 
     export abstract class AbstractController implements IWebSocketConsumer, IClientStateChangeConsumer {
         websocket: WebSocketClient;
         model: ClientStateModel;
 
-
-        protected groupedOutputState: {} = {};
-        protected outSideHigh:number = 0;
-        protected outSideLow:number = 0;
-
+        aggregation:StateAggregation;
+        outSideAggregation:OutputAggregation;
 
         constructor() {
+            this.aggregation = new StateAggregation();
+            this.outSideAggregation = new OutputAggregation();
             this.model = new ClientStateModel(this);
-            this.initGroupedState();
         }
 
-        initGroupedState() {
-            this.groupedOutputState = {};
-            this.groupedOutputState["high"] = [];
-            this.groupedOutputState["low"] = [];
-            this.groupedOutputState["disabled"] = [];
-            this.groupedOutputState["outside_low"] = [];
-            this.groupedOutputState["outside_high"] = [];
-        }
+
 
         start(host: string) {
             this.websocket = new WebSocketClient(host, this);
@@ -48,18 +41,22 @@ namespace client {
 
         }
 
+        public groupedOutputState(){
+            return this.aggregation.groupedOutputState;
+        }
 
-        handleCommandsChanged() {
+
+        handleCommandsChanged(commands:Command[]) {
         }
 
         handleOutputStateChange(state: string) {
             var method_char = state.charAt(0);
+            let saveSate = state;
             if(method_char != 'o'){
                 this.displayError("got wrong output method char");
                 return;
             }
             state = state.substr(1);
-            let saveSate = state;
             while (state.length > 0) {
                 var xChar = state.charAt(0);
                 var x = parseInt(state.charAt(0));
@@ -74,23 +71,7 @@ namespace client {
         }
 
         protected generateStateAggregation(state: string) {
-            this.initGroupedState();
-
-            while (state.length > 0) {
-                var x = parseInt(state.charAt(0));
-                var y = parseInt(state.charAt(1));
-                var s = parseInt(state.charAt(2));
-                if (s == 0) {
-                    this.groupedOutputState["low"].push(x + "" + y);
-                } else if (s == 1) {
-                    this.groupedOutputState["high"].push(x + "" + y);
-
-                } else if (s == 7) {
-                    this.groupedOutputState["disabled"].push(x + "" + y);
-                }
-                state = state.substr(3);
-            }
-
+            this.aggregation.withNewState(state);
         }
 
         protected changeOutputRow(x: number, y: number, s: number) {
@@ -119,27 +100,20 @@ namespace client {
         }
 
         handleOutsideStateChange(state: string) {
-            this.outSideLow = 0;
-            this.outSideHigh = 0;
-            var method_char = state.charAt(0);
-            if(method_char != 'u'){
-                this.displayError("got wrong output method char");
-                return;
-            }
-            state = state.substr(1);
-
-            while (state.length > 0) {
-                var s = parseInt(state.charAt(1));
-                if (s == 1) {
-                    this.outSideHigh++;
-                }
-                if (s == 0) {
-                    this.outSideLow++;
-                }
-                state = state.substr(2);
-                continue;
-            }
+           this.outSideAggregation.withNewState(state);
         }
+
+        public groupedOutsideState(){
+            return this.outSideAggregation.groupedOutsideState;
+        }
+
+        handleSettingsChange(setting: client.Setting) {
+        }
+
+
+
+
+
 
 
     }

@@ -46,7 +46,6 @@ public class SettingsController {
         model.addAttribute("sources", SerialSources.values());
         model.addAttribute("inputCommands", InputCommand.values());
         model.addAttribute("inputControls", InputControl.values());
-
         model.addAttribute("stateCommands", StateCommand.values());
         model.addAttribute("stateCommandOverwrites", persistenceService.getStateCommandOverwrites());
         model.addAttribute("newStateCommandOverwrite", persistenceService.newStateControlOverwrite());
@@ -64,7 +63,9 @@ public class SettingsController {
             s.setOutside(setting.getOutside());
             s.setInputCommand(setting.getInputCommand());
             s.setMasterUrl(setting.getMasterUrl());
+            s.setMasterInternetUrl(setting.getMasterInternetUrl());
             s.setControl(setting.getControl());
+            s.setName(setting.getName());
         });
         return this.details(model);
     }

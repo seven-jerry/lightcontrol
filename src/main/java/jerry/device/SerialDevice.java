@@ -151,7 +151,7 @@ public class SerialDevice implements ISerialSource, SerialPortDataListener {
             String data = new String(event.getReceivedData());
             this.delegate.handleMessage(data);
         } catch (Exception e) {
-            log.error(e.getMessage());
+            log.error(e.toString());
         }
 
     }

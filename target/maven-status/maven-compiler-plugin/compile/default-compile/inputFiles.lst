@@ -50,6 +50,7 @@
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/util/ErrorForwardingConsumer.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/util/DateFormatter.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/util/Sleep.java
+/Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/config/LocalSecurity.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/SimpleEchoSocket.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/util/ThriPredicate.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/interaction/MasterStateNotifier.java

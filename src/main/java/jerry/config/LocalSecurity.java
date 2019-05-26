@@ -12,21 +12,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
-@Profile("internet")
-public class Security extends WebSecurityConfigurerAdapter {
+@Profile("local")
+public class LocalSecurity extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-                .withUser("jerry").password(passwordEncoder().encode("derschneeman")).roles("ADMIN")
-                .and().withUser("robot").password(passwordEncoder().encode("robot")).roles("USER")
-                .and().withUser("alex").password(passwordEncoder().encode("alex")).roles("USER")
-                .and().withUser("richi").password(passwordEncoder().encode("richi")).roles("USER")
-                .and().withUser("michi").password(passwordEncoder().encode("michi")).roles("USER")
-                .and().withUser("sissi").password(passwordEncoder().encode("sissi")).roles("USER")
-                .and().withUser("christian").password(passwordEncoder().encode("christian")).roles("USER");
-        ;
-//.and().withUser()
     }
 
     @Override
@@ -39,18 +29,7 @@ public class Security extends WebSecurityConfigurerAdapter {
                 .antMatchers("/webSocket").permitAll()
                 .antMatchers("/masterSocket").permitAll()
                 .antMatchers("/api/setting/**").permitAll()
-                .anyRequest()
-                .authenticated()
-                .and()
-                .formLogin()
-                .loginPage("/login")
-                .permitAll()
-                .and()
-                .logout()
-                .permitAll()
-                .and()
-                .rememberMe().key("sooscretyoubiteyourtongeandyesthetypowasintent")
-                .tokenValiditySeconds(Integer.MAX_VALUE);
+                .anyRequest().permitAll();
         ;
     }
 

@@ -25,6 +25,7 @@ public class ClientState {
 
     public static final String MESSAGE_TYPE_FULL = "full";
     public static final String MESSAGE_TYPE_PARTIAL = "partial";
+    public static final String MESSAGE_TYPE_PING = "ping";
 
     Setting setting;
 

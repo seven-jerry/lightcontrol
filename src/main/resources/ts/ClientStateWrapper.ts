@@ -4,15 +4,17 @@ namespace client{
         host:string;
         delegate:IMasterChangeConsumer;
 
-        constructor(host:string,value:string,delegate:IMasterChangeConsumer){
+        constructor(host:string,delegate:IMasterChangeConsumer){
             this.host = host;
             this.state = new ClientStateModel(this);
             this.delegate = delegate;
-            this.state.handleStateUpdate(value);
         }
 
-        handleCommandsChanged() {
-            this.delegate.handleCommandsChanged(this.host);
+        handleUpdate(state:string){
+            this.state.handleStateUpdate(state);
+        }
+        handleCommandsChanged(commands:Command[]) {
+            this.delegate.handleCommandsChanged(this.host,commands);
         }
 
         handleInputStateChange(inputMap: {}) {
@@ -36,6 +38,10 @@ namespace client{
 
         handlePartialUpdate(update: string) {
             this.state.handleStateUpdate(update);
+        }
+
+        handleSettingsChange(setting: client.Setting) {
+            this.delegate.handleSettingsChange(this.host,setting);
         }
     }
 }

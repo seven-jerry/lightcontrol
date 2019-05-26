@@ -35,6 +35,7 @@ public final class MasterUpdateSocket {
         if(isConnected()) return;
         try {
             webSocketClient.getHttpClient().setConnectTimeout(300);
+            webSocketClient.getHttpClient().setIdleTimeout(1000);
             webSocketClient.start();
 
             URI echoUri = new URI(destination);
@@ -69,11 +70,12 @@ public final class MasterUpdateSocket {
 
     @OnWebSocketMessage
     public void onMessage(String msg) {
-        this.handler.onMessageFromMaster(msg);
+        this.handler.onMessageFromMaster(this.session, msg);
     }
 
     @OnWebSocketError
     public void onWebSocketError(Throwable t){
+        log.error(t.toString());
         messageReciever.pushMessage(t.getMessage());
     }
     public void writeMessage(String message) {

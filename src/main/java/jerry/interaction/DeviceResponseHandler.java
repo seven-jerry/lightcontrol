@@ -38,7 +38,7 @@ public class DeviceResponseHandler implements IResponseHandler {
 
                 this.proccessMessage(message);
             } catch (RuntimeException e) {
-                log.error(e.getMessage());
+                log.error(e.toString());
             } finally {
                 rawMessage = rawMessage.substring(rawMessage.indexOf("}", rawMessage.indexOf("{")) + 1);
             }

@@ -14,8 +14,10 @@ public class Setting {
     private Integer outside;
     private InputCommand inputCommand;
     private String masterUrl;
-    private InputControl control;
+    private String masterInternetUrl;
 
+    private InputControl control;
+    private String name;
 
     private List<Input> inputs = new ArrayList<>();
 
@@ -191,5 +193,22 @@ public class Setting {
 
     public int getInputCount(){
         return this.inputs.size();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+    public String getMasterInternetUrl() {
+        return masterInternetUrl;
+    }
+
+    public void setMasterInternetUrl(String masterInternetUrl) {
+        this.masterInternetUrl = masterInternetUrl;
     }
 }

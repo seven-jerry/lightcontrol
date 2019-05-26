@@ -13,7 +13,7 @@ namespace client {
         control: string;
         rows: number;
         outputSource: SerialSource;
-
+        name: string;
 
         public static withDefaults(){
             let setting = new Setting();
@@ -22,6 +22,7 @@ namespace client {
             setting.rows = 0;
             setting.masterUrl="";
             setting.control = "";
+            setting.name = "Default Name";
             return setting;
         }
         public static fromObject(obj: any) {
@@ -31,6 +32,8 @@ namespace client {
             setting.outside = obj.outside;
             setting.inputCommand = obj.inputCommand;
             setting.masterUrl = obj.masterUrl;
+            setting.name = obj.name;
+
             setting.inputSource = SerialSource.fromObject(obj.inputSource);
             setting.outputSource = SerialSource.fromObject(obj.outputSource);
 

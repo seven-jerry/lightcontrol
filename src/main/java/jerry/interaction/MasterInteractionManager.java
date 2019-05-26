@@ -19,6 +19,7 @@ public class MasterInteractionManager extends AbstractInteractionManager {
     @Autowired
     ClientStateUpdater clientStateUpdater;
 
+
     public MasterInteractionManager() {
         System.out.println("master");
     }
@@ -28,7 +29,7 @@ public class MasterInteractionManager extends AbstractInteractionManager {
         this.lifeCycleManagedComponents.add(notifier);
     }
 
-    public void writeToProducer(Map<String,String> map) {
+    public void writeToProducer(Map<String, String> map) {
         map.forEach(clientStateUpdater::writeToHost);
     }
 

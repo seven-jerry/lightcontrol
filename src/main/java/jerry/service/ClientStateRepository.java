@@ -100,6 +100,9 @@ public class ClientStateRepository implements ILIfeCycleExposable {
 
     protected void afterUpdate(boolean hasUpdated, String... keys) {
         if (!hasUpdated) return;
+        if(notifier == null){
+            return;
+        }
         notifier.hasUpdatedClientState(keys);
     }
 }

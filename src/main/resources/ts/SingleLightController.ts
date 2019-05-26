@@ -30,7 +30,7 @@ namespace client {
             this.changeButtonLayout();
         }
 
-        handleCommandsChanged() {
+        handleCommandsChanged(commands:Command[]) {
             $(".command").remove();
             for (let command of this.model.clientState.commands) {
                 SingleLightController.displayCommand(command);
@@ -63,7 +63,9 @@ namespace client {
 
         public handleOutsideStateChange(state: string) {
             super.handleOutsideStateChange(state);
-            SingleLightController.updateOutside(this.outSideHigh, this.outSideLow);
+
+            let outside = this.groupedOutsideState();
+            SingleLightController.updateOutside( outside["high"], outside["low"]);
         }
 
         public commandEntered(command: string) {

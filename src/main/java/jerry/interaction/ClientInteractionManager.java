@@ -38,6 +38,10 @@ public class ClientInteractionManager extends AbstractInteractionManager {
     @Autowired
     MasterUpdater masterUpdater;
 
+    @Autowired
+    @Qualifier("internet")
+    MasterUpdater internetUpdater;
+
 
     private StateDelegator stateDelegator;
 
@@ -51,6 +55,7 @@ public class ClientInteractionManager extends AbstractInteractionManager {
     protected void onTryAutoStart() {
         log.debug("onTryAutoStart");
         masterUpdater.checkConnection();
+        internetUpdater.checkConnection();
     }
 
 
@@ -61,16 +66,20 @@ public class ClientInteractionManager extends AbstractInteractionManager {
         this.lifeCycleManagedComponents.add(notifier);
         this.lifeCycleManagedComponents.add(readManager);
         this.lifeCycleManagedComponents.add(masterUpdater);
+        this.lifeCycleManagedComponents.add(internetUpdater);
+
     }
 
     @Override
     protected void onStart() throws Exception {
+        this.lifeCycleManagedComponents.remove(stateDelegator);
         stateDelegator = this.stateController();
         this.lifeCycleManagedComponents.add(stateDelegator);
         super.onStart();
         Thread.sleep(1000);
         writeToSource(q -> q.offer(StateCommand.HEART_BEAT.getCommand()));
     }
+
 
     public void writeToProducer(String userAction) {
         log.trace(userAction);

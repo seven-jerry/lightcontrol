@@ -3,17 +3,16 @@ package jerry.persist;
 import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class FilePersistedCollection<T extends IIdProvider&Comparable<T>> extends AbstractFilePersisted<T> implements ICollectionPersistable<T> {
 
     File folder;
     String fileNameTemplate;
 
-    public FilePersistedCollection(String path,Class<T> tClass,String prefix,String potfix){
-        folder =toBaseDirectoryLocatedFile(path);
+    public FilePersistedCollection(String folder,String path,Class<T> tClass,String prefix,String potfix){
+        super(folder);
+        this.folder =toBaseDirectoryLocatedFile(path);
         fileNameTemplate = prefix + "{id}."+potfix;
         clazz = tClass;
    }
@@ -21,7 +20,9 @@ public class FilePersistedCollection<T extends IIdProvider&Comparable<T>> extend
     @Override
     public List<T> getAvailabeEntries() {
         List<T> list = new ArrayList<>();
-        for(File f : folder.listFiles()){
+        if( folder.listFiles() == null) return list;
+
+        for(File f : Objects.requireNonNull(folder.listFiles())){
             if (f.isHidden())continue;
             if(!Files.isRegularFile(f.toPath())) continue;
             list.add(read(f));
@@ -37,7 +38,7 @@ public class FilePersistedCollection<T extends IIdProvider&Comparable<T>> extend
 
     @Override
     public void addEntry(T entry) {
-        Integer id = getAvailabeEntries().size();
+        Integer id = this.generateNewId();
         entry.setId(id);
         String idTemplate = fileNameTemplate.replace("{id}",""+id);
         File f = Paths.get(folder.toString(),idTemplate).toFile();
@@ -47,6 +48,7 @@ public class FilePersistedCollection<T extends IIdProvider&Comparable<T>> extend
 
     @Override
     public void removeEntries(List<T> entries) {
+        entries.forEach(this::removeEntry);
 
     }
 
@@ -62,17 +64,26 @@ public class FilePersistedCollection<T extends IIdProvider&Comparable<T>> extend
 
     @Override
     public void removeAllEntries() {
-
+        this.getAvailabeEntries().forEach(this::removeEntry);
     }
 
-    @Override
-    public void updateEntries(List<T> entries) {
-
-    }
 
     private void removeEntry(T entry){
         String idTemplate = fileNameTemplate.replace("{id}",""+entry.getId());
         File f = Paths.get(folder.toString(),idTemplate).toFile();
         removeFile(f);
+    }
+
+
+    private Integer generateNewId(){
+        Integer id = new Random().nextInt();
+
+        for (T available : this.getAvailabeEntries()){
+            if(available.getId().equals(id)){
+                return this.generateNewId();
+            }
+        }
+        return id;
+
     }
 }

@@ -1,25 +1,36 @@
 package jerry.interaction;
 
-import jerry.arduino.*;
 import jerry.service.PersistenceService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import java.util.concurrent.atomic.AtomicReference;
+import java.util.Objects;
 
 @Component
-public class ReadManager implements IReadUpdateable, ILIfeCycleExposable {
+@Slf4j
+public class ReadManager implements ILIfeCycleExposable {
 
 
     @Autowired
-    StateNotifier notifier;
+    @Qualifier("contextAwareClientStateNotifier")
+    AbstractStateNotifier abstractStateNotifier;
 
     @Autowired
     PersistenceService service;
 
+    @Value("${base.folder}")
+    public String settingsFolder;
+
+    @Autowired
+    public AbstractInteractionManager clientInteractionManager;
+
+    private InputControl inputControl = InputControl.AUTO;
+
     private InputCommand command;
 
-    private AtomicReference<StateArray> state = new AtomicReference<>(new StateArray(0,0,0));
 
     @Override
     public void startLifecycle() throws RuntimeException {
@@ -28,26 +39,30 @@ public class ReadManager implements IReadUpdateable, ILIfeCycleExposable {
 
     @Override
     public void stopLifeCycle() {
-        command.resetCondition();
+        if (command != null)
+            command.resetCondition();
     }
 
-    @Override
-    public synchronized void handleMessage(StateArray message) {
-        int currentState = state.get().stateHashCode();
-        int nextState = message.stateHashCode();
-        state.set(message);
-        System.out.println("currentState : "+currentState + " nextState : "+nextState);
-        if(currentState != nextState) {
-            command.testCondition(message).ifPresent(e -> notifier.produceOnce(e.getCommand()));
-        }
+    //    @Override
+    public void handleMessage(StateArray message) {
+        log.trace(message.toString());
+        command.testCondition(message, inputControl)
+                .ifPresent(e -> clientInteractionManager.writeToProducer(e.getCommand()));
+
     }
 
-    public StateArray getLastState(){
-        return this.state.get();
-    }
-    @Override
+    //   @Override
     public void handleError(String message) {
-        System.out.println("Error :"+message);
+        System.out.println("Error :" + message);
         command.resetCondition();
+    }
+
+
+    public InputControl getInputControl() {
+        return inputControl;
+    }
+
+    public void setInputControl(InputControl inputControl) {
+        this.inputControl = Objects.requireNonNull(inputControl);
     }
 }

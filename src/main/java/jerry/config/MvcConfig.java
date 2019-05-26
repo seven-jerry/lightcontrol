@@ -5,16 +5,17 @@ import jerry.util.DateFormatter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.format.FormatterRegistry;
+import org.springframework.http.CacheControl;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.servlet.config.annotation.*;
 
 @Configuration
+@EnableScheduling
 public class MvcConfig implements WebMvcConfigurer {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-       registry.addViewController("/command").setViewName("command");
-        //registry.addViewController("/").setViewName("index");
-
+        registry.addViewController("/login").setViewName("login");
     }
 
     @Override
@@ -30,7 +31,7 @@ public class MvcConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
-        registry.addResourceHandler("/js/**").addResourceLocations("classpath:/static/js/");
+        registry.addResourceHandler("/js/**").addResourceLocations("classpath:/static/js/").setCacheControl(CacheControl.noCache());
 
     }
 

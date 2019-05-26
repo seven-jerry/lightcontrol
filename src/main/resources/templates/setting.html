@@ -29,6 +29,14 @@
             <br/>
         </div>
     </div>
+
+    <div>
+        <ul th:each="event : ${events}">
+            <li th:text="${event}"></li>
+        </ul>
+
+    </div>
+
     <div><p th:text="${info}"></p></div>
     <a href="#" th:href="@{/setting/detail}" class="btn btn-primary">Bearbeiten</a>
 

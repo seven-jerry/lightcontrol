@@ -41,7 +41,7 @@ public class ClientStateUpdater {
     public void hasUpdatedClientState(WebSocketSession host, String... keys) {
         Map<String, String> map = new HashMap<>();
         String state = clientStates.get(host).getStateJson(keys);
-        map.put(host.getRemoteAddress().getHostName(), state);
+        map.put(host.getId(), state);
         if (notifiable != null) {
             notifiable.hasUpdatedClientState(new Gson().toJson(map));
         }

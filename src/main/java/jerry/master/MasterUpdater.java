@@ -55,7 +55,7 @@ public class MasterUpdater implements ILIfeCycleExposable, IMasterResponseHandle
 
     @Override
     public synchronized void stopLifeCycle() {
-
+        this.closeConnection();
     }
 
     public synchronized void checkConnection() {

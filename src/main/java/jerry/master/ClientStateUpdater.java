@@ -5,10 +5,12 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import jerry.consumer.ClientRequestMessage;
 import jerry.consumer.ClientState;
+import jerry.interaction.EventHandler;
 import jerry.pojo.Command;
 import jerry.service.ClientStateRepository;
 import jerry.service.IClientStateChangeNotifiable;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
@@ -22,13 +24,16 @@ import java.util.concurrent.ConcurrentHashMap;
 @Slf4j
 public class ClientStateUpdater {
 
+    @Autowired
+    EventHandler eventHandler;
+
     private ConcurrentHashMap<WebSocketSession, ClientStateRepository> clientStates = new ConcurrentHashMap<>();
     private IMasterChangeNotifiable notifiable;
 
     public String getClientStateJson(String... keys) {
         Map<String, String> map = new HashMap<>();
         clientStates.forEach((k, v) -> {
-            map.put(k.getRemoteAddress().getHostName(), v.getStateJson(keys));
+            map.put(k.getId(), v.getStateJson(keys));
         });
         return new Gson().toJson(map);
     }
@@ -58,6 +63,7 @@ public class ClientStateUpdater {
                 try {
                     session.sendMessage(new TextMessage(ClientRequestMessage.fetchString()));
                 } catch (IOException e) {
+                    eventHandler.pushMessage(EventHandler.Type.ERROR,e.toString());
                     log.error(e.getMessage());
                 }
                 return;
@@ -90,7 +96,7 @@ public class ClientStateUpdater {
         innerMap.put("type",ClientState.MESSAGE_TYPE_PING);
 
         Map<String,Map<String,String>> map = new HashMap<>();
-        map.put(session.getRemoteAddress().getHostName(),innerMap);
+        map.put(session.getId(),innerMap);
         return new Gson().toJson(map);
 
 
@@ -140,7 +146,7 @@ public class ClientStateUpdater {
     public Map<String, ClientState> getClientStateMap() {
         Map<String, ClientState> map = new HashMap<>();
         this.clientStates.forEach((k, v) -> {
-                    map.put(k.getRemoteAddress().getHostName(), v.getState());
+                    map.put(k.getId(), v.getState());
                 }
         );
         return map;
@@ -148,7 +154,7 @@ public class ClientStateUpdater {
 
     public void writeToHost(String host, String value) {
         clientStates.keySet().stream()
-                .filter(s -> s.getRemoteAddress().getHostName().equals(host))
+                .filter(s -> s.getId().equals(host))
                 .forEach(session -> {
                     try {
                         session.sendMessage(new TextMessage(ClientRequestMessage.changeString(value)));

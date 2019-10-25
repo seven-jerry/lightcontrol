@@ -6,7 +6,7 @@ if [[ "$#" -ne 3 ]]; then
 fi
 
 
-sshpass -p "derschneeman" ssh pi@$1 "mkdir -p $2/$3/"
-sshpass -p "derschneeman" ssh pi@$1 "sudo pkill -9 java"
-sshpass -p "derschneeman" scp target/lightcontrol.jar pi@$1:$2/$3/lightcontrol.jar
-sshpass -p "derschneeman" ssh pi@$1 "sudo reboot &"
+sshpass -p "${RASPI_PW}" ssh pi@$1 "mkdir -p $2/$3/"
+sshpass -p "${RASPI_PW}" ssh pi@$1 "sudo pkill -9 java"
+sshpass -p "${RASPI_PW}" scp target/lightcontrol.jar pi@$1:$2/$3/lightcontrol.jar
+sshpass -p "${RASPI_PW}" ssh pi@$1 "sudo reboot &"

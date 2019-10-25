@@ -314,37 +314,6 @@
             </properties>
         </profile>
 
-
-         <!--<profile>
-             <id>living</id>
-             <properties>
-                 <repo-id>living</repo-id>
-                 <repo-url>ftp://192.168.1.9/home/pi/Desktop</repo-url>
-             </properties>
-         </profile>
-         <profile>
-             <id>eating</id>
-             <properties>
-                 <repo-id>eating</repo-id>
-                 <repo-url>ftp://192.168.1.100/home/pi/Desktop</repo-url>
-             </properties>
-         </profile>
-         <profile>
-             <id>bathhall</id>
-             <properties>
-                 <repo-id>hallway</repo-id>
-                 <repo-url>ftp://192.168.1.38/home/pi/Desktop</repo-url>
-             </properties>
-         </profile>
-         <profile>
-             <id>master</id>
-             <properties>
-                 <repo-id>master</repo-id>
-                 <repo-url>ftp://192.168.1.30/home/pi/Desktop</repo-url>
-             </properties>
-         </profile>
-
-         !-->
     </profiles>
 
 </project>

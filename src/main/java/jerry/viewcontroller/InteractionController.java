@@ -52,6 +52,7 @@ public class InteractionController {
         try {
             action.accept(model);
         } catch (Exception e) {
+            e.printStackTrace();
             model.addAttribute("error", e.toString());
         }
         return settingsController.index(model);

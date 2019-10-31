@@ -1,11 +1,9 @@
 package jerry.interaction;
 
 public enum InputControl {
-    AUTO("Auto",true,true),
+    ISLAND_MODE("Auto",true,true),
     MANUAL("Hand",false,false),
-    AUTO_OFF_MANUAL_ON("Auto Aus Hand Ein",false,true),
-    AUTO_ON_MAN_OFF("Auto Ein Hand Aus",true,false);
-
+    HOME_ASSIST("Home Assist",true,true);
     boolean high;
     boolean low;
     InputControl(String label,boolean high,boolean low){

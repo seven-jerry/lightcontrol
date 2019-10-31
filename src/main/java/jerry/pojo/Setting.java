@@ -15,9 +15,12 @@ public class Setting {
     private InputCommand inputCommand;
     private String masterUrl;
     private String masterInternetUrl;
-
     private InputControl control;
     private String name;
+
+    private String localNodeRedWebsocket;
+    private String homeAssistHttpEndpoint;
+
 
     private List<Input> inputs = new ArrayList<>();
 
@@ -211,4 +214,21 @@ public class Setting {
     public void setMasterInternetUrl(String masterInternetUrl) {
         this.masterInternetUrl = masterInternetUrl;
     }
+
+    public String getLocalNodeRedWebsocket() {
+        return localNodeRedWebsocket;
+    }
+
+    public void setLocalNodeRedWebsocket(String localNodeRedWebsocket) {
+        this.localNodeRedWebsocket = localNodeRedWebsocket;
+    }
+
+    public String getHomeAssistHttpEndpoint() {
+        return homeAssistHttpEndpoint;
+    }
+
+    public void setHomeAssistHttpEndpoint(String homeAssistHttpEndpoint) {
+        this.homeAssistHttpEndpoint = homeAssistHttpEndpoint;
+    }
+
 }

@@ -1,15 +1,10 @@
 package jerry.interaction;
 
-import com.google.gson.Gson;
-import jerry.consumer.ClientRequestMessage;
 import jerry.consumer.IConsumer;
-import jerry.master.MasterUpdater;
-import jerry.service.ClientStateRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
-import org.springframework.web.socket.TextMessage;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
@@ -75,7 +70,7 @@ public abstract class AbstractStateNotifier implements Runnable, ILIfeCycleExpos
     }
 
 
-    public void handleConsumerMessage(TextMessage message) {
+    public void handleConsumerMessage(String message) {
 
     }
 

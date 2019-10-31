@@ -51,7 +51,7 @@ public class WebSocketController extends TextWebSocketHandler {
     public void handleTextMessage(WebSocketSession session, TextMessage textMessage) throws IOException {
         try {
             log.trace(textMessage.getPayload());
-            notifier.handleConsumerMessage(textMessage);
+            notifier.handleConsumerMessage(textMessage.getPayload());
         } catch (Exception e) {
             session.sendMessage(new TextMessage("{\"error\":\"" + e.getMessage() + "\"}"));
             log.error(e.getMessage());

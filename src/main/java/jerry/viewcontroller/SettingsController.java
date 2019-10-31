@@ -66,6 +66,8 @@ public class SettingsController {
             s.setMasterInternetUrl(setting.getMasterInternetUrl());
             s.setControl(setting.getControl());
             s.setName(setting.getName());
+            s.setLocalNodeRedWebsocket(setting.getLocalNodeRedWebsocket());
+            s.setHomeAssistHttpEndpoint(setting.getHomeAssistHttpEndpoint());
         });
         return this.details(model);
     }

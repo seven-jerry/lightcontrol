@@ -30,7 +30,7 @@ public class MasterStateNotifier extends AbstractStateNotifier implements IMaste
 
 
     @Override
-    public void handleConsumerMessage(TextMessage message) {
+    public void handleConsumerMessage(String message) {
         ClientRequestMessage requestMessage = transformMessage(message);
         switch (requestMessage.type) {
             case FETCH:
@@ -42,8 +42,7 @@ public class MasterStateNotifier extends AbstractStateNotifier implements IMaste
         }
     }
 
-    private ClientRequestMessage transformMessage(TextMessage message){
-        String payload = message.getPayload();
+    private ClientRequestMessage transformMessage(String payload){
         return new Gson().fromJson(payload,ClientRequestMessage.class);
     }
 

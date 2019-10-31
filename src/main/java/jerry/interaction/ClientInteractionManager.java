@@ -54,8 +54,8 @@ public class ClientInteractionManager extends AbstractInteractionManager {
     @Override
     protected void onTryAutoStart() {
         log.debug("onTryAutoStart");
-        masterUpdater.checkConnection();
-        internetUpdater.checkConnection();
+        masterUpdater.startLifecycle();
+        internetUpdater.startLifecycle();
     }
 
 
@@ -67,7 +67,6 @@ public class ClientInteractionManager extends AbstractInteractionManager {
         this.lifeCycleManagedComponents.add(readManager);
         this.lifeCycleManagedComponents.add(masterUpdater);
         this.lifeCycleManagedComponents.add(internetUpdater);
-
     }
 
     @Override

@@ -28,17 +28,28 @@ public class DeviceResponseHandlerTest {
     @Autowired
     DeviceResponseHandler deviceResponseHandler;
 
+    @MockBean
+    ReadManager readManager;
+
 
     @Test
     public void handleMessage() {
-        when(clientStateRepository.getState()).thenReturn(ClientState.withSize(2,2,2,2));
-        deviceResponseHandler.handleMessage("{o000010020030040100110120130147200210220230240ui00}}");
-      //  verify(clientStateRepository,times(1)).updateOutputState("o000010100110");
+        when(clientStateRepository.getState()).thenReturn(ClientState.withSize(2,5,2,2));
+        deviceResponseHandler.handleMessage("{o000010020030040100110120130147200210220230240u0010i0010}}");
+        verify(clientStateRepository,times(1)).updateOutputState("o000010020030040100110120130147200210220230240");
     }
 
     @Test
     public void updateInputState() {
-        deviceResponseHandler.handleMessage("{i0010}");
+        ClientState state = ClientState.withSize(0,0,2,0);
+        when(clientStateRepository.updateInputState(anyString())).thenReturn(true);
+
+        when(clientStateRepository.getState()).thenReturn(state);
+       // verify(readManager,times(3)).handleMessage(state.getState());
+
+        //deviceResponseHandler.handleMessage("{i0110}");
+       // deviceResponseHandler.handleMessage("{i0010}");
+      //  deviceResponseHandler.handleMessage("{i0110}");
 
     }
 }

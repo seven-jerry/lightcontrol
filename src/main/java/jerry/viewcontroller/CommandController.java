@@ -18,6 +18,8 @@ public class CommandController {
     @Autowired
     ReadManager readManager;
 
+
+
     @RequestMapping(value = {"", "/", "/{host}/"})
     public String index(Model model, @PathVariable("host") Optional<String> host) {
         model.addAttribute("inputControls", InputControl.values());

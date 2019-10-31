@@ -35,7 +35,7 @@ public class ClientStateNotifier extends AbstractStateNotifier implements IClien
 
 
     @Override
-    public void handleConsumerMessage(TextMessage message) {
+    public void handleConsumerMessage(String message) {
         ClientRequestMessage requestMessage = transformMessage(message);
         switch (requestMessage.type) {
 
@@ -48,8 +48,7 @@ public class ClientStateNotifier extends AbstractStateNotifier implements IClien
         }
     }
 
-    private ClientRequestMessage transformMessage(TextMessage message){
-        String payload = message.getPayload();
+    private ClientRequestMessage transformMessage(String payload){
         return new Gson().fromJson(payload,ClientRequestMessage.class);
     }
 }

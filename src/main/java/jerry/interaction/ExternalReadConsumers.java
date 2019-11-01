@@ -21,7 +21,7 @@ import java.util.Map;
 
 @Slf4j
 @Component
-public class ExternalReadConsumers {
+public class ExternalReadConsumers implements ILIfeCycleExposable{
 
     @Autowired
     ReadManager readManager;
@@ -35,7 +35,7 @@ public class ExternalReadConsumers {
     @Autowired
     EventHandler eventHandler;
 
-    @Scheduled(initialDelay = 10_000, fixedDelay = 10_000)
+
     public synchronized void tryAutoStart() {
 
         if (readManager.getInputControl() == InputControl.ISLAND_MODE ||
@@ -104,5 +104,15 @@ public class ExternalReadConsumers {
 
     public void disconnect() {
         this.nodeRedSocket.stopLifeCycle();
+    }
+
+    @Override
+    public void startLifecycle() throws RuntimeException {
+        tryAutoStart();
+    }
+
+    @Override
+    public void stopLifeCycle() {
+    this.nodeRedSocket.stopLifeCycle();
     }
 }

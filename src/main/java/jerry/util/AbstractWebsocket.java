@@ -15,9 +15,8 @@ import java.time.LocalDateTime;
 public abstract class AbstractWebsocket implements ILIfeCycleExposable, IWebSocketResponseHandler, IConsumer {
 
 
-    protected WebsocketImpl socket;
     protected boolean sendPing;
-
+    protected Integer socketId;
 
     public void setSendPing(boolean sendPing) {
         this.sendPing = sendPing;
@@ -32,19 +31,15 @@ public abstract class AbstractWebsocket implements ILIfeCycleExposable, IWebSock
     }
 
     private void connectSocket() {
-        if (socket == null)
-            socket = new WebsocketImpl(getEventHandler(), this, this.getUrl());
-        if (socket.isConnected()) return;
-
         try {
-            socket.connect();
+            socketId = getWebsocketManager().newSocket(getUrl(), this);
         } catch (Exception e) {
-            log.error("could not connect to " + this.getUrl() + " : " + e.toString());
+            e.printStackTrace();
         }
     }
 
     private boolean pingIfConnected() {
-        if (this.socket != null && this.socket.isConnected()) {
+        if (this.socketId != null) {
             this.ping();
             return true;
         }
@@ -59,7 +54,11 @@ public abstract class AbstractWebsocket implements ILIfeCycleExposable, IWebSock
         }
 
         log.trace("connected - pinging");
-        socket.writeMessage(pingMessage());
+        try {
+            getWebsocketManager().writeToSocket(socketId, pingMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
@@ -94,12 +93,20 @@ public abstract class AbstractWebsocket implements ILIfeCycleExposable, IWebSock
     @Override
     public void write(String message) {
         log.trace(message);
-        this.socket.writeMessage(message);
+        try {
+            getWebsocketManager().writeToSocket(socketId,message);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void handleError(Exception e) {
-        socket.writeMessage("{\"error\":\"" + e.getMessage() + "\"}");
+        try {
+            getWebsocketManager().writeToSocket(socketId,"{\"error\":\"" + e.getMessage() + "\"}");
+        } catch (Exception e1){
+            e1.printStackTrace();
+        }
     }
 
 
@@ -108,5 +115,8 @@ public abstract class AbstractWebsocket implements ILIfeCycleExposable, IWebSock
         log.warn("");
         this.stopLifeCycle();
     }
+
+
+    protected abstract WebsocketManager getWebsocketManager();
 }
 

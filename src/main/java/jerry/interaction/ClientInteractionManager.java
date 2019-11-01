@@ -43,6 +43,9 @@ public class ClientInteractionManager extends AbstractInteractionManager {
     MasterUpdater internetUpdater;
 
 
+    @Autowired
+    ExternalReadConsumers externalReadConsumers;
+
     private StateDelegator stateDelegator;
 
 
@@ -66,6 +69,7 @@ public class ClientInteractionManager extends AbstractInteractionManager {
         this.lifeCycleManagedComponents.add(notifier);
         this.lifeCycleManagedComponents.add(readManager);
         this.lifeCycleManagedComponents.add(masterUpdater);
+        this.lifeCycleManagedComponents.add(externalReadConsumers);
         this.lifeCycleManagedComponents.add(internetUpdater);
     }
 

@@ -15,6 +15,7 @@ jerry/viewcontroller/SettingCommandController.class
 jerry/device/SerialSources.class
 jerry/util/AbstractWebsocket.class
 jerry/util/ThriPredicate.class
+jerry/util/IWebsocketErrorHandler.class
 jerry/master/ClientStateUpdater.class
 jerry/viewcontroller/Index.class
 jerry/interaction/IResponseHandler.class
@@ -48,6 +49,7 @@ jerry/master/IWebSocketResponseHandler.class
 jerry/config/MasterBeans.class
 jerry/SpringMain.class
 jerry/viewcontroller/MockStateEndpoint.class
+jerry/util/WebsocketManager.class
 jerry/device/MockSerialDevice.class
 jerry/interaction/ILIfeCycleExposable.class
 jerry/master/ClientStateUpdater$HostAwareChangeNotifiable.class

@@ -15,6 +15,7 @@ import jerry.service.PersistenceService;
 import jerry.util.AbstractWebsocket;
 import jerry.util.WebsocketImpl;
 import jerry.util.Sleep;
+import jerry.util.WebsocketManager;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.jetty.websocket.api.Session;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,9 +41,11 @@ public class MasterUpdater extends AbstractWebsocket {
     @Qualifier("contextAwareClientStateNotifier")
     AbstractStateNotifier abstractStateNotifier;
 
-
     @Autowired
     ClientStateRepository clientStateRepository;
+
+    @Autowired
+    WebsocketManager websocketManager;
 
     public String type = "local";
 
@@ -67,7 +70,7 @@ public class MasterUpdater extends AbstractWebsocket {
         ClientRequestMessage requestMessage = transformMessage(message);
         switch (requestMessage.type) {
             case FETCH:
-                this.socket.writeMessage(clientStateRepository.getStateJson(requestMessage.argumentsAsArray()));
+                write(clientStateRepository.getStateJson(requestMessage.argumentsAsArray()));
                 break;
             case CHANGE:
                 clientInteractionManager.writeToProducer(requestMessage.argumentAsString());
@@ -80,6 +83,10 @@ public class MasterUpdater extends AbstractWebsocket {
         return new Gson().fromJson(message, ClientRequestMessage.class);
     }
 
+    @Override
+    protected WebsocketManager getWebsocketManager(){
+        return websocketManager;
+    }
     @Override
     public EventHandler getEventHandler(){
         return this.eventHandler;

@@ -3,6 +3,7 @@ package jerry.interaction;
 import jerry.service.PersistenceService;
 import jerry.util.AbstractWebsocket;
 import jerry.util.WebsocketImpl;
+import jerry.util.WebsocketManager;
 import org.eclipse.jetty.websocket.api.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -23,6 +24,12 @@ public class NodeUpdater extends AbstractWebsocket {
     @Qualifier("contextAwareClientStateNotifier")
     AbstractStateNotifier notifier;
 
+    @Autowired
+    WebsocketManager websocketManager;
+
+    public NodeUpdater(){
+        setSendPing(true);
+    }
 
     @Override
     protected String getUrl() {
@@ -41,5 +48,10 @@ public class NodeUpdater extends AbstractWebsocket {
     @Override
     protected EventHandler getEventHandler() {
         return eventHandler;
+    }
+
+    @Override
+    protected WebsocketManager getWebsocketManager(){
+        return websocketManager;
     }
 }

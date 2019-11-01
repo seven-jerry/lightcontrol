@@ -14,6 +14,7 @@
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/interaction/DeviceResponseHandler.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/interaction/StateDelegator.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/config/Beans.java
+/Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/util/WebsocketManager.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/device/MockSerialDevice.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/interaction/ExternalReadConsumers.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/consumer/WebSocketConsumer.java
@@ -51,6 +52,7 @@
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/pojo/InputType.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/interaction/WriteThread.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/interaction/ReadManager.java
+/Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/util/IWebsocketErrorHandler.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/device/ISerialSource.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/util/ErrorForwardingConsumer.java
 /Users/jeremybutler/IdeaProjects/lightcontrol/src/main/java/jerry/util/DateFormatter.java

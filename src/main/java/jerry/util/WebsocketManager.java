@@ -24,7 +24,7 @@ public class WebsocketManager implements IWebsocketErrorHandler {
     @Autowired
     EventHandler eventHandler;
 
-    private Map<Integer, WebsocketImpl> sockets = new ConcurrentHashMap<>();
+    private Map<String, WebsocketImpl> sockets = new ConcurrentHashMap<>();
     private WebSocketClient webSocketClient = new WebSocketClient();
     private Random random = new Random();
 
@@ -38,9 +38,10 @@ public class WebsocketManager implements IWebsocketErrorHandler {
         }
     }
 
-    @Scheduled(initialDelay = 10_000, fixedDelay = 10_000)
+
+    @Scheduled(initialDelay = 60_000, fixedDelay = 5_000)
     public synchronized void checkSessionActive() {
-        for (Map.Entry<Integer, WebsocketImpl> socket : sockets.entrySet()) {
+        for (Map.Entry<String, WebsocketImpl> socket : sockets.entrySet()) {
             if (this.socketInBadState(socket.getValue())) {
                 socket.getValue().disconnect();
                 reconnectSocket(socket.getValue().getId());
@@ -52,11 +53,11 @@ public class WebsocketManager implements IWebsocketErrorHandler {
         return !socket.isConnected();
     }
 
-    public int newSocket(String url, IWebSocketResponseHandler responseHandler) throws Exception {
+    public String newSocket(String url, IWebSocketResponseHandler responseHandler) throws Exception {
         int id = random.nextInt(Integer.SIZE - 1);
         WebsocketImpl websocket = buildConnection(id, url, responseHandler);
-        this.sockets.put(id, websocket);
-        return id;
+        this.sockets.put(url, websocket);
+        return url;
     }
 
     private WebsocketImpl buildConnection(WebsocketImpl websocket) throws Exception {
@@ -69,8 +70,8 @@ public class WebsocketManager implements IWebsocketErrorHandler {
         sockets.remove(id);
     }
 
-    public void writeToSocket(int id, String message) throws Exception {
-        sockets.get(id).writeMessage(message);
+    public void writeToSocket(String url, String message) throws Exception {
+        sockets.get(url).writeMessage(message);
     }
 
 
@@ -108,13 +109,12 @@ public class WebsocketManager implements IWebsocketErrorHandler {
     @Override
     public void socketErrorReceived(Integer id, Throwable t) {
         log.warn(id + " has received error : "+t.toString());
-        reconnectSocket(id);
     }
 
     private void reconnectSocket(Integer id){
         try {
             WebsocketImpl websocket = sockets.get(id);
-            sockets.replace(id, buildConnection(websocket));
+            sockets.replace(websocket.getUrl(), buildConnection(websocket));
         } catch (Exception e){
             eventHandler.pushMessage(EventHandler.Type.ERROR,"could not create socket after closed");
         }

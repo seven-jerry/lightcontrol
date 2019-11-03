@@ -15,47 +15,21 @@ import java.time.LocalDateTime;
 public abstract class AbstractWebsocket implements ILIfeCycleExposable, IWebSocketResponseHandler, IConsumer {
 
 
-    protected boolean sendPing;
     protected Integer socketId;
-
-    public void setSendPing(boolean sendPing) {
-        this.sendPing = sendPing;
-    }
-
 
     @Override
     public synchronized void startLifecycle() throws RuntimeException {
-        if (pingIfConnected()) return;
         if (!hasValidUrl()) return;
         connectSocket();
     }
 
     private void connectSocket() {
         try {
+            if(socketId != null){
+                getWebsocketManager().checkSessionActive();
+                return;
+            }
             socketId = getWebsocketManager().newSocket(getUrl(), this);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    private boolean pingIfConnected() {
-        if (this.socketId != null) {
-            this.ping();
-            return true;
-        }
-        return false;
-    }
-
-
-    protected void ping() {
-        if (!this.sendPing) {
-            log.trace(getUrl() + " not pinging");
-            return;
-        }
-
-        log.trace("connected - pinging");
-        try {
-            getWebsocketManager().writeToSocket(socketId, pingMessage());
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -76,7 +50,7 @@ public abstract class AbstractWebsocket implements ILIfeCycleExposable, IWebSock
 
     protected abstract String getUrl();
 
-    private String pingMessage() {
+    public String pingPayload() {
         JsonObject object = new JsonObject();
         object.addProperty(ClientState.MESSAGE_TYPE, ClientState.MESSAGE_TYPE_PING);
         object.addProperty("time", LocalDateTime.now().toString());
@@ -113,7 +87,8 @@ public abstract class AbstractWebsocket implements ILIfeCycleExposable, IWebSock
     @Override
     public void closeConnection() {
         log.warn("");
-        this.stopLifeCycle();
+        getWebsocketManager().disconnectSocket(socketId);
+        socketId = null;
     }
 
 

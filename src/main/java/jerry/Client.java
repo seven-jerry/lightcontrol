@@ -14,12 +14,15 @@ import org.springframework.web.socket.client.WebSocketConnectionManager;
 import java.net.URI;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class Client {
 
 
     public static void main(String[] args) throws Exception{
+        Logger.getGlobal().setLevel(Level.OFF);
         String destUri = "ws://192.168.1.6:1880/local";
         if (args.length > 0)
         {
@@ -33,6 +36,7 @@ public class Client {
         while(true){
             Thread.sleep(3000);
             manager.writeToSocket(id,"test");
+            manager.checkSessionActive();
         }
 
        // manager.stop();
@@ -42,6 +46,11 @@ public class Client {
         @Override
         public void onMessageFromSocket(Session session, String message) {
             System.out.println(message);
+        }
+
+        @Override
+        public String pingPayload() {
+            return "";
         }
     }
 

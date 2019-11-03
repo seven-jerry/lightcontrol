@@ -50,7 +50,7 @@ public class MasterUpdater extends AbstractWebsocket {
     public String type = "local";
 
     public MasterUpdater(){
-        setSendPing(true);
+
     }
 
     @Override

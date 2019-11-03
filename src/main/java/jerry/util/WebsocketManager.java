@@ -37,6 +37,7 @@ public class WebsocketManager implements IWebsocketErrorHandler {
     public WebsocketManager() {
         webSocketClient.getHttpClient().setConnectTimeout(300);
         webSocketClient.getHttpClient().setIdleTimeout(1000);
+
         try {
             webSocketClient.start();
         } catch (Exception e) {
@@ -45,10 +46,18 @@ public class WebsocketManager implements IWebsocketErrorHandler {
     }
 
 
-    @Scheduled(initialDelay = 60_000, fixedDelay = 5_000)
+    @Scheduled(initialDelay = 60_000, fixedDelay = 10_000)
     public synchronized void checkSessionActive() {
+        log.trace("checkSessionActive");
         for (Map.Entry<Integer, WebsocketImpl> socket : sockets.entrySet()) {
             if (this.socketInBadState(socket.getValue())) {
+                socket.getValue().disconnect();
+                reconnectSocket(socket.getValue().getId());
+                continue;
+            }
+            try {
+                socket.getValue().writeMessage(socket.getValue().getResponseHandler().pingPayload());
+            } catch (Exception e) {
                 socket.getValue().disconnect();
                 reconnectSocket(socket.getValue().getId());
             }
@@ -61,10 +70,21 @@ public class WebsocketManager implements IWebsocketErrorHandler {
     }
 
     public Integer newSocket(String url, IWebSocketResponseHandler responseHandler) throws Exception {
+        if (url == null) {
+            return null;
+        }
         int id = random.nextInt(Integer.SIZE - 1);
-        WebsocketImpl websocket = buildConnection(id, url, responseHandler);
-        this.sockets.put(id, websocket);
+
+        try {
+            this.locks.put(id, new ReentrantLock());
+            this.locks.get(id).lock();
+            WebsocketImpl websocket = buildConnection(id, url, responseHandler);
+            this.sockets.put(id, websocket);
+        } finally {
+            this.locks.get(id).unlock();
+        }
         return id;
+
     }
 
     private WebsocketImpl buildConnection(WebsocketImpl websocket) throws Exception {
@@ -72,13 +92,20 @@ public class WebsocketManager implements IWebsocketErrorHandler {
     }
 
     public synchronized void disconnectSocket(int id) {
+        locks.get(id).lock();
         WebsocketImpl websocket = sockets.get(id);
         websocket.disconnect();
         sockets.remove(id);
+        locks.get(id).unlock();
     }
 
     public void writeToSocket(Integer id, String message) throws Exception {
+        if (message == null) {
+            return;
+        }
+        locks.get(id).lock();
         sockets.get(id).writeMessage(message);
+        locks.get(id).unlock();
     }
 
 
@@ -116,17 +143,21 @@ public class WebsocketManager implements IWebsocketErrorHandler {
     @Override
     public void socketErrorReceived(Integer id, Throwable t) {
         log.warn(id + " has received error : " + t.toString());
-        if(t instanceof IOException){
-            reconnectSocket(id);
-        }
+        reconnectSocket(id);
+
     }
 
     private void reconnectSocket(Integer id) {
+        locks.get(id).lock();
         try {
             WebsocketImpl websocket = sockets.get(id);
+            websocket.disconnect();
             sockets.replace(id, buildConnection(websocket));
         } catch (Exception e) {
             eventHandler.pushMessage(EventHandler.Type.ERROR, "could not create socket after closed");
+            sockets.get(id).disconnect();
+        } finally {
+            locks.get(id).unlock();
         }
     }
 

@@ -28,7 +28,6 @@ public class NodeUpdater extends AbstractWebsocket {
     WebsocketManager websocketManager;
 
     public NodeUpdater(){
-        setSendPing(true);
     }
 
     @Override

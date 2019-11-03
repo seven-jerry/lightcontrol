@@ -50,6 +50,7 @@ jerry/config/MasterBeans.class
 jerry/SpringMain.class
 jerry/viewcontroller/MockStateEndpoint.class
 jerry/util/WebsocketManager.class
+jerry/Client$ResponseHandler.class
 jerry/device/MockSerialDevice.class
 jerry/interaction/ILIfeCycleExposable.class
 jerry/master/ClientStateUpdater$HostAwareChangeNotifiable.class

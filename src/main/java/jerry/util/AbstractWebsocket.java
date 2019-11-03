@@ -16,7 +16,7 @@ public abstract class AbstractWebsocket implements ILIfeCycleExposable, IWebSock
 
 
     protected boolean sendPing;
-    protected String socketId;
+    protected Integer socketId;
 
     public void setSendPing(boolean sendPing) {
         this.sendPing = sendPing;

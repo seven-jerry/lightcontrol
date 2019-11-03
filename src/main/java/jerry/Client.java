@@ -1,50 +1,49 @@
 package jerry;
 
 
+import jerry.interaction.EventHandler;
+import jerry.master.IWebSocketResponseHandler;
+import jerry.util.WebsocketManager;
+import org.eclipse.jetty.websocket.api.Session;
 import org.eclipse.jetty.websocket.client.ClientUpgradeRequest;
 import org.eclipse.jetty.websocket.client.WebSocketClient;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.socket.client.WebSocketConnectionManager;
 
 import java.net.URI;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+
 
 public class Client {
 
 
-    public static void main(String[] args) {
-        String destUri = "ws://192.168.1.9/webSocket";
+    public static void main(String[] args) throws Exception{
+        String destUri = "ws://192.168.1.6:1880/local";
         if (args.length > 0)
         {
             destUri = args[0];
         }
 
-        WebSocketClient client = new WebSocketClient();
-        SimpleEchoSocket socket = new SimpleEchoSocket();
-        try
-        {
-            client.start();
-
-            URI echoUri = new URI(destUri);
-            ClientUpgradeRequest request = new ClientUpgradeRequest();
-            client.connect(socket,echoUri,request);
-            System.out.printf("Connecting to : %s%n",echoUri);
-
-            socket.awaitClose(1,TimeUnit.MINUTES);
-
+        WebsocketManager manager = new WebsocketManager();
+        manager.setEventHandler(new EventHandler());
+        Integer id = manager.newSocket(destUri,new ResponseHandler());
+        manager.checkSessionActive();
+        while(true){
+            Thread.sleep(3000);
+            manager.writeToSocket(id,"test");
         }
-        catch (Throwable t)
-        {
-            t.printStackTrace();
-        }
-        finally
-        {
-            try
-            {
-                client.stop();
-            }
-            catch (Exception e)
-            {
-                e.printStackTrace();
-            }
+
+       // manager.stop();
+    }
+
+    public static class ResponseHandler implements IWebSocketResponseHandler{
+        @Override
+        public void onMessageFromSocket(Session session, String message) {
+            System.out.println(message);
         }
     }
+
+
 }

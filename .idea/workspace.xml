@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25ee49b8-b532-4d39-b11c-6aa1bb1bf2db" name="Default" comment="fix socket">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/NodeUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/NodeUpdater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/master/IWebSocketResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/master/IWebSocketResponseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/util/AbstractWebsocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/util/AbstractWebsocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scp.sh" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/util/WebsocketManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/util/WebsocketManager.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,123 +23,6 @@
   <component name="FavoritesManager">
     <favorites_list name="lightcontrol" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jerry/util/WebsocketManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1731">
-              <caret line="157" column="41" selection-start-line="157" selection-start-column="41" selection-end-line="157" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2334#2335#0" expanded="true" />
-                <element signature="e#5397#5398#0" expanded="true" />
-                <element signature="e#5507#5508#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/WebSocketController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MockStateEndpoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/RestStateApi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/IWebSocketResponseHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="22" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jerry/util/WebsocketImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1021#1022#0" expanded="true" />
-                <element signature="e#1060#1061#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jerry/util/AbstractWebsocket.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1621#1622#0" expanded="true" />
-                <element signature="e#1659#1660#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdater.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/NodeUpdater.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/jerry/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-              <folding>
-                <element signature="e#1629#1630#0" expanded="true" />
-                <element signature="e#1664#1665#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -156,43 +36,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>ClientStateRepo</find>
-      <find>hasUpdatedClientState</find>
-      <find>ClientInteractionManager</find>
-      <find>writeMessage</find>
-      <find>MasterController</find>
-      <find>ClientStateWrapper</find>
-      <find>groupedOutputState</find>
-      <find>webSocket</find>
-      <find>webj</find>
-      <find>handleC</find>
-      <find>handlePing</find>
-      <find>writeToProducer</find>
-      <find>throwIf</find>
-      <find>ClientStateRepository</find>
-      <find>handleOutputS</find>
-      <find>toS</find>
-      <find>Internet</find>
-      <find>error writ</find>
-      <find>getRemoteAddress</find>
-      <find>MANUAL</find>
-      <find>headers</find>
-      <find>Se</find>
-      <find>internet</find>
-      <find>Pers</find>
-      <find>closeConnection</find>
-      <find>MasterUpda</find>
-      <find>CLientInter</find>
-      <find>erro</find>
-      <find>ExternalRe</find>
-      <find>CONSOLE_LOG_PATTERN</find>
-    </findStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$/target</dir>
-    </dirStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -201,288 +44,30 @@
       </map>
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/jerry/config/Beans.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/ts/MessageConverter.ts" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/consumer/ClientRequestMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/ts/MasterModel.ts" />
-        <option value="$PROJECT_DIR$/src/main/resources/ts/MasterController.ts" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/InputCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/master/ClientStateUpdater.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/ClientStateNotifier.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractStateNotifier.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/MasterStateNotifier.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/WebSocketController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/pojo/Input.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/NodeRedSesnorState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/InputControl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/NodeRedSocket.java" />
-        <option value="$PROJECT_DIR$/test/java/jerry/interaction/ReadManagerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/StateArray.java" />
-        <option value="$PROJECT_DIR$/test/java/jerry/interaction/DeviceResponseHandlerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/master/ClientSocket.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/util/ClientSocket.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/setting/detail.html" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/pojo/Setting.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/master/IMasterResponseHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/EventHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SettingsController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/InteractionController.java" />
-        <option value="$PROJECT_DIR$/scp.sh" />
-        <option value="$PROJECT_DIR$/src/main/resources/logging.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/util/ClientWebSocket.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/util/IWebSocketControl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/RestStateApi.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/CommandController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/ReadManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/NodeRedSensorState.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/util/WebsockerFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/util/WebsocketFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/util/IWebsocketErrorHandler.java" />
-        <option value="$PROJECT_DIR$/test/java/jerry/device/WebsocketTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/ClientInteractionManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/ExternalReadConsumers.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/master/IWebSocketResponseHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/Client.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdater.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/interaction/NodeUpdater.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/util/WebsocketManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/util/WebsocketImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/jerry/util/AbstractWebsocket.java" />
-      </list>
-    </option>
-  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
-        <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lightcontrol" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lightcontrol" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lightcontrol" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lightcontrol" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lightcontrol" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jerry" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lightcontrol" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jerry" type="462c0819:PsiDirectoryNode" />
-              <item name="device" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lightcontrol" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jerry" type="462c0819:PsiDirectoryNode" />
-              <item name="interaction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lightcontrol" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jerry" type="462c0819:PsiDirectoryNode" />
-              <item name="master" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lightcontrol" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jerry" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lightcontrol" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="jerry" type="462c0819:PsiDirectoryNode" />
-              <item name="viewcontroller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lightcontrol" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 11 &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 11 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="java.base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 11 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="java.base" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 11 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="java.base" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 11 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="java.base" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrent" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 11 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="java.base" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrent" type="462c0819:PsiDirectoryNode" />
-              <item name="locks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.eclipse.jetty.websocket:websocket-client:9.4.15.v20190215" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.eclipse.jetty.websocket:websocket-client:9.4.15.v20190215" type="70bed36:NamedLibraryElementNode" />
-              <item name="websocket-client-9.4.15.v20190215.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.eclipse.jetty.websocket:websocket-client:9.4.15.v20190215" type="70bed36:NamedLibraryElementNode" />
-              <item name="websocket-client-9.4.15.v20190215.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.eclipse.jetty:jetty-util:9.4.15.v20190215" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.eclipse.jetty:jetty-util:9.4.15.v20190215" type="70bed36:NamedLibraryElementNode" />
-              <item name="jetty-util-9.4.15.v20190215.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.eclipse.jetty:jetty-util:9.4.15.v20190215" type="70bed36:NamedLibraryElementNode" />
-              <item name="jetty-util-9.4.15.v20190215.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="jetty" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.eclipse.jetty:jetty-util:9.4.15.v20190215" type="70bed36:NamedLibraryElementNode" />
-              <item name="jetty-util-9.4.15.v20190215.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="jetty" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightcontrol" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.eclipse.jetty:jetty-util:9.4.15.v20190215" type="70bed36:NamedLibraryElementNode" />
-              <item name="jetty-util-9.4.15.v20190215.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="jetty" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-              <item name="log" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+  <component name="ProjectId" id="1VXH4kBbfZExyGN550Euvvlclu5" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value=";&#9;null&#9;null&#10;produceOnce&#9;PSI&#9;JAVA://jerry.arduino.StateNotifier#produceOnce" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="extract.method.default.visibility" value="private" />
@@ -493,7 +78,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.32873562" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
@@ -527,22 +112,13 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.Client">
-    <configuration default="true" type="Applet">
+  <component name="RunManager" selected="Java Scratch.Scratch">
+    <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <method v="2">
+      <option name="WIDTH" value="0" />
+      <option name="HEIGHT" value="0" />
+      <module />
+      <method>
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -608,7 +184,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="Unnamed" type="Application" factoryName="Application">
       <module name="lightcontrol" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -616,23 +192,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DeviceResponseHandlerTest.updateInputState" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lightcontrol" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jerry.interaction.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="jerry.interaction" />
-      <option name="MAIN_CLASS_NAME" value="jerry.interaction.DeviceResponseHandlerTest" />
-      <option name="METHOD_NAME" value="updateInputState" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -648,6 +207,7 @@
       <option name="PACKAGE_NAME" value="jerry.interaction" />
       <option name="MAIN_CLASS_NAME" value="jerry.interaction.ReadManagerTest" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -665,6 +225,7 @@
       <option name="MAIN_CLASS_NAME" value="jerry.interaction.ReadManagerTest" />
       <option name="METHOD_NAME" value="handleMessage" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -681,6 +242,7 @@
       <option name="PACKAGE_NAME" value="jerry.device" />
       <option name="MAIN_CLASS_NAME" value="jerry.device.StateArrayTest" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -697,6 +259,7 @@
       <option name="PACKAGE_NAME" value="jerry.device" />
       <option name="MAIN_CLASS_NAME" value="jerry.device.WebsocketTest" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -704,7 +267,15 @@
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Scratch" />
+      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -744,6 +315,7 @@
     </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
       <listeners />
@@ -766,24 +338,35 @@
       <item itemvalue="Application.Spring-Master" />
       <item itemvalue="Application.Unnamed" />
       <item itemvalue="Application.Client" />
+      <item itemvalue="Java Scratch.Scratch" />
       <item itemvalue="JUnit.StateArrayTest" />
-      <item itemvalue="JUnit.DeviceResponseHandlerTest.updateInputState" />
       <item itemvalue="JUnit.ReadManagerTest" />
       <item itemvalue="JUnit.ReadManagerTest.handleMessage" />
       <item itemvalue="JUnit.WebsocketTest" />
       <item itemvalue="Remote.Unnamed" />
       <item itemvalue="Remote.Test-Debug" />
-      <item itemvalue="Spring Boot.SpringMain" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Java Scratch.Scratch" />
         <item itemvalue="Application.Client" />
         <item itemvalue="JUnit.WebsocketTest" />
         <item itemvalue="JUnit.ReadManagerTest.handleMessage" />
         <item itemvalue="JUnit.ReadManagerTest" />
-        <item itemvalue="JUnit.DeviceResponseHandlerTest.updateInputState" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration>$USER_HOME$/.subversion</configuration>
@@ -828,6 +411,11 @@
       <workItem from="1572372141408" duration="8784000" />
       <workItem from="1572502669113" duration="10593000" />
       <workItem from="1572556617001" duration="11537000" />
+      <workItem from="1577392334537" duration="260000" />
+      <workItem from="1577392613570" duration="539000" />
+      <workItem from="1577393390694" duration="4190000" />
+      <workItem from="1577898362483" duration="2000" />
+      <workItem from="1582382544888" duration="83000" />
     </task>
     <task id="LOCAL-00001" summary="version 1.2.2">
       <created>1551729148231</created>
@@ -860,41 +448,6 @@
     <option name="localTasksCounter" value="5" />
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="DeviceResponseHandlerTest_updateInputState - 2019.10.28 at 22h 01m 12s.xml">
-      <configuration name="DeviceResponseHandlerTest.updateInputState" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeviceResponseHandlerTest_updateInputState - 2019.10.28 at 22h 01m 30s.xml">
-      <configuration name="DeviceResponseHandlerTest.updateInputState" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeviceResponseHandlerTest_updateInputState - 2019.10.28 at 22h 03m 49s.xml">
-      <configuration name="DeviceResponseHandlerTest.updateInputState" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeviceResponseHandlerTest_handleMessage - 2019.10.28 at 22h 04m 30s.xml">
-      <configuration name="DeviceResponseHandlerTest.handleMessage" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeviceResponseHandlerTest_updateInputState - 2019.10.28 at 22h 04m 35s.xml">
-      <configuration name="DeviceResponseHandlerTest.updateInputState" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeviceResponseHandlerTest_updateInputState - 2019.10.28 at 22h 05m 21s.xml">
-      <configuration name="DeviceResponseHandlerTest.updateInputState" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeviceResponseHandlerTest_updateInputState - 2019.10.28 at 22h 05m 35s.xml">
-      <configuration name="DeviceResponseHandlerTest.updateInputState" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DeviceResponseHandlerTest_updateInputState - 2019.10.28 at 22h 06m 04s.xml">
-      <configuration name="DeviceResponseHandlerTest.updateInputState" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WebsocketTest - 2019.11.01 at 21h 26m 00s.xml">
-      <configuration name="WebsocketTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WebsocketTest - 2019.11.01 at 21h 29m 57s.xml">
-      <configuration name="WebsocketTest" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="302410000" />
-  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -903,47 +456,6 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <layout>
-      <window_info id="Web" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49213484" visible="true" weight="0.22246066" />
-      <window_info id="Structure" order="2" weight="0.2532189" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Designer" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Favorites" order="7" sideWeight="0.5078652" side_tool="true" weight="0.22246066" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Java Enterprise" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Database Changes" order="2" />
-      <window_info anchor="bottom" id="Spring" order="3" weight="0.32891566" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49928468" weight="0.46385542" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.63493973" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" sideWeight="0.49928468" weight="0.32891566" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49642345" visible="true" weight="0.26746988" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5035765" side_tool="true" weight="0.32650602" />
-      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49928468" weight="0.32771084" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.32771084" />
-      <window_info anchor="bottom" id="TypeScript" order="15" weight="0.32891566" />
-      <window_info anchor="right" id="Database" order="0" />
-      <window_info anchor="right" id="Bean Validation" order="1" weight="0.3297568" />
-      <window_info anchor="right" id="Maven" order="2" weight="0.3297568" />
-      <window_info anchor="right" id="Commander" order="3" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info anchor="right" id="Maven Projects" order="10" />
-      <window_info anchor="right" id="Coverage" order="11" side_tool="true" weight="0.3297568" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -964,35 +476,8 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
           </value>
         </entry>
       </map>
@@ -1006,80 +491,139 @@
     <MESSAGE value="fix socket" />
     <option name="LAST_COMMIT_MESSAGE" value="fix socket" />
   </component>
+  <component name="WindowStateProjectService">
+    <state x="553" y="347" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1577898853447">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="553" y="347" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1440.900@0.0.1440.900" timestamp="1577898853447" />
+    <state x="340" y="49" key="CommitChangelistDialog2" timestamp="1583660555237">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state x="340" y="55" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1577392645393" />
+    <state x="340" y="49" key="CommitChangelistDialog2/0.23.1440.816@0.23.1440.816" timestamp="1583660555237" />
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1577392517969">
+      <screen x="0" y="23" width="1440" height="814" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.23.1440.814@0.23.1440.814" timestamp="1577392517969" />
+    <state width="1398" height="209" key="GridCell.Tab.0.bottom" timestamp="1578744317296">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state width="1398" height="209" key="GridCell.Tab.0.bottom/0.23.1440.812@0.23.1440.812" timestamp="1578744317296" />
+    <state width="1398" height="209" key="GridCell.Tab.0.center" timestamp="1578744317295">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state width="1398" height="209" key="GridCell.Tab.0.center/0.23.1440.812@0.23.1440.812" timestamp="1578744317295" />
+    <state width="1398" height="209" key="GridCell.Tab.0.left" timestamp="1578744317295">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state width="1398" height="209" key="GridCell.Tab.0.left/0.23.1440.812@0.23.1440.812" timestamp="1578744317295" />
+    <state width="1398" height="209" key="GridCell.Tab.0.right" timestamp="1578744317296">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state width="1398" height="209" key="GridCell.Tab.0.right/0.23.1440.812@0.23.1440.812" timestamp="1578744317296" />
+    <state x="221" y="103" key="SettingsEditor" timestamp="1578401407865">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1577392601175" />
+    <state x="221" y="103" key="SettingsEditor/0.23.1440.812@0.23.1440.812" timestamp="1578401407865" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1578676090689">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.23.1440.812@0.23.1440.812" timestamp="1578676090689" />
+    <state x="374" y="280" key="com.intellij.ide.util.TipDialog" timestamp="1583660513868">
+      <screen x="0" y="23" width="1440" height="816" />
+    </state>
+    <state x="374" y="284" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1577898828382" />
+    <state x="374" y="279" key="com.intellij.ide.util.TipDialog/0.23.1440.812@0.23.1440.812" timestamp="1578675351438" />
+    <state x="374" y="280" key="com.intellij.ide.util.TipDialog/0.23.1440.816@0.23.1440.816" timestamp="1583660513868" />
+    <state x="458" y="190" key="extract.method.dialog" timestamp="1578743400201">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state x="458" y="190" key="extract.method.dialog/0.23.1440.812@0.23.1440.812" timestamp="1578743400201" />
+    <state x="375" y="219" width="689" height="462" key="find.popup" timestamp="1582382620619">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="375" y="219" width="689" height="462" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1582382620619" />
+    <state x="375" y="221" width="689" height="462" key="find.popup/0.23.1440.812@0.23.1440.812" timestamp="1578519282842" />
+    <state width="600" height="424" key="javadoc.popup" timestamp="1578258704323">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state width="600" height="424" key="javadoc.popup/0.23.1440.812@0.23.1440.812" timestamp="1578258704323" />
+    <state x="97" y="130" key="new project wizard" timestamp="1578744314973">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state x="97" y="130" key="new project wizard/0.23.1440.812@0.23.1440.812" timestamp="1578744314973" />
+    <state x="370" y="153" width="700" height="610" key="recent.locations.popup" timestamp="1578401446698">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state x="370" y="153" width="700" height="610" key="recent.locations.popup/0.23.1440.812@0.23.1440.812" timestamp="1578401446698" />
+    <state x="385" y="159" width="670" height="676" key="search.everywhere.popup" timestamp="1578519361627">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state x="385" y="159" width="670" height="676" key="search.everywhere.popup/0.23.1440.812@0.23.1440.812" timestamp="1578519361627" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-messaging/5.0.5.RELEASE/spring-messaging-5.0.5.RELEASE.jar!/org/springframework/messaging/simp/stomp/DefaultStompSession.class</url>
           <line>276</line>
-          <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/com/fazecast/jSerialComm/1.3.11/jSerialComm-1.3.11-sources.jar!/com/fazecast/jSerialComm/SerialPort.java</url>
           <line>915</line>
-          <properties />
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/InteractionController.java</url>
-          <line>33</line>
-          <properties />
+          <line>38</line>
           <option name="timeStamp" value="149" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/jerry/config/MasterBeans.java</url>
           <line>17</line>
-          <properties />
           <option name="timeStamp" value="169" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/jerry/device/SerialDevice.java</url>
           <line>58</line>
-          <properties />
           <option name="timeStamp" value="170" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/jerry/interaction/WriteThread.java</url>
           <line>48</line>
-          <properties />
           <option name="timeStamp" value="282" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/jerry/interaction/StateDelegator.java</url>
           <line>102</line>
-          <properties />
           <option name="timeStamp" value="283" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/jerry/device/SerialDevice.java</url>
           <line>153</line>
-          <properties />
           <option name="timeStamp" value="286" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/test/java/jerry/interaction/DeviceResponseHandlerTest.java</url>
           <line>49</line>
-          <properties />
           <option name="timeStamp" value="317" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/jerry/interaction/DeviceResponseHandler.java</url>
-          <line>68</line>
-          <properties />
-          <option name="timeStamp" value="318" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/jerry/interaction/DeviceResponseHandler.java</url>
           <line>40</line>
-          <properties />
           <option name="timeStamp" value="320" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/test/java/jerry/device/WebsocketTest.java</url>
           <line>20</line>
-          <properties />
           <option name="timeStamp" value="322" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/jerry/interaction/ClientStateNotifier.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="324" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1091,411 +635,6 @@
     <SUITE FILE_PATH="coverage/lightcontrol$StateArrayTest__1_.ic" NAME="StateArrayTest (1) Coverage Results" MODIFIED="1557054356526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>jerry.arduino.*</FILTER>
     </SUITE>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/util/ThriPredicate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractInteractionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="89" column="19" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/Index.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SettingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/InputController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/CommandController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/ClientController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/NodeRedSensorState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/service/PersistenceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/util/IWebsocketErrorHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/java/jerry/device/StateArrayTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/java/jerry/interaction/DeviceResponseHandlerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="19" selection-start-line="19" selection-end-line="20" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/ArduinoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/persist/FilePersistedObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-96">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/ReadManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/ExternalReadConsumers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1305">
-          <caret line="104" column="19" selection-start-line="104" selection-start-column="19" selection-end-line="104" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4148#4149#0" expanded="true" />
-            <element signature="e#4194#4195#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.3.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Random.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4350">
-          <caret line="327" column="15" selection-start-line="327" selection-start-column="15" selection-end-line="327" selection-end-column="15" />
-          <folding>
-            <element signature="e#11995#11996#0" expanded="true" />
-            <element signature="e#12026#12027#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/java/jerry/device/WebsocketTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/persist/FilePersistedCollection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/ClientInteractionManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="67" column="67" selection-start-line="67" selection-start-column="67" selection-end-line="67" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scp.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/websocket/websocket-api/9.4.15.v20190215/websocket-api-9.4.15.v20190215-sources.jar!/org/eclipse/jetty/websocket/api/annotations/OnWebSocketError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/websocket/websocket-common/9.4.15.v20190215/websocket-common-9.4.15.v20190215-sources.jar!/org/eclipse/jetty/websocket/common/events/JettyAnnotatedScanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.3.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1388">
-          <caret line="242" column="6" selection-start-line="242" selection-start-column="6" selection-end-line="242" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/websocket/websocket-common/9.4.15.v20190215/websocket-common-9.4.15.v20190215-sources.jar!/org/eclipse/jetty/websocket/common/events/JettyAnnotatedMetadata.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-io/9.4.15.v20190215/jetty-io-9.4.15.v20190215-sources.jar!/org/eclipse/jetty/io/EofException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/websocket/websocket-common/9.4.15.v20190215/websocket-common-9.4.15.v20190215-sources.jar!/org/eclipse/jetty/websocket/common/events/annotated/OptionalSessionCallableMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.3.jdk/Contents/Home/lib/src.zip!/java.base/java/io/EOFException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/consumer/ClientState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-          <folding>
-            <element signature="e#4617#4618#0" expanded="true" />
-            <element signature="e#4674#4675#0" expanded="true" />
-            <element signature="e#4915#4916#0" expanded="true" />
-            <element signature="e#4965#4966#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.3.jdk/Contents/Home/lib/src.zip!/java.base/java/io/IOException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settingList.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/util/ThriIntFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/SpringMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="21" column="22" selection-start-line="20" selection-start-column="6" selection-end-line="21" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/EventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/device/MockSerialDevice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="e#1104#1105#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/SimpleEchoSocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/logback-spring.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/websocket/websocket-client/9.4.15.v20190215/websocket-client-9.4.15.v20190215-sources.jar!/org/eclipse/jetty/websocket/client/WebSocketClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="69" column="40" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-util/9.4.15.v20190215/jetty-util-9.4.15.v20190215-sources.jar!/org/eclipse/jetty/util/log/Log.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-405">
-          <caret line="197" column="39" selection-start-line="197" selection-start-column="39" selection-end-line="197" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.3.jdk/Contents/Home/lib/src.zip!/java.base/java/util/concurrent/locks/ReentrantLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="345" column="19" selection-start-line="345" selection-start-column="19" selection-end-line="345" selection-end-column="19" />
-          <folding>
-            <element signature="e#11795#11796#0" expanded="true" />
-            <element signature="e#11843#11844#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-          <folding>
-            <element signature="e#1629#1630#0" expanded="true" />
-            <element signature="e#1664#1665#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/IWebSocketResponseHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/interaction/NodeUpdater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/util/WebsocketImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1021#1022#0" expanded="true" />
-            <element signature="e#1060#1061#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/util/WebsocketManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1731">
-          <caret line="157" column="41" selection-start-line="157" selection-start-column="41" selection-end-line="157" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2334#2335#0" expanded="true" />
-            <element signature="e#5397#5398#0" expanded="true" />
-            <element signature="e#5507#5508#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/WebSocketController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MockStateEndpoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/RestStateApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/jerry/util/AbstractWebsocket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1621#1622#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

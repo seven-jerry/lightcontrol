@@ -46,7 +46,7 @@ public class WebsocketManager implements IWebsocketErrorHandler {
     }
 
 
-    @Scheduled(initialDelay = 60_000, fixedDelay = 10_000)
+    @Scheduled(initialDelay = 60_000, fixedDelay = 20_000)
     public synchronized void checkSessionActive() {
         log.trace("checkSessionActive");
         for (Map.Entry<Integer, WebsocketImpl> socket : sockets.entrySet()) {

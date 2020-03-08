@@ -178,6 +178,13 @@
         <java.version>1.8</java.version>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>ansible</id>
+            <url>ftp://control.local:/var/data/artifacts</url>
+        </repository>
+    </distributionManagement>
+
 
     <build>
         <finalName>lightcontrol</finalName>
@@ -225,95 +232,17 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>scp upload</id>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <executable>scp.sh</executable>
-                    <arguments>
-                        <argument>${repo-host}</argument>
-                        <argument>${repo-path}</argument>
-                        <argument>${version}</argument>
-                    </arguments>
-                </configuration>
-            </plugin>
-        </plugins>
+         </plugins>
+
+        <extensions>
+            <!-- Enabling the use of SSH -->
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ftp</artifactId>
+                <version>3.3.3</version>
+            </extension>
+        </extensions>
+
     </build>
-
-
-    <profiles>
-
-        <profile>
-            <id>bathhall</id>
-            <properties>
-                <repo-host>192.168.1.38</repo-host>
-                <repo-path>/home/pi/java/</repo-path>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>master</id>
-            <properties>
-                <repo-host>192.168.1.30</repo-host>
-                <repo-path>/home/pi/java/</repo-path>
-            </properties>
-        </profile>
-
-
-        <profile>
-            <id>test</id>
-            <properties>
-                <repo-host>192.168.1.46</repo-host>
-                <repo-path>/home/pi/java/</repo-path>
-            </properties>
-        </profile>
-
-
-         <profile>
-             <id>hall</id>
-             <properties>
-                 <repo-id>hall</repo-id>
-                 <repo-host>192.168.1.6</repo-host>
-                 <repo-path>/home/pi/java/</repo-path>
-             </properties>
-         </profile>
-
-        <profile>
-            <id>eating</id>
-            <properties>
-                <repo-id>eating</repo-id>
-                <repo-host>192.168.1.100</repo-host>
-                <repo-path>/home/pi/java/</repo-path>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>bath</id>
-            <properties>
-                <repo-id>bath</repo-id>
-                <repo-host>192.168.1.10</repo-host>
-                <repo-path>/home/pi/java/</repo-path>
-            </properties>
-        </profile>
-
-        <profile>
-            <id>living</id>
-            <properties>
-                <repo-id>living</repo-id>
-                <repo-host>192.168.1.9</repo-host>
-                <repo-path>/home/pi/java/</repo-path>
-            </properties>
-        </profile>
-
-    </profiles>
 
 </project>

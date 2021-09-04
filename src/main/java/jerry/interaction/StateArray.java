@@ -2,6 +2,7 @@ package jerry.interaction;
 
 
 import jerry.pojo.Input;
+import jerry.util.ThriConsumer;
 import jerry.util.ThriIntFunction;
 import lombok.extern.slf4j.Slf4j;
 
@@ -166,6 +167,17 @@ public class StateArray {
         for (int i = 0; i < inputState.length; i = i + 1) {
             consumer.accept(i, inputState[i]);
         }
+    }
+    public int countTurnedOnLights() {
+        int count = 0;
+        for (int i = 0; i < output_x; i++) {
+            for (int j = 0; j < output_y; j++) {
+              if(outputState[i][j] == 1){
+                  count++;
+              }
+            }
+        }
+        return count;
     }
 
     public void changeOutputState(ThriIntFunction function) {

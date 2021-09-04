@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -97,6 +98,11 @@ public class ExternalReadConsumers implements ILIfeCycleExposable{
             NodeRedSensorState sensorState = new NodeRedSensorState(entry.getValue(), null, entry.getKey());
             sensorStates.add(sensorState);
         }
+
+        int count = message.countTurnedOnLights();
+        NodeRedSensorState sensorState = new NodeRedSensorState(count, null,"Lichter");
+        sensorStates.add(sensorState);
+
         return sensorStates;
     }
 

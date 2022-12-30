@@ -7,6 +7,7 @@ namespace client {
             this.groupedOutputState["high"] = [];
             this.groupedOutputState["low"] = [];
             this.groupedOutputState["disabled"] = [];
+            this.groupedOutputState["dynamic_disabled"] = [];
             this.groupedOutputState["outside_low"] = [];
             this.groupedOutputState["outside_high"] = [];
         }
@@ -32,6 +33,9 @@ namespace client {
 
                 } else if (s == 7) {
                     this.groupedOutputState["disabled"].push(x + "" + y);
+                }
+                else if (s == 8) {
+                    this.groupedOutputState["dynamic_disabled"].push(x + "" + y);
                 }
                 state = state.substr(3);
             }

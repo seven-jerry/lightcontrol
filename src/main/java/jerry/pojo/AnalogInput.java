@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 
 @XmlRootElement
-public class Input implements IIdProvider,Comparable<Input> {
+public class AnalogInput implements IIdProvider,Comparable<AnalogInput> {
     private Integer id;
     private InputType type;
     private String name;
@@ -22,8 +22,8 @@ public class Input implements IIdProvider,Comparable<Input> {
     }
 
 
-    public static Input withDefaults() {
-        Input input = new Input();
+    public static AnalogInput withDefaults() {
+        AnalogInput input = new AnalogInput();
         input.id = null;
         input.type = InputType.MANUAL;
         input.name = "new input";
@@ -31,10 +31,10 @@ public class Input implements IIdProvider,Comparable<Input> {
     }
 
 
-    public Input() {
+    public AnalogInput() {
     }
 
-    public Input(InputType type, String name, String sourceId) {
+    public AnalogInput(InputType type, String name, String sourceId) {
         this.type = type;
         this.name = name;
         this.sourceId = sourceId;
@@ -101,7 +101,7 @@ public class Input implements IIdProvider,Comparable<Input> {
 
 
     @Override
-    public int compareTo(Input o) {
+    public int compareTo(AnalogInput o) {
      return Integer.compare(this.order,o.order);
     }
 }

@@ -32,6 +32,8 @@ public class MvcConfig implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
         registry.addResourceHandler("/js/**").addResourceLocations("classpath:/static/js/").setCacheControl(CacheControl.noCache());
+        registry.addResourceHandler("/static/images/**").addResourceLocations("file:/etc/jerry_home/static/images/","classpath:/static/images/").setCacheControl(CacheControl.noCache());
+        registry.addResourceHandler("/static/css/**").addResourceLocations("file:/etc/jerry_home/static/css/","classpath:/static/css/").setCacheControl(CacheControl.noCache());
 
     }
 

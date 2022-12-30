@@ -9,7 +9,17 @@
     <remote-repository>
       <option name="id" value="snapshots" />
       <option name="name" value="libs-snapshot" />
+      <option name="url" value="http://nexus01.corp.xaidat.com:8081/repository/local-snapshots/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="snapshots" />
+      <option name="name" value="libs-snapshot" />
       <option name="url" value="https://nexus.xaidat.com/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="libs-release" />
+      <option name="url" value="http://nexus01.corp.xaidat.com:8081/repository/local-releases/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />

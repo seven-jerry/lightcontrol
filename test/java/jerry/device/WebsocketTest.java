@@ -25,4 +25,9 @@ public class WebsocketTest implements IWebSocketResponseHandler {
     public void onMessageFromSocket(Session session, String message) {
 
     }
+
+    @Override
+    public String pingPayload() {
+        return "";
+    }
 }

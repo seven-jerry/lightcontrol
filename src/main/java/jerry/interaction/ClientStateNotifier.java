@@ -42,13 +42,27 @@ public class ClientStateNotifier extends AbstractStateNotifier implements IClien
             case FETCH:
                 messages.offer(clientStateRepository.getStateJson(requestMessage.argumentsAsArray()));
                 break;
+            case DISABLE:
+                String args = requestMessage.argumentAsString();
+                if (args.length() != 2) {
+                    return;
+                }
+                int x = Character.getNumericValue(args.charAt(0));
+                int y = Character.getNumericValue(args.charAt(1));
+                int state = clientStateRepository.getState().getState().getStateForIndex(x, y);
+                if (state == StateArray.DYNAMIC_DISABLED_STATE) {
+                    interactionManager.writeToProducer("e" + x + "" + y);
+                } else {
+                    interactionManager.writeToProducer("d" + x + "" + y);
+                }
+                break;
             case CHANGE:
                 interactionManager.writeToProducer(requestMessage.argumentAsString());
                 break;
         }
     }
 
-    private ClientRequestMessage transformMessage(String payload){
-        return new Gson().fromJson(payload,ClientRequestMessage.class);
+    private ClientRequestMessage transformMessage(String payload) {
+        return new Gson().fromJson(payload, ClientRequestMessage.class);
     }
 }

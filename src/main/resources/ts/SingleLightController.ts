@@ -30,10 +30,11 @@ namespace client {
             this.changeButtonLayout();
         }
 
-        handleCommandsChanged(commands:Command[]) {
+        handleCommandsChanged(commands: Command[]) {
             $(".command").remove();
             for (let command of this.model.clientState.commands) {
                 SingleLightController.displayCommand(command);
+                this.commands.set(command.command, command);
             }
         }
 
@@ -65,32 +66,37 @@ namespace client {
             super.handleOutsideStateChange(state);
 
             let outside = this.groupedOutsideState();
-            SingleLightController.updateOutside( outside["high"], outside["low"]);
+            SingleLightController.updateOutside(outside["high"], outside["low"]);
         }
 
-        public commandEntered(command: string) {
-            let message = MessageConverter.changeMessage(command);
-            this.websocket.send(message);
-        }
 
         protected changeOutputRow(x: number, y: number, s: number) {
             var key = "#light" + x + y + "";
             if (s == 0) {
-                $(key).css("background-color", "#6c757d");
+                $(key).css("background-color", "rgba(108, 117, 125,0.7)");
+                $(key).css("border", "2px solid rgb(108, 117, 125)");
                 $(key).attr('onclick', 'light_clicked(' + x + ',' + y + ',' + 1 + ');');
             } else if (s == 1) {
-                $(key).css("background-color", "#ffc107");
+                $(key).css("background-color", "rgba(255,193,7,0.7)");
+                $(key).css("border", "2px solid rgb(108, 117, 125)");
                 $(key).attr('onclick', 'light_clicked(' + x + ',' + y + ',' + 0 + ');');
-
             } else if (s == 7) {
                 $(key).css("visibility", "hidden");
                 $(key).attr('onclick', '');
+            } else if (s == 8) {
+                $(key).attr('onclick', '');
+                $(key).css("background-color", "rgba(36, 39, 41, 0.93)");
+                $(key).attr('onclick', 'light_clicked(' + x + ',' + y + ',' + 0 + ');');
             }
         }
 
         public lightClicked(row, column, value) {
             let obj = "" + row + "" + column + "" + value + "";
             let message = MessageConverter.changeMessage(obj);
+
+            if (window.location.hash && window.location.hash.includes("disable")) {
+                message = MessageConverter.disableMessage("" + row + "" + column + "");
+            }
             let key = "#light" + row + column + "";
             $(key).css("background-color", "#ffffe6");
             this.websocket.send(message);

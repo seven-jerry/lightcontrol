@@ -34,7 +34,7 @@ public class MasterController {
     @RequestMapping(value = {"", "/", "/{host}/"})
     public String index(Model model, @PathVariable("host") Optional<String> host) {
         if (profile.contains("client")) {
-            return "/";
+            return "redirect:/";
         }
 
         if (profile.contains("master")) {

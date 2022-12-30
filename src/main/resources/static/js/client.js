@@ -63,6 +63,7 @@ var client;
             command.id = obj.id;
             command.command = obj.command;
             command.order = obj.order;
+            command.payload = obj.payload;
             return command;
         }
         static arrayFromObject(obj) {
@@ -224,6 +225,7 @@ var client;
             this.groupedOutputState["high"] = [];
             this.groupedOutputState["low"] = [];
             this.groupedOutputState["disabled"] = [];
+            this.groupedOutputState["dynamic_disabled"] = [];
             this.groupedOutputState["outside_low"] = [];
             this.groupedOutputState["outside_high"] = [];
         }
@@ -248,6 +250,9 @@ var client;
                 }
                 else if (s == 7) {
                     this.groupedOutputState["disabled"].push(x + "" + y);
+                }
+                else if (s == 8) {
+                    this.groupedOutputState["dynamic_disabled"].push(x + "" + y);
                 }
                 state = state.substr(3);
             }
@@ -292,15 +297,53 @@ var client;
 (function (client) {
     class AbstractController {
         constructor() {
+            this.commands = new Map();
             this.aggregation = new client.StateAggregation();
             this.outSideAggregation = new client.OutputAggregation();
             this.model = new client.ClientStateModel(this);
+        }
+        init() {
+            $("#newCommandSave").on("click", () => {
+                let key = $("#commandKey").val();
+                let name = $("#commandName").val();
+                let payload = this.model.clientState.ouputState;
+                console.log("key", key, "name", name, "payload", payload);
+                if (payload != undefined) {
+                    payload = payload.replace("o", "");
+                    let co = {
+                        command: key,
+                        order: 0,
+                        payload: payload,
+                        label: name,
+                        id: undefined
+                    };
+                    $.ajax({
+                        type: "POST",
+                        url: "/setting/command/add/api",
+                        contentType: 'application/json',
+                        data: JSON.stringify(co)
+                    });
+                }
+            });
+        }
+        commandEntered(command) {
+            if (this.commands.has(command)) {
+                let co = this.commands.get(command);
+                if (co.payload != undefined && co.payload.length > 0) {
+                    let message = client.MessageConverter.changeMessage(co.payload);
+                    this.websocket.send(message);
+                    return;
+                }
+            }
+            let message = client.MessageConverter.changeMessage(command);
+            this.websocket.send(message);
         }
         start(host) {
             this.websocket = new client.WebSocketClient(host, this);
         }
         handleWebSocketMessage(message) {
             this.model.handleStateUpdate(message);
+            $("#currentCommand").text(this.model.clientState.ouputState);
         }
         handleWebSocketError(message) {
             this.displayError(message);
@@ -408,6 +451,12 @@ var client;
             obj["argument"] = message;
             return JSON.stringify(obj);
         }
+        static disableMessage(message) {
+            var obj = {};
+            obj["type"] = "DISABLE";
+            obj["argument"] = message;
+            return JSON.stringify(obj);
+        }
         static masterChangeMessage(hosts, command) {
             var obj = {};
             obj["type"] = "CHANGE";
@@ -432,14 +481,11 @@ var client;
 var client;
 (function (client) {
     class CommandsController extends client.AbstractController {
-        commandEntered(command) {
-            let message = client.MessageConverter.changeMessage(command);
-            this.websocket.send(message);
-        }
         handleCommandsChanged(commands) {
             $("#commandWrapper").empty();
             for (let command of this.model.clientState.commands) {
                 CommandsController.displayCommand(command);
+                this.commands.set(command.command, command);
             }
         }
         handleOutputStateChange(state) {
@@ -518,6 +564,7 @@ var client;
             $(".command").remove();
             for (let command of this.model.clientState.commands) {
                 SingleLightController.displayCommand(command);
+                this.commands.set(command.command, command);
             }
         }
         changeButtonLayout() {
@@ -542,28 +589,34 @@ var client;
             let outside = this.groupedOutsideState();
             SingleLightController.updateOutside(outside["high"], outside["low"]);
         }
-        commandEntered(command) {
-            let message = client.MessageConverter.changeMessage(command);
-            this.websocket.send(message);
-        }
         changeOutputRow(x, y, s) {
             var key = "#light" + x + y + "";
             if (s == 0) {
-                $(key).css("background-color", "#6c757d");
+                $(key).css("background-color", "rgba(108, 117, 125,0.7)");
+                $(key).css("border", "2px solid rgb(108, 117, 125)");
                 $(key).attr('onclick', 'light_clicked(' + x + ',' + y + ',' + 1 + ');');
             }
             else if (s == 1) {
-                $(key).css("background-color", "#ffc107");
+                $(key).css("background-color", "rgba(255,193,7,0.7)");
+                $(key).css("border", "2px solid rgb(108, 117, 125)");
                 $(key).attr('onclick', 'light_clicked(' + x + ',' + y + ',' + 0 + ');');
             }
             else if (s == 7) {
                 $(key).css("visibility", "hidden");
                 $(key).attr('onclick', '');
             }
+            else if (s == 8) {
+                $(key).attr('onclick', '');
+                $(key).css("background-color", "rgba(36, 39, 41, 0.93)");
+                $(key).attr('onclick', 'light_clicked(' + x + ',' + y + ',' + 0 + ');');
+            }
         }
         lightClicked(row, column, value) {
             let obj = "" + row + "" + column + "" + value + "";
             let message = client.MessageConverter.changeMessage(obj);
+            if (window.location.hash && window.location.hash.includes("disable")) {
+                message = client.MessageConverter.disableMessage("" + row + "" + column + "");
+            }
             let key = "#light" + row + column + "";
             $(key).css("background-color", "#ffffe6");
             this.websocket.send(message);
@@ -812,9 +865,11 @@ function commandEntered(command) {
 }
 if (profile == "command") {
     controller = new client.CommandsController();
+    controller.init();
 }
 else if (profile == "single_light") {
     controller = new client.SingleLightController();
+    controller.init();
     window.onresize = function () {
         controller.changeButtonLayout();
     };

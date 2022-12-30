@@ -9,6 +9,9 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 public enum StateCommand {
+
+
+
     ALL_HIGH("sah", StateCommand::turnAllOn),
     HALF_HIGH("shh", StateCommand::turnHalfOn),
     ALL_LOW("sal", StateCommand::turnAllOff),

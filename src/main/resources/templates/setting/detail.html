@@ -188,7 +188,7 @@
                     </div>
                     <div class="col-auto">
                         <label class="">Source Id</label>
-                        <input type="text" class="form-control mb-2" th:field="*{sourceId}">
+                        <input type="number" class="form-control mb-2" th:field="*{sourceId}">
                     </div>
                     <div class="col-auto">
                         <label class="">Order</label>
@@ -220,6 +220,8 @@
                 <ul th:each="command : ${setting.getCommands()}">
                     <li style="display:inline">Label : <span th:text="${command.getLabel()}"></span></li>
                     <li style="display:inline">Command : <span th:text="${command.getCommand()}"></span></li>
+                    <li style="display:inline">Payload : <span th:text="${command.getPayload()}"></span></li>
+
                     <li style="display:inline"><a
                             th:href="@{/setting/command/delete/?id={id}(id=${command.id})}">Delete</a>
                     </li>
@@ -238,6 +240,10 @@
                         <input type="text" class="form-control mb-2" th:field="*{command}">
                     </div>
                     <div class="col-auto">
+                        <label class="">Payload</label>
+                        <input type="text" class="form-control mb-2" th:field="*{payload}">
+                    </div>
+                    <div class="col-auto">
                         <label class="">Order</label>
                         <input type="text" class="form-control mb-2" th:field="*{order}">
                     </div>
@@ -250,84 +256,6 @@
     </div>
 
 
-
-
-    <div class="card" style="margin-top:20px;">
-        <h4 class="card-header">State Command Overwrites</h4>
-        <div style="margin-left:10px;">
-            <h5 style="margin-top:10px;">list</h5>
-            <div th:if="${!stateCommandOverwrites.isEmpty()}">
-                <ul th:each="overwrite : ${stateCommandOverwrites}">
-                    <li style="display:inline">Label : <span th:text="${overwrite.getCommand()}"></span></li>
-                    <li style="display:inline">Command : <span th:text="${overwrite.getOverwrite()}"></span></li>
-                    <li style="display:inline"><a
-                            th:href="@{/setting/statecontroloverwrite/delete/?id={id}(id=${overwrite.id})}">Delete</a>
-                    </li>
-                </ul>
-            </div>
-
-            <form method="POST" th:object="${newStateCommandOverwrite}" th:action="@{/setting/statecontroloverwrite/add}">
-                <h5>New Sate Command Overwrite</h5>
-                <div class="form-row align-items-center">
-
-                    <div class="col-auto">
-                        <label class="">Command</label>
-                        <select class="form-control mb-2" name="command">
-                            <option th:each="command : ${stateCommands}"
-                                    th:value="${command}"
-                                    th:utext="${command}"
-                            ></option>
-                        </select>
-                    </div>
-
-
-                    <div class="col-auto">
-                        <label class="">Label</label>
-                        <input type="text" class="form-control mb-2" th:field="*{overwrite}">
-                    </div>
-
-
-
-                    <div class="col-auto">
-                        <button type="submit" style="margin-top:30px;" class="btn btn-primary mb-2">Submit</button>
-                    </div>
-                </div>
-            </form>
-
-
-
-
-            <form method="POST" th:object="${newStateCommandOverwrite}" th:action="@{/setting/statecontroloverwrite/add}">
-                <h5>New Sate Command Overwrite</h5>
-                <div class="form-row align-items-center">
-
-                    <div class="col-auto">
-                        <label class="">Command</label>
-                        <select class="form-control mb-2" name="command">
-                            <option th:each="command : ${stateCommands}"
-                                    th:value="${command}"
-                                    th:utext="${command}"
-                            ></option>
-                        </select>
-                    </div>
-
-
-                    <div class="col-auto">
-                        <label class="">Label</label>
-                        <input type="text" class="form-control mb-2" th:field="*{overwrite}">
-                    </div>
-
-
-
-                    <div class="col-auto">
-                        <button type="submit" style="margin-top:30px;" class="btn btn-primary mb-2">Submit</button>
-                    </div>
-                </div>
-            </form>
-
-
-        </div>
-    </div>
 
 
     <br/>

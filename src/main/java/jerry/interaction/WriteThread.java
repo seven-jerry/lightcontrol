@@ -26,13 +26,29 @@ public class WriteThread extends Thread implements ILIfeCycleExposable {
         while (!this.isInterrupted() && running) {
             try {
                 String value = queue.take();
-                log.trace(value);
-                source.write("{" + value + "}");
-            } catch (RuntimeException | InterruptedException e) {
+                sendToSource(value);
+            } catch (InterruptedException e) {
                 log.error(e.getMessage());
                 break;
+            } catch (Exception e) {
+                log.error(e.getMessage());
             }
         }
+    }
+
+    void sendToSource(String value) {
+        if (value.length() % 3 != 0) {
+            log.warn("ignoring command {}", value);
+            return;
+        }
+        while (value.length() > 39) {
+            String partialCommand = value.substring(0, 39);
+            log.trace(partialCommand);
+            source.write("{" + partialCommand + "}");
+            value = value.substring(39);
+        }
+        log.trace(value);
+        source.write("{" + value + "}");
     }
 
 

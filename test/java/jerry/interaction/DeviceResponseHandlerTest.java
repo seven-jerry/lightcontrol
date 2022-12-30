@@ -35,7 +35,7 @@ public class DeviceResponseHandlerTest {
     @Test
     public void handleMessage() {
         when(clientStateRepository.getState()).thenReturn(ClientState.withSize(2,5,2,2));
-        deviceResponseHandler.handleMessage("{o000010020030040100110120130147200210220230240u0010i0010}}");
+        deviceResponseHandler.handleMessage("{o000010020030040100110120130147200210220230240u0010i0010a0:130,1:150}}");
         verify(clientStateRepository,times(1)).updateOutputState("o000010020030040100110120130147200210220230240");
     }
 

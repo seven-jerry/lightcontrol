@@ -6,6 +6,7 @@ import jerry.interaction.InputControl;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.*;
+import java.util.stream.Collectors;
 
 @XmlRootElement
 public class Setting {
@@ -136,15 +137,17 @@ public class Setting {
     }
 
     public Map<String, Integer> labeledInput(StateArray lastState) {
+
+        Map<Integer, String> nameMap = new HashMap<>();
+        for (Input input : this.inputs) {
+            nameMap.put(Integer.parseInt(input.getSourceId()), input.getName());
+        }
         HashMap<String, Integer> buildMap = new HashMap<>();
         if (lastState == null) return buildMap;
 
-        lastState.walkInputState((x,s) -> {
-            Optional.of(x)
-                    .filter(e -> this.inputs.size() > e)
-                    .map(e -> inputs.get(x))
-                    .ifPresent(e -> buildMap.put(e.getName(), s));
-
+        lastState.walkInputState((x, s) -> {
+            String name = String.valueOf(nameMap.get(x));
+            buildMap.put(name, s);
         });
         return buildMap;
     }
@@ -190,11 +193,11 @@ public class Setting {
         return this.getOutside();
     }
 
-    public int getOutputCount(){
+    public int getOutputCount() {
         return this.columns * this.rows;
     }
 
-    public int getInputCount(){
+    public int getInputCount() {
         return this.inputs.size();
     }
 

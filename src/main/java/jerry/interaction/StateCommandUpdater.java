@@ -19,7 +19,6 @@ public class StateCommandUpdater implements ILIfeCycleExposable{
 
     @Override
     public void startLifecycle() throws RuntimeException {
-        service.getStateCommandOverwrites().forEach(StateCommandOverwrite::doOverwrite);
     }
 
     @Override

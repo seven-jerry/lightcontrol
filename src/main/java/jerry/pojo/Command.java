@@ -8,6 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Command implements IIdProvider ,Comparable<Command>{
     private Integer id;
+    private String payload;
     private String command;
     private String label;
     private Integer order = 0;
@@ -17,6 +18,7 @@ public class Command implements IIdProvider ,Comparable<Command>{
         c.id = 0;
         c.command = "";
         c.label = "new command";
+        c.payload = "";
         return c;
     }
 
@@ -53,6 +55,7 @@ public class Command implements IIdProvider ,Comparable<Command>{
         this.order = order;
     }
 
+
     @Override
     public String toString() {
         return "Command{" +
@@ -66,5 +69,16 @@ public class Command implements IIdProvider ,Comparable<Command>{
     @Override
     public int compareTo(Command o) {
         return Integer.compare(this.order,o.order);
+    }
+
+    public String getPayload() {
+        if(payload == null){
+            return "";
+        }
+        return payload;
+    }
+
+    public void setPayload(String payload) {
+        this.payload = payload;
     }
 }

@@ -56,7 +56,7 @@ public class SerialDevice implements ISerialSource, SerialPortDataListener {
             comPort.addDataListener(this);
         }
         if (!comPort.isOpen()) {
-            throw new IllegalStateException("the comprt was not able to be opened");
+            throw new IllegalStateException("the comport was not able to be opened");
         }
     }
 
@@ -82,9 +82,13 @@ public class SerialDevice implements ISerialSource, SerialPortDataListener {
         }
         OutputStream stream = Objects.requireNonNull(this.comPort.getOutputStream(), "SerialDevice : was not able to get outputstream");
 
-        PrintWriter p = new PrintWriter(stream);
-        p.print(s);
-        p.flush();
+        try (PrintWriter p = new PrintWriter(stream)) {
+            p.print(s);
+            p.flush();
+        } catch (Exception e) {
+            log.error("could not write to serial line source", e);
+        }
+
 
     }
 

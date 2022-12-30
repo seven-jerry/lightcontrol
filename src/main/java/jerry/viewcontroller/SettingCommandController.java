@@ -38,6 +38,14 @@ public class SettingCommandController {
         return settingsController.details(model);
     }
 
+    @PostMapping(value = "/command/add/api")
+    @ResponseBody
+    public String addInputAPI(@RequestBody Command command) {
+        persistenceService.addCommand(command);
+        clientStateRepository.updateCommands(persistenceService.getCommands());
+        return "{}";
+    }
+
     @GetMapping(value = "/command/delete")
     public String deleteInput(@RequestParam(value = "id", required = true) String id, Model model) {
         persistenceService.removeCommand(id);
@@ -45,19 +53,5 @@ public class SettingCommandController {
         return settingsController.details(model);
     }
 
-
-
-
-    @PostMapping(value = "/statecontroloverwrite/add")
-    public String addStateCommandOverwrite(@ModelAttribute StateCommandOverwrite overwrite, Model model) {
-        persistenceService.addStateCommandOverwrite(overwrite);
-        return settingsController.details(model);
-    }
-
-    @GetMapping(value = "/statecontroloverwrite/delete")
-    public String deleteStateControlOverwrite(@RequestParam(value = "id", required = true) String id, Model model) {
-        persistenceService.removeStateCommandOverwrite(id);
-        return settingsController.details(model);
-    }
 
 }

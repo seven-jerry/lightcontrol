@@ -3,6 +3,7 @@ namespace client {
         label: string;
         id: number;
         command: string;
+        payload:string;
         order: number;
 
         public static fromObject(obj: any) {
@@ -11,6 +12,7 @@ namespace client {
             command.id = obj.id;
             command.command = obj.command;
             command.order = obj.order;
+            command.payload = obj.payload;
             return command;
         }
 

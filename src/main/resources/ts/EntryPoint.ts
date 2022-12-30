@@ -15,10 +15,12 @@ function commandEntered(command) {
 
 if (profile == "command") {
     controller = new client.CommandsController();
+    controller.init();
 }
 
 else if (profile == "single_light") {
     controller = new client.SingleLightController();
+    controller.init();
 
     window.onresize = function () {
         controller.changeButtonLayout();

@@ -8,8 +8,10 @@ namespace client {
         websocket: WebSocketClient;
         model: ClientStateModel;
 
-        aggregation:StateAggregation;
-        outSideAggregation:OutputAggregation;
+        aggregation: StateAggregation;
+        outSideAggregation: OutputAggregation;
+
+        commands = new Map();
 
         constructor() {
             this.aggregation = new StateAggregation();
@@ -17,7 +19,45 @@ namespace client {
             this.model = new ClientStateModel(this);
         }
 
+        init() {
+            $("#newCommandSave").on("click", () => {
+                let key = $("#commandKey").val() as string;
+                let name = $("#commandName").val() as string;
+                let payload = this.model.clientState.ouputState;
+                console.log("key", key, "name", name, "payload", payload);
 
+                if (payload != undefined) {
+                    payload = payload.replace("o","");
+                    let co: Command = {
+                        command: key,
+                        order: 0,
+                        payload: payload,
+                        label: name,
+                        id: undefined
+                    };
+                    $.ajax({
+                        type: "POST",
+                        url: "/setting/command/add/api",
+                        contentType: 'application/json',
+                        data: JSON.stringify(co)
+                    });
+                }
+            });
+        }
+
+
+        public commandEntered(command: string) {
+            if (this.commands.has(command)) {
+                let co = this.commands.get(command);
+                if (co.payload != undefined && co.payload.length > 0) {
+                    let message = MessageConverter.changeMessage(co.payload);
+                    this.websocket.send(message);
+                    return;
+                }
+            }
+            let message = MessageConverter.changeMessage(command);
+            this.websocket.send(message);
+        }
 
         start(host: string) {
             this.websocket = new WebSocketClient(host, this);
@@ -26,6 +66,7 @@ namespace client {
 
         handleWebSocketMessage(message: string) {
             this.model.handleStateUpdate(message);
+            $("#currentCommand").text(this.model.clientState.ouputState);
         }
 
         handleWebSocketError(message: string) {
@@ -41,18 +82,18 @@ namespace client {
 
         }
 
-        public groupedOutputState(){
+        public groupedOutputState() {
             return this.aggregation.groupedOutputState;
         }
 
 
-        handleCommandsChanged(commands:Command[]) {
+        handleCommandsChanged(commands: Command[]) {
         }
 
         handleOutputStateChange(state: string) {
             var method_char = state.charAt(0);
             let saveSate = state;
-            if(method_char != 'o'){
+            if (method_char != 'o') {
                 this.displayError("got wrong output method char");
                 return;
             }
@@ -89,7 +130,7 @@ namespace client {
             console.error(error);
             setTimeout(
                 function () {
-                   location.reload();
+                    location.reload();
                 }, 30000);
 
 
@@ -100,20 +141,15 @@ namespace client {
         }
 
         handleOutsideStateChange(state: string) {
-           this.outSideAggregation.withNewState(state);
+            this.outSideAggregation.withNewState(state);
         }
 
-        public groupedOutsideState(){
+        public groupedOutsideState() {
             return this.outSideAggregation.groupedOutsideState;
         }
 
         handleSettingsChange(setting: client.Setting) {
         }
-
-
-
-
-
 
 
     }

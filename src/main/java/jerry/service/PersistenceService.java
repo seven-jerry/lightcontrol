@@ -4,12 +4,16 @@ import jerry.pojo.*;
 import jerry.persist.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Consumer;
+
+import static org.springframework.util.StringUtils.hasText;
 
 
 @Service
@@ -18,8 +22,7 @@ public class PersistenceService {
     ICollectionPersistable<Input> inputPersist;
     ICollectionPersistable<Command> commandPersist;
     ICollectionPersistable<Client> clientPersist;
-    ICollectionPersistable<StateCommandOverwrite> stateCommandOverwrites;
-
+    ConcurrentHashMap<String, Command> commandMap = new ConcurrentHashMap<>();
     @Value("${base.folder}")
     public String settingsFolder;
 
@@ -32,7 +35,6 @@ public class PersistenceService {
         inputPersist = new FilePersistedCollection<Input>(settingsFolder, "/input/", Input.class, "input", "xml");
         commandPersist = new FilePersistedCollection<Command>(settingsFolder, "/command/", Command.class, "command", "xml");
         clientPersist = new FilePersistedCollection<Client>(settingsFolder, "/client/", Client.class, "client", "xml");
-        stateCommandOverwrites = new FilePersistedCollection<>(settingsFolder,"/overwrites/",StateCommandOverwrite.class,"overwrite","xml");
     }
 
 
@@ -67,7 +69,7 @@ public class PersistenceService {
             return;
         }
         settingPersist.update(consumer);
-
+        commandMap.clear();
     }
 
 
@@ -88,11 +90,22 @@ public class PersistenceService {
     }
 
     public void addCommand(Command command) {
+        if (!hasText(command.getCommand()) || !hasText(command.getLabel()) || command.getCommand().length() != 3) {
+            throw new IllegalArgumentException("no valid command");
+        }
+
+        for (Command availabeEntry : commandPersist.getAvailabeEntries()) {
+            if (availabeEntry.getCommand().equals(command.getCommand())) {
+                commandPersist.removeEntryById(availabeEntry.getId());
+            }
+        }
         commandPersist.addEntry(command);
+        commandMap.clear();
     }
 
     public void removeCommand(String id) {
         commandPersist.removeEntryById(Integer.valueOf(id));
+        commandMap.clear();
     }
 
     public void addClient(Client client) {
@@ -109,22 +122,19 @@ public class PersistenceService {
     }
 
 
-
-    public void addStateCommandOverwrite(StateCommandOverwrite overwrite) {
-        stateCommandOverwrites.addEntry(overwrite);
-    }
-
-    public void removeStateCommandOverwrite(String id) {
-        stateCommandOverwrites.removeEntryById(Integer.valueOf(id));
-    }
-
-
-    public List<StateCommandOverwrite> getStateCommandOverwrites(){
-        return stateCommandOverwrites.getAvailabeEntries();
-    }
-
     public StateCommandOverwrite newStateControlOverwrite() {
         StateCommandOverwrite overwrite = new StateCommandOverwrite();
         return overwrite;
+    }
+
+    public Command getCommand(String key) {
+        return commandMap.computeIfAbsent(key, (k) -> {
+            for (Command availabeEntry : commandPersist.getAvailabeEntries()) {
+                if (availabeEntry.getCommand().equals(k)) {
+                    return availabeEntry;
+                }
+            }
+            return null;
+        });
     }
 }

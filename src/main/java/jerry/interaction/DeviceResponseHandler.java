@@ -51,7 +51,7 @@ public class DeviceResponseHandler implements IResponseHandler {
     private void proccessMessage(String message) {
         log.trace(message);
         char type_char = message.charAt(0);
-
+/*
         if (type_char == 's') {
             StateArray stateArray = clientStateRepository.getState().getState().copy();
             StateCommand.fromCommand(message).callConsumer(stateArray);
@@ -59,6 +59,8 @@ public class DeviceResponseHandler implements IResponseHandler {
             clientStateRepository.updateOutputState(stateArray.outputStateString(false));
             return;
         }
+
+ */
         if (Character.isDigit(type_char)) {
             clientStateRepository.updateOutputState(message);
             return;

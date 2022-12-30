@@ -21,156 +21,82 @@
     </expand>
     <select />
   </component>
+  <component name="BuildServerSettings">
+    <treeState key="project">
+      <selectedPath>
+        <pathElement>
+          <option name="myNodeId" value="helperText" />
+          <option name="myNodeType" value="jetbrains.buildServer.tree.descriptors.LinkedTextDescriptor" />
+        </pathElement>
+      </selectedPath>
+    </treeState>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="25ee49b8-b532-4d39-b11c-6aa1bb1bf2db" name="Default" comment="fix socket">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/bashsupport_project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bashsupport_project.xml" afterDir="false" />
+    <list default="true" id="25ee49b8-b532-4d39-b11c-6aa1bb1bf2db" name="Default" comment="update from disc">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lightcontrol 2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/StateCommandKeys.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/jerry/pojo/AnalogInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-develop.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/java/jerry/interaction/InputCommandTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/java/jerry/interaction/WriteThreadTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fazecast_jSerialComm_2_5_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fazecast_jSerialComm_2_7_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lightcontrol.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lightcontrol.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settingList.xml" beforeDir="false" afterPath="$PROJECT_DIR$/settingList.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/ArduinoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/ArduinoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/SimpleEchoSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/SimpleEchoSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/SpringMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/SpringMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/config/Beans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/config/Beans.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/config/LocalSecurity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/config/LocalSecurity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/config/MasterBeans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/config/MasterBeans.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/config/MessageWebApplicationInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/config/MessageWebApplicationInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/config/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/config/Security.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/config/Security.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/config/SimpleCORSFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/config/SimpleCORSFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/config/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/config/WebSocketConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/consumer/ClientRequestMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/consumer/ClientRequestMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/consumer/ClientState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/consumer/ClientState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/consumer/IConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/consumer/IConsumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/consumer/RequestType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/consumer/RequestType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/consumer/WebSocketConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/consumer/WebSocketConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/device/ISerialSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/device/ISerialSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/device/MockSerialDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/device/MockSerialDevice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/device/SerialDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/device/SerialDevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/device/SerialSources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/device/SerialSources.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/device/WriteMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/device/WriteMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractInteractionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractInteractionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractStateNotifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/AbstractStateNotifier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/ClientInteractionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/ClientInteractionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/ClientStateNotifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/ClientStateNotifier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/DeviceResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/DeviceResponseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/EventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/ExternalReadConsumers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/ExternalReadConsumers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/ILIfeCycleExposable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/ILIfeCycleExposable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/IMessageable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/IMessageable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/IReadUpdateable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/IReadUpdateable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/IResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/IResponseHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/InputCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/InputCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/InputControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/InputControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/MasterInteractionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/MasterInteractionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/MasterStateNotifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/MasterStateNotifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/NodeRedSensorState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/NodeRedSensorState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/NodeUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/NodeUpdater.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/ReadManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/ReadManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/StateArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/StateArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/StateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/StateCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/StateCommandUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/StateCommandUpdater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/StateDelegator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/StateDelegator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/interaction/WriteThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/interaction/WriteThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/master/ClientStateUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/master/ClientStateUpdater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/master/IMasterChangeNotifiable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/master/IMasterChangeNotifiable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/master/IWebSocketResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/master/IWebSocketResponseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/master/MasterUpdater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/persist/AbstractFilePersisted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/persist/AbstractFilePersisted.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/persist/FilePersistedCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/persist/FilePersistedCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/persist/FilePersistedObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/persist/FilePersistedObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/persist/ICollectionPersistable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/persist/ICollectionPersistable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/persist/IFolderChangeable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/persist/IFolderChangeable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/persist/IIdProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/persist/IIdProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/persist/IObjectPersistable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/persist/IObjectPersistable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/persist/IPersistable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/persist/IPersistable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/pojo/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/pojo/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/pojo/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/pojo/Command.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/pojo/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/pojo/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/pojo/InputType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/pojo/InputType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/pojo/SerialSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/pojo/SerialSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/pojo/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/pojo/Setting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/pojo/StateCommandOverwrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/pojo/StateCommandOverwrite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/service/ClientStateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/service/ClientStateRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/service/IClientStateChangeNotifiable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/service/IClientStateChangeNotifiable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/service/LifeCycleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/service/LifeCycleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/service/PersistenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/service/PersistenceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/service/SerialService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/service/SerialService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/util/AbstractWebsocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/util/AbstractWebsocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/util/DateFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/util/DateFormatter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/util/ErrorForwardingConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/util/ErrorForwardingConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/util/ErrrorHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/util/ErrrorHandling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/util/IWebsocketErrorHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/util/IWebsocketErrorHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/util/Sleep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/util/Sleep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/util/ThriConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/util/ThriConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/util/ThriIntFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/util/ThriIntFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/util/ThriPredicate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/util/ThriPredicate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/util/WebsocketImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/util/WebsocketImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/util/WebsocketManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/util/WebsocketManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/CommandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/CommandController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/Index.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/InputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/InputController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/InteractionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/InteractionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MasterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MasterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MasterSocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MasterSocketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MockStateEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/MockStateEndpoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/RestStateApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/RestStateApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SettingCommandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SettingCommandController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SettingRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SettingRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SettingsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/SourceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/WebSocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jerry/viewcontroller/WebSocketController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/banner.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/banner.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/client.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/client.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/command.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/command.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/master.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/master.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/setting.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/setting.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/setting/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/setting/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/switch.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/switch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ts/AbstractController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/AbstractController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ts/ClientState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/ClientState.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ts/ClientStateModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/ClientStateModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ts/ClientStateWrapper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/ClientStateWrapper.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ts/CommandsController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/CommandsController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ts/EntryPoint.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/EntryPoint.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ts/MasterController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/MasterController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ts/MasterModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/MasterModel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ts/MessageConverter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/MessageConverter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ts/SingleLightController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/SingleLightController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ts/StateAggregation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/StateAggregation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ts/WebSocketClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/WebSocketClient.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ts/entity/Command.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/entity/Command.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ts/entity/Input.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/entity/Input.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ts/entity/SerialSource.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/entity/SerialSource.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ts/entity/Setting.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/entity/Setting.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ts/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ts/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jerry/SpringMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jerry/config/SimpleCORSFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jerry/config/WebSocketConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/java/jerry/device/StateArrayTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/jerry/device/StateArrayTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/banner.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/images/banner.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/setting/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/setting/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/switch.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/switch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/java/jerry/device/WebsocketTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/jerry/device/WebsocketTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/java/jerry/interaction/DeviceResponseHandlerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/jerry/interaction/DeviceResponseHandlerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/java/jerry/interaction/ReadManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/jerry/interaction/ReadManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/java/test/ReadManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/java/test/ReadManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsc.sh" beforeDir="false" afterPath="$PROJECT_DIR$/tsc.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,6 +119,7 @@
         <option value="TypeScript File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -204,10 +131,24 @@
       </map>
     </option>
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+        <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -218,52 +159,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="SearchEverywhereHistoryKey" value=";&#9;null&#9;null&#10;produceOnce&#9;PSI&#9;JAVA://jerry.arduino.StateNotifier#produceOnce" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="extract.method.default.visibility" value="private" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/test/java/jerry/arduino" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Problems" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.32873562" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "go.import.settings.migrated": "true",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "fda025cf115752825af50e2bc920687d",
+    "ts.external.directory.path": "/Users/jeremybutler/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/221.6008.13/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
+  }
+}]]></component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="jerry.interaction" />
-      <recent name="jerry.arduino" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="jerry.interaction" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/resources/ts" />
       <recent name="$PROJECT_DIR$/src/main/java/jerry/master" />
       <recent name="$PROJECT_DIR$/src/main/resources/ts/entity" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="jerry.interaction" />
-      <recent name="jerry.config" />
-      <recent name="jerry.master" />
-      <recent name="jerry.viewcontroller" />
-      <recent name="jerry.arduino" />
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/ts/entry_point" />
@@ -271,28 +197,28 @@
       <recent name="$PROJECT_DIR$/src/main/resources/static/js" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="jerry.interaction" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="jerry.interaction" />
+      <recent name="jerry.arduino" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="jerry.pojo" />
+      <recent name="jerry.interaction" />
+      <recent name="jerry.config" />
+      <recent name="jerry.master" />
+      <recent name="jerry.viewcontroller" />
+    </key>
   </component>
-  <component name="RunManager" selected="Java Scratch.Scratch">
+  <component name="RunManager" selected="Spring Boot.SpringMain">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="WIDTH" value="0" />
       <option name="HEIGHT" value="0" />
       <module />
       <method>
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jerry.Client" />
-      <module name="lightcontrol" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jerry.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -356,7 +282,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReadManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InputCommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lightcontrol" />
       <extension name="coverage">
         <pattern>
@@ -364,27 +290,12 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="azul-11" />
       <option name="PACKAGE_NAME" value="jerry.interaction" />
-      <option name="MAIN_CLASS_NAME" value="jerry.interaction.ReadManagerTest" />
+      <option name="MAIN_CLASS_NAME" value="jerry.interaction.InputCommandTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReadManagerTest.handleMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lightcontrol" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="jerry.interaction.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="jerry.interaction" />
-      <option name="MAIN_CLASS_NAME" value="jerry.interaction.ReadManagerTest" />
-      <option name="METHOD_NAME" value="handleMessage" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -408,17 +319,71 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebsocketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WriteThreadTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lightcontrol" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jerry.device.*" />
+          <option name="PATTERN" value="jerry.interaction.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="jerry.device" />
-      <option name="MAIN_CLASS_NAME" value="jerry.device.WebsocketTest" />
+      <option name="PACKAGE_NAME" value="jerry.interaction" />
+      <option name="MAIN_CLASS_NAME" value="jerry.interaction.WriteThreadTest" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WriteThreadTest.givenFaultyCommands__whenProcessed__sourceReceivesCorrectCommandInChunkedMode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lightcontrol" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jerry.interaction.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jerry.interaction" />
+      <option name="MAIN_CLASS_NAME" value="jerry.interaction.WriteThreadTest" />
+      <option name="METHOD_NAME" value="givenFaultyCommands__whenProcessed__sourceReceivesCorrectCommandInChunkedMode" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WriteThreadTest.givenLongSingleCommands__whenProcessed__sourceReceivesCorrectCommandInChunkedMode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lightcontrol" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jerry.interaction.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jerry.interaction" />
+      <option name="MAIN_CLASS_NAME" value="jerry.interaction.WriteThreadTest" />
+      <option name="METHOD_NAME" value="givenLongSingleCommands__whenProcessed__sourceReceivesCorrectCommandInChunkedMode" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WriteThreadTest.givenStringCommand__whenProcessed__sourceReceivesCorrectCommand" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lightcontrol" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="jerry.interaction.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="jerry.interaction" />
+      <option name="MAIN_CLASS_NAME" value="jerry.interaction.WriteThreadTest" />
+      <option name="METHOD_NAME" value="givenStringCommand__whenProcessed__sourceReceivesCorrectCommand" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -433,12 +398,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scratch" type="Java Scratch" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Scratch" />
-      <option name="SCRATCH_FILE_URL" value="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_2.java" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="scratch.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$APPLICATION_CONFIG_DIR$/scratches/scratch.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
     </configuration>
     <configuration name="Test-Debug" type="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -467,6 +428,9 @@
       <method v="2" />
     </configuration>
     <configuration name="SpringMain" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" value="develop,client,local" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <module name="lightcontrol" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="jerry.SpringMain" />
       <method v="2">
@@ -497,23 +461,24 @@
       <item itemvalue="Application.Spring-Client" />
       <item itemvalue="Application.Spring-Master" />
       <item itemvalue="Application.Unnamed" />
-      <item itemvalue="Application.Client" />
-      <item itemvalue="Java Scratch.Scratch" />
       <item itemvalue="JUnit.StateArrayTest" />
-      <item itemvalue="JUnit.ReadManagerTest" />
-      <item itemvalue="JUnit.ReadManagerTest.handleMessage" />
-      <item itemvalue="JUnit.WebsocketTest" />
-      <item itemvalue="Remote.Unnamed" />
-      <item itemvalue="Remote.Test-Debug" />
+      <item itemvalue="JUnit.InputCommandTest" />
+      <item itemvalue="JUnit.WriteThreadTest" />
+      <item itemvalue="JUnit.WriteThreadTest.givenFaultyCommands__whenProcessed__sourceReceivesCorrectCommandInChunkedMode" />
+      <item itemvalue="JUnit.WriteThreadTest.givenLongSingleCommands__whenProcessed__sourceReceivesCorrectCommandInChunkedMode" />
+      <item itemvalue="JUnit.WriteThreadTest.givenStringCommand__whenProcessed__sourceReceivesCorrectCommand" />
+      <item itemvalue="Node.js.scratch.js" />
+      <item itemvalue="Remote JVM Debug.Test-Debug" />
+      <item itemvalue="Remote JVM Debug.Unnamed" />
       <item itemvalue="Spring Boot.SpringMain" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Java Scratch.Scratch" />
-        <item itemvalue="Application.Client" />
-        <item itemvalue="JUnit.WebsocketTest" />
-        <item itemvalue="JUnit.ReadManagerTest.handleMessage" />
-        <item itemvalue="JUnit.ReadManagerTest" />
+        <item itemvalue="JUnit.WriteThreadTest.givenFaultyCommands__whenProcessed__sourceReceivesCorrectCommandInChunkedMode" />
+        <item itemvalue="JUnit.WriteThreadTest.givenLongSingleCommands__whenProcessed__sourceReceivesCorrectCommandInChunkedMode" />
+        <item itemvalue="JUnit.WriteThreadTest" />
+        <item itemvalue="JUnit.WriteThreadTest.givenStringCommand__whenProcessed__sourceReceivesCorrectCommand" />
+        <item itemvalue="Node.js.scratch.js" />
       </list>
     </recent_temporary>
   </component>
@@ -567,7 +532,17 @@
       <workItem from="1577898362483" duration="2000" />
       <workItem from="1582382544888" duration="83000" />
       <workItem from="1601095017219" duration="4764000" />
-      <workItem from="1630778807871" duration="132000" />
+      <workItem from="1630778807871" duration="1221000" />
+      <workItem from="1636830534268" duration="1020000" />
+      <workItem from="1641463771299" duration="323000" />
+      <workItem from="1641464126849" duration="125000" />
+      <workItem from="1641464269159" duration="12956000" />
+      <workItem from="1641932661133" duration="3451000" />
+      <workItem from="1643707584252" duration="18409000" />
+      <workItem from="1644954050457" duration="12000" />
+      <workItem from="1672344115355" duration="202000" />
+      <workItem from="1672344362574" duration="3404000" />
+      <workItem from="1672416669338" duration="5851000" />
     </task>
     <task id="LOCAL-00001" summary="version 1.2.2">
       <created>1551729148231</created>
@@ -597,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572556976580</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update from disc">
+      <created>1630779376591</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1630779376591</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -632,7 +614,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="version 1.2.2" />
@@ -640,13 +621,12 @@
     <MESSAGE value="typo" />
     <MESSAGE value="add local node and hassio" />
     <MESSAGE value="fix socket" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix socket" />
+    <MESSAGE value="update from disc" />
+    <option name="LAST_COMMIT_MESSAGE" value="update from disc" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="522" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1630778827211">
-      <screen x="0" y="25" width="1440" height="875" />
-    </state>
-    <state x="522" y="345" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.875@0.25.1440.875" timestamp="1630778827211" />
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -662,24 +642,9 @@
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/jerry/viewcontroller/InteractionController.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="149" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/jerry/config/MasterBeans.java</url>
           <line>17</line>
           <option name="timeStamp" value="169" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/jerry/device/SerialDevice.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="170" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/jerry/interaction/WriteThread.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="282" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/jerry/interaction/StateDelegator.java</url>
@@ -688,23 +653,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/jerry/device/SerialDevice.java</url>
-          <line>153</line>
+          <line>157</line>
           <option name="timeStamp" value="286" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/test/java/jerry/interaction/DeviceResponseHandlerTest.java</url>
           <line>49</line>
           <option name="timeStamp" value="317" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/jerry/interaction/DeviceResponseHandler.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="320" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/jerry/interaction/ClientStateNotifier.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="324" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -3,15 +3,14 @@
 
 namespace client {
     export class CommandsController extends AbstractController {
-        public commandEntered(command: string) {
-            let message = MessageConverter.changeMessage(command);
-            this.websocket.send(message);
-        }
 
-        handleCommandsChanged(commands:Command[]) {
+
+
+        handleCommandsChanged(commands: Command[]) {
             $("#commandWrapper").empty();
             for (let command of this.model.clientState.commands) {
                 CommandsController.displayCommand(command);
+                this.commands.set(command.command, command);
             }
         }
 

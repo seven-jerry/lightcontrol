@@ -7,6 +7,13 @@ namespace client {
             return JSON.stringify(obj);
         }
 
+        public static disableMessage(message: string) {
+            var obj = {};
+            obj["type"] = "DISABLE";
+            obj["argument"] = message;
+            return JSON.stringify(obj);
+        }
+
         public static masterChangeMessage(hosts:string[],command: string) {
             var obj = {};
             obj["type"] = "CHANGE";

@@ -2,12 +2,14 @@ package jerry.interaction;
 
 
 import jerry.master.MasterUpdater;
+import jerry.pojo.Command;
 import jerry.service.ClientStateRepository;
 import jerry.service.PersistenceService;
 import jerry.pojo.Setting;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.util.StringUtils;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.function.Consumer;
@@ -86,6 +88,18 @@ public class ClientInteractionManager extends AbstractInteractionManager {
 
     public void writeToProducer(String userAction) {
         log.trace(userAction);
+        if (userAction.startsWith("s")) {
+            Command useCommand = persistenceService.getCommand(userAction);
+            if (useCommand == null) {
+                return;
+            }
+            if (StringUtils.hasText(useCommand.getPayload())) {
+                stateDelegator.writeToSource(q -> q.offer(useCommand.getPayload()));
+                return;
+            }
+            stateDelegator.writeToSource(q -> q.offer(useCommand.getCommand()));
+            return;
+        }
         stateDelegator.writeToSource(q -> q.offer(userAction));
     }
 

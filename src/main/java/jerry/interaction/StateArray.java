@@ -13,15 +13,20 @@ import java.util.function.Predicate;
 
 @Slf4j
 public class StateArray {
-    private static final int DISABLED_STATE = 7;
+    public static final int DISABLED_STATE = 7;
+
+    public static final int DYNAMIC_DISABLED_STATE = 8;
+
     private static final int INDEX_LENGTH_OFFSET = 1;
 
     public static final char OUTPUT_CHAR = 'o';
     public static final char INPUT_CHAR = 'i';
     public static final char OUTSIDE_CHAR = 'u';
+    public static final char ANALOG_INPUT_CHAR = 'a';
 
     private int[][] outputState;
     private int[] inputState;
+    private Map<String, Integer> analogInputState = new HashMap<>();
     private int[] outsideState;
 
     private int output_x;
@@ -57,6 +62,9 @@ public class StateArray {
                     stateArray.initInputState(component);
                     stateArray.updateInputState(component);
                     break;
+                case ANALOG_INPUT_CHAR:
+                    stateArray.updateAnalogInputState(component);
+                    break;
                 case OUTSIDE_CHAR:
                     stateArray.initOutSideState(component);
                     stateArray.updateOutsideState(component);
@@ -66,6 +74,18 @@ public class StateArray {
             }
         }
     }
+
+    private void updateAnalogInputState(String component) {
+        component = removeBulk(component);
+        String[] split = component.split(",");
+        for (String s : split) {
+            String[] input = s.split(":");
+            if (input.length == 2 && input[0].length() > 0 && input[1].length() > 0) {
+                analogInputState.put(input[0], Integer.parseInt(input[1]));
+            }
+        }
+    }
+
 
     private void initOutputState(String state) {
         output_x = Character.getNumericValue(state.charAt(state.length() - 3)) + INDEX_LENGTH_OFFSET;
@@ -124,6 +144,13 @@ public class StateArray {
     }
 
 
+    public int getStateForIndex(int x, int y) {
+        if (x >= outputState.length || y >= outputState[x].length) {
+            throw new IllegalArgumentException("array out of bounds.x:" + x + " y:" + y);
+        }
+        return outputState[x][y];
+    }
+
     public void updateOutputState(String state) {
         state = removeBulk(state);
         char[] stateChars = state.toCharArray();
@@ -131,7 +158,7 @@ public class StateArray {
             int x = Character.getNumericValue(stateChars[i]);
             int y = Character.getNumericValue(stateChars[i + 1]);
             int s = Character.getNumericValue(stateChars[i + 2]);
-            if(outputState[x][y] != StateArray.DISABLED_STATE) {
+            if (outputState[x][y] != StateArray.DISABLED_STATE) {
                 outputState[x][y] = s;
             }
         }
@@ -168,13 +195,14 @@ public class StateArray {
             consumer.accept(i, inputState[i]);
         }
     }
+
     public int countTurnedOnLights() {
         int count = 0;
         for (int i = 0; i < output_x; i++) {
             for (int j = 0; j < output_y; j++) {
-              if(outputState[i][j] == 1){
-                  count++;
-              }
+                if (outputState[i][j] == 1) {
+                    count++;
+                }
             }
         }
         return count;
@@ -184,7 +212,7 @@ public class StateArray {
         for (int i = 0; i < output_x; i++) {
             for (int j = 0; j < output_y; j++) {
                 int new_state = function.apply(i, j, outputState[i][j]);
-                if (outputState[i][j] != StateArray.DISABLED_STATE) {
+                if (outputState[i][j] != StateArray.DISABLED_STATE && outputState[i][j] != StateArray.DYNAMIC_DISABLED_STATE) {
                     outputState[i][j] = new_state;
                 }
             }
@@ -280,7 +308,7 @@ public class StateArray {
     private String removeBulk(String input) {
         return input.replace("{", "")
                 .replace("}", "").replace("" + INPUT_CHAR, "")
-                .replace("" + OUTPUT_CHAR, "").replace("" + OUTSIDE_CHAR, "");
+                .replace("" + OUTPUT_CHAR, "").replace("" + OUTSIDE_CHAR, "").replace("" + ANALOG_INPUT_CHAR, "");
     }
 
     public void changeOutside(BiFunction<Integer, Integer, Integer> consumer) {

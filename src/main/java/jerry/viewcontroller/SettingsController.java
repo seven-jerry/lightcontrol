@@ -47,8 +47,6 @@ public class SettingsController {
         model.addAttribute("inputCommands", InputCommand.values());
         model.addAttribute("inputControls", InputControl.values());
         model.addAttribute("stateCommands", StateCommand.values());
-        model.addAttribute("stateCommandOverwrites", persistenceService.getStateCommandOverwrites());
-        model.addAttribute("newStateCommandOverwrite", persistenceService.newStateControlOverwrite());
 
         return "setting/detail";
     }

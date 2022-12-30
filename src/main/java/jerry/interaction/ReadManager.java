@@ -1,5 +1,6 @@
 package jerry.interaction;
 
+import jerry.pojo.Command;
 import jerry.pojo.Setting;
 import jerry.service.PersistenceService;
 import lombok.extern.slf4j.Slf4j;
@@ -10,6 +11,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.*;
@@ -33,6 +35,8 @@ public class ReadManager implements ILIfeCycleExposable {
     @Autowired
     EventHandler eventHandler;
 
+    @Autowired
+    public PersistenceService persistenceService;
 
     @Autowired
     public AbstractInteractionManager clientInteractionManager;
@@ -62,7 +66,7 @@ public class ReadManager implements ILIfeCycleExposable {
     public void handleMessage(StateArray message) {
         log.trace(message.toString());
 
-        if(shouldCallExternalConsumers()){
+        if (shouldCallExternalConsumers()) {
             externalReadConsumers.handleMessage(message);
             return;
         }
@@ -75,8 +79,10 @@ public class ReadManager implements ILIfeCycleExposable {
     }
 
     private void localReadHandler(StateArray message) {
-        command.testCondition(message, inputControl)
-                .ifPresent(e -> clientInteractionManager.writeToProducer(e.getCommand()));
+        command.testCondition(message, inputControl, service.getSetting().getInputs())
+                .ifPresent(e -> {
+                    clientInteractionManager.writeToProducer(e);
+                });
     }
 
 
@@ -85,7 +91,7 @@ public class ReadManager implements ILIfeCycleExposable {
     }
 
     public void setInputControl(InputControl inputControl) {
-        if(this.shouldCallExternalConsumers()){
+        if (this.shouldCallExternalConsumers()) {
             externalReadConsumers.disconnect();
         }
         this.inputControl = Objects.requireNonNull(inputControl);
